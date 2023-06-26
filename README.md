@@ -18,7 +18,7 @@ Repositorio Educativo
  </ul>      
         
         
-Nuestra idea es fácilitar a los maestros y alumno la busqueda de materiales y contenidos, incorporando todo en un solo lugar
+Nuestra idea es facilitar a los maestros y alumno la busqueda de materiales y contenidos, incorporando todo en un solo lugar
 
 ### Instalación 
 
