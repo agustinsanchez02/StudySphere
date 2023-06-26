@@ -33,3 +33,28 @@ $ cd StudySphere
 ```
 
 > Plataformas soportadas : **`Windows 10/11`**
+
+<h3 align="center">
+:: Vista Previa ::
+</h3>
+<p align="center">
+<img src="https://github.com/agustinsanchez02/StudySphere/blob/bde83fd6d09e99053c19172006c92b9bd2343f82/VistaPrevia/inicio.png"/>
+</p>
+<p align="center">
+<img src="https://github.com/agustinsanchez02/StudySphere/blob/bde83fd6d09e99053c19172006c92b9bd2343f82/VistaPrevia/carga.jpg"/>
+</p>
+<p align="center">
+<img src="https://github.com/agustinsanchez02/StudySphere/blob/bde83fd6d09e99053c19172006c92b9bd2343f82/VistaPrevia/inicio.jpg"/>
+</p>
+<p align="center">
+<img src="https://github.com/agustinsanchez02/StudySphere/blob/bde83fd6d09e99053c19172006c92b9bd2343f82/VistaPrevia/registro.jpg"/>
+</p>
+<p align="center">
+<img src="https://github.com/agustinsanchez02/StudySphere/blob/bde83fd6d09e99053c19172006c92b9bd2343f82/VistaPrevia/Metodo%20de%20pago.jpg"/>
+</p>
+<p align="center">
+<img src="https://github.com/agustinsanchez02/StudySphere/blob/bde83fd6d09e99053c19172006c92b9bd2343f82/VistaPrevia/suscripciones.jpg"/>
+</p>
+<p align="center">
+<img src="https://github.com/agustinsanchez02/StudySphere/blob/bde83fd6d09e99053c19172006c92b9bd2343f82/VistaPrevia/subida.jpg"/>
+</p>
