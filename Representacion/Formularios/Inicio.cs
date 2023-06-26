@@ -102,5 +102,12 @@ namespace Representacion
             subir.Show();
             this.Hide();
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            PerfildeUsuario perfildeUsuario = new PerfildeUsuario();
+            perfildeUsuario.Show();
+            this.Hide();
+        }
     }
 }

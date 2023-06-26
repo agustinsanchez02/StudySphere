@@ -84,3 +84,4 @@ C:\Users\agusp\source\repos\Studysphere\Representacion\bin\Debug\WinFormAnimatio
 C:\Users\agusp\source\repos\Studysphere\Representacion\bin\Debug\CircularProgressBar.xml
 C:\Users\agusp\source\repos\Studysphere\Representacion\obj\Debug\Representacion.Formularios.Bienvenida.resources
 C:\Users\agusp\source\repos\Studysphere\Representacion\obj\Debug\Representacion.MetodoDePago.resources
+C:\Users\agusp\source\repos\Studysphere\Representacion\obj\Debug\Representacion.PerfildeUsuario.resources

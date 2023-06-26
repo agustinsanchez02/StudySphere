@@ -55,6 +55,7 @@
             this.RegistrarseBTN = new System.Windows.Forms.Button();
             this.lblnombre = new System.Windows.Forms.Label();
             this.lblmail = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -290,7 +291,7 @@
             this.pictureBox6.Image = global::Representacion.Properties.Resources.USuario__2___1_;
             this.pictureBox6.Location = new System.Drawing.Point(236, 12);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(65, 56);
+            this.pictureBox6.Size = new System.Drawing.Size(65, 65);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 47;
             this.pictureBox6.TabStop = false;
@@ -378,12 +379,25 @@
             this.lblmail.TabIndex = 48;
             this.lblmail.Text = "Email";
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.linkLabel1.Location = new System.Drawing.Point(374, 67);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(43, 13);
+            this.linkLabel1.TabIndex = 49;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Mi perfil";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(1019, 609);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.lblmail);
             this.Controls.Add(this.lblnombre);
             this.Controls.Add(this.lblTipoCuenta);
@@ -441,5 +455,6 @@
         private System.Windows.Forms.Label lblTipoCuenta;
         private System.Windows.Forms.Label lblnombre;
         private System.Windows.Forms.Label lblmail;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }
