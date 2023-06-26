@@ -1,0 +1,6 @@
+C:\Users\agusp\source\repos\Studysphere\CapaSoporte\bin\Debug\CapaSoporte.dll
+C:\Users\agusp\source\repos\Studysphere\CapaSoporte\bin\Debug\CapaSoporte.pdb
+C:\Users\agusp\source\repos\Studysphere\CapaSoporte\obj\Debug\CapaSoporte.csproj.AssemblyReference.cache
+C:\Users\agusp\source\repos\Studysphere\CapaSoporte\obj\Debug\CapaSoporte.csproj.CoreCompileInputs.cache
+C:\Users\agusp\source\repos\Studysphere\CapaSoporte\obj\Debug\CapaSoporte.dll
+C:\Users\agusp\source\repos\Studysphere\CapaSoporte\obj\Debug\CapaSoporte.pdb

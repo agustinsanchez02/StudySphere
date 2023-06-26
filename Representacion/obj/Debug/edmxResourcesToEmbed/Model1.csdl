@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="StudysphereModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="clientes">
+    <Key>
+      <PropertyRef Name="Email" />
+    </Key>
+    <Property Name="Nombre" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="Apellido" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="Usuario" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="Contraseña" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="60" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="StudysphereEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="clientes" EntityType="Self.clientes" />
+  </EntityContainer>
+</Schema>

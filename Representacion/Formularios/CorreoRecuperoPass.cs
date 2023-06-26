@@ -1,0 +1,141 @@
+﻿using FontAwesome.Sharp;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Net.Mail;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using COMUN;
+using Dominios;
+
+namespace Representacion.Formularios
+{
+    public partial class CorreoRecuperoPass : Form
+    {
+        public CorreoRecuperoPass()
+        {
+            InitializeComponent();
+        }
+        EventArgs v;
+        private void Usuario_TextChanged(object sender, EventArgs e)
+        {
+            v = e;
+            if (Correo.Text != "" && Correo.ForeColor != Color.Silver)
+            {
+                if (COMUN.MetodosComunes.ValidacionEMAIL(e, Correo.Text))
+                {
+                    pctLineDecoration(pctCorreo, 1);
+                }
+                else
+                {
+                    pctLineDecoration(pctCorreo, 3);
+                }
+            }
+        }
+        public void pctLineDecoration(PictureBox a, int caso)
+        {
+            //Esta función la uso para las lineas de color verde y gris, una decoración bastante moderna//
+            //Caso 1 significa que el usuario entro al TextBox y Caso 2 Significa que el usuario salió del TextBox//
+            switch (caso)
+            {
+                case 1:
+                    a.BackColor = Color.FromArgb(65, 168, 95); ;
+                    break;
+                case 2:
+                    a.BackColor = Color.DarkGray; ;
+                    break;
+                case 3:
+                    a.BackColor = Color.Red;
+                    break;
+                default:
+                    MessageBox.Show("Error");
+                    break;
+            }
+        }
+
+        private void Correo_Enter(object sender, EventArgs e)
+        {
+            if (Correo.Text == "Correo")
+            {
+                Correo.Text = "";
+                Correo.ForeColor = Color.White;
+            }
+        }
+
+        private void Correo_Leave(object sender, EventArgs e)
+        {
+            if (Correo.Text == "")
+            {
+                Correo.Text = "Correo";
+                Correo.ForeColor = Color.Gray;
+            }
+        }
+
+        private void Cerrar_Click(object sender, EventArgs e)
+        {
+            iniciar_sesion sesion = new iniciar_sesion();
+            sesion.Show(); 
+            this.Close();
+        }
+        private void msgError(string msg)
+        {
+            lblErrorMensaje.Text = "      " + msg;
+            lblErrorMensaje.Visible = true;
+            lblErrorMensaje.ForeColor = Color.White;
+        }
+
+        private void Aceptarbtn_Click(object sender, EventArgs e)
+        {
+            if (Correo.Text == "" || MetodosComunes.ValidacionEMAIL(v, Correo.Text) == false)
+            {
+                msgError("Ingrese un correo valido.");
+            }
+            else
+            {
+                ModeloUsuario modelo = new ModeloUsuario();
+                var correovalido = modelo.ObtenerUsuario(Correo.Text);
+                if (correovalido == true)
+                {
+                    Controladora.usuarios1 controladora = new Controladora.usuarios1();
+
+                    string mail = Correo.Text;
+                    Random r = new Random();
+                    int codigoVER = r.Next(10000, 99999);
+                    CodigoConfirmacion formConfirmacion = new CodigoConfirmacion(codigoVER, mail);
+                    try
+                    {
+                        SmtpClient cliente = controladora.SmtpClient();
+
+                        MailMessage correo = controladora.MailVerificar(mail, codigoVER);
+
+                        cliente.Send(correo);
+                    }
+                    catch (Exception ex)
+                    {
+                        DialogResult dialog = MessageBox.Show(ex.Message, "Se produjo un error al enviar el código de verificación, por favor revisar si escribio bien su correo electronico.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    }
+                    formConfirmacion.ShowDialog();
+                    if (formConfirmacion.Confirmacion())
+                    {
+                        Form1 form1 = new Form1(mail);
+                        form1.Show();
+                        this.Hide();
+                    }
+                }
+                else
+                {
+                    msgError("El Correo no está registrado.\n      intente nuevamente.");
+                    Correo.Text = "";
+                    Correo.ForeColor = Color.White;
+                    Correo.Focus();
+                }
+               
+            }
+        }
+    }
+}
