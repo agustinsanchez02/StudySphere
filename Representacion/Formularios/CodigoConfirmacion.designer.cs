@@ -57,6 +57,7 @@
             this.pnlLabel.Name = "pnlLabel";
             this.pnlLabel.Size = new System.Drawing.Size(663, 60);
             this.pnlLabel.TabIndex = 0;
+            this.pnlLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlLabel_MouseDown_1);
             // 
             // iniciarsesionbutton
             // 

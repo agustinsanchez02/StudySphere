@@ -98,7 +98,7 @@
             this.Usuario.AutoSize = true;
             this.Usuario.Font = new System.Drawing.Font("Roboto Bk", 18F);
             this.Usuario.ForeColor = System.Drawing.Color.White;
-            this.Usuario.Location = new System.Drawing.Point(576, 146);
+            this.Usuario.Location = new System.Drawing.Point(546, 147);
             this.Usuario.Name = "Usuario";
             this.Usuario.Size = new System.Drawing.Size(96, 29);
             this.Usuario.TabIndex = 2;

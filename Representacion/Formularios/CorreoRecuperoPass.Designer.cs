@@ -64,6 +64,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 18;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
             // 
             // Correo
             // 
@@ -172,6 +173,7 @@
             this.Name = "CorreoRecuperoPass";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CorreoRecuperoPass";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.CorreoRecuperoPass_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctCorreo)).EndInit();
             this.ResumeLayout(false);

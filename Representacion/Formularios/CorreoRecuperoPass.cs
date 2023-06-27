@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using COMUN;
 using Dominios;
+using System.Runtime.InteropServices;
 
 namespace Representacion.Formularios
 {
@@ -21,6 +22,10 @@ namespace Representacion.Formularios
             InitializeComponent();
         }
         EventArgs v;
+        [DllImport("User32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("User32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
         private void Usuario_TextChanged(object sender, EventArgs e)
         {
             v = e;
@@ -136,6 +141,18 @@ namespace Representacion.Formularios
                 }
                
             }
+        }
+
+        private void CorreoRecuperoPass_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }

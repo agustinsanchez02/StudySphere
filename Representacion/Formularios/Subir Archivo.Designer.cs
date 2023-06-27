@@ -39,15 +39,15 @@
             this.nombretxt = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.axAcroPDF1 = new AxAcroPDFLib.AxAcroPDF();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.archivosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.axAcroPDF1 = new AxAcroPDFLib.AxAcroPDF();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.archivosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.archivosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -81,11 +81,12 @@
             this.splitContainer1.Panel1.Controls.Add(this.nombretxt);
             this.splitContainer1.Panel1.Controls.Add(this.label2);
             this.splitContainer1.Panel1.Controls.Add(this.label1);
+            this.splitContainer1.Panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.splitContainer1_Panel1_MouseDown);
             // 
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.axAcroPDF1);
-            this.splitContainer1.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel2_Paint);
+            this.splitContainer1.Panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.splitContainer1_Panel2_MouseDown);
             this.splitContainer1.Size = new System.Drawing.Size(798, 693);
             this.splitContainer1.SplitterDistance = 223;
             this.splitContainer1.TabIndex = 43;
@@ -161,10 +162,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre:";
             // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            // 
             // axAcroPDF1
             // 
             this.axAcroPDF1.Enabled = true;
@@ -173,6 +170,10 @@
             this.axAcroPDF1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axAcroPDF1.OcxState")));
             this.axAcroPDF1.Size = new System.Drawing.Size(792, 460);
             this.axAcroPDF1.TabIndex = 42;
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // Subir_Archivo
             // 
@@ -186,13 +187,14 @@
             this.Name = "Subir_Archivo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Subir_Archivo";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Subir_Archivo_MouseDown);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.archivosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.archivosBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

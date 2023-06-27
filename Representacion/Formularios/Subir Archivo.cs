@@ -13,6 +13,8 @@ using System.Data.SqlClient;
 using System.Net.Mail;
 using System.Web;
 using System.Windows.Media;
+using Dominios;
+using System.Runtime.InteropServices;
 
 namespace Representacion
 {
@@ -24,7 +26,10 @@ namespace Representacion
         {
             InitializeComponent();
         }
-        
+        [DllImport("User32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("User32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
         private void Explorar_Click(object sender, EventArgs e)
         {
             openFileDialog1.InitialDirectory = "c:\\";
@@ -63,26 +68,14 @@ namespace Representacion
                         file = ms.ToArray();
 
                     }
-                    using (SqlConnection oconexion = new SqlConnection(cadena))
+                   ModeloUsuario modeloUsuario = new ModeloUsuario();
+                    if (modeloUsuario.GuardarArchivo(nombretxt.Text.Trim(), Path.GetExtension(openFileDialog1.FileName), file) == true)
                     {
-                        SqlCommand cmd = new SqlCommand("INSERT INTO Archivos (Nombre,Extension, doc) VALUES (@nombre, @extension,@doc)", oconexion);
-                        cmd.Parameters.AddWithValue("@nombre", nombretxt.Text.Trim());
-                        cmd.Parameters.AddWithValue("@extension", Path.GetExtension(openFileDialog1.FileName));
-                        cmd.Parameters.AddWithValue("@doc", file);
-                        cmd.CommandType = CommandType.Text;
-
-                        oconexion.Open();
-                        int r = cmd.ExecuteNonQuery();
-
-                        if (r > 0)
-                        {
-                            MessageBox.Show("Archivo subido con exito.");
-                        }
-                        else
-                        {
-                            MessageBox.Show("No se ha podido Cambiar la contraseña.");
-                        }
-                        oconexion.Close();
+                        MessageBox.Show("Archivo subido con exito.");
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se ha podido subir el archivo.");
                     }
                 }
             }
@@ -96,9 +89,22 @@ namespace Representacion
             this.Close();
         }
 
-        private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
+        private void splitContainer1_Panel1_MouseDown(object sender, MouseEventArgs e)
         {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
 
+        private void Subir_Archivo_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void splitContainer1_Panel2_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }

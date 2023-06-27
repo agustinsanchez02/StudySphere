@@ -510,6 +510,7 @@
             this.Name = "suscripciones";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.suscripciones_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.bunifuCards1.ResumeLayout(false);
             this.bunifuCards1.PerformLayout();

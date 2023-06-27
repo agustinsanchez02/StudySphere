@@ -17,6 +17,7 @@ namespace Representacion.Formularios
         {
             InitializeComponent();
         }
+
         private void timer1_Tick(object sender, EventArgs e)
         {
             if (this.Opacity < 1) 

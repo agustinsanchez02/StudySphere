@@ -148,6 +148,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(215, 623);
             this.panel1.TabIndex = 6;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
             // label8
             // 
@@ -383,7 +384,7 @@
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.linkLabel1.Location = new System.Drawing.Point(374, 67);
+            this.linkLabel1.Location = new System.Drawing.Point(675, 54);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(43, 13);
             this.linkLabel1.TabIndex = 49;
@@ -416,6 +417,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio";
             this.Load += new System.EventHandler(this.Inicio_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Inicio_MouseDown);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();

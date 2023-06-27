@@ -19,19 +19,10 @@ namespace Representacion
         string Mail;
         bool confirmacion = false;
 
-        //DRAG MOVE, Mover formulario con panel// //Código Descarte, por la dudas se guarda para futuras actualizaciones//
-        public const int WM_NCLBUTTONDOWN = 0xA1;
-
-        public const int HTCAPTION = 0x2;
-
-        [DllImport("User32.dll")]
-
-        public static extern bool ReleaseCapture();
-
-        [DllImport("User32.dll")]
-
-        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
-        //Fin del código mover (drag)//
+        [DllImport("User32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("User32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
 
 
         private void txt1_KeyPress(object sender, KeyPressEventArgs e)
@@ -142,6 +133,12 @@ namespace Representacion
         public bool Confirmacion()
         {
             return confirmacion;
+        }
+
+        private void pnlLabel_MouseDown_1(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }

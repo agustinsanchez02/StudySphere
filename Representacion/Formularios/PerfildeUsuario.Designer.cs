@@ -28,14 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PerfildeUsuario));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.Cancelar = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.emailtxt = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.apellidotxt = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.nombretxt = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.usuariotxt = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.Cancelar = new System.Windows.Forms.Button();
+            this.emailtxt = new System.Windows.Forms.TextBox();
+            this.Aceptar = new System.Windows.Forms.Button();
+            this.contraseñaactual = new System.Windows.Forms.TextBox();
+            this.usuariotxt = new System.Windows.Forms.TextBox();
+            this.nombretxt = new System.Windows.Forms.TextBox();
+            this.apellidotxt = new System.Windows.Forms.TextBox();
+            this.contraseñatxt = new System.Windows.Forms.TextBox();
+            this.confirmarcontraseñatxt = new System.Windows.Forms.TextBox();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label12 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -57,11 +60,7 @@
             this.emailbl = new System.Windows.Forms.Label();
             this.tipocuentalbl = new System.Windows.Forms.Label();
             this.cerrarbtn = new System.Windows.Forms.Button();
-            this.editarbtn = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.confirmarcontraseñatxt = new System.Windows.Forms.TextBox();
-            this.contraseñaactual = new System.Windows.Forms.TextBox();
-            this.contraseñatxt = new System.Windows.Forms.TextBox();
+            this.editarbtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -69,16 +68,16 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
+            this.panel1.Controls.Add(this.Cancelar);
+            this.panel1.Controls.Add(this.emailtxt);
+            this.panel1.Controls.Add(this.Aceptar);
             this.panel1.Controls.Add(this.contraseñaactual);
+            this.panel1.Controls.Add(this.usuariotxt);
+            this.panel1.Controls.Add(this.nombretxt);
+            this.panel1.Controls.Add(this.apellidotxt);
             this.panel1.Controls.Add(this.contraseñatxt);
             this.panel1.Controls.Add(this.confirmarcontraseñatxt);
             this.panel1.Controls.Add(this.linkLabel1);
-            this.panel1.Controls.Add(this.bunifuThinButton21);
-            this.panel1.Controls.Add(this.Cancelar);
-            this.panel1.Controls.Add(this.emailtxt);
-            this.panel1.Controls.Add(this.apellidotxt);
-            this.panel1.Controls.Add(this.nombretxt);
-            this.panel1.Controls.Add(this.usuariotxt);
             this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.label13);
@@ -92,130 +91,124 @@
             this.panel1.Size = new System.Drawing.Size(375, 584);
             this.panel1.TabIndex = 0;
             this.panel1.Visible = false;
-            // 
-            // bunifuThinButton21
-            // 
-            this.bunifuThinButton21.ActiveBorderThickness = 1;
-            this.bunifuThinButton21.ActiveCornerRadius = 20;
-            this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(96)))), ((int)(((byte)(232)))));
-            this.bunifuThinButton21.ActiveForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(96)))), ((int)(((byte)(232)))));
-            this.bunifuThinButton21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
-            this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
-            this.bunifuThinButton21.ButtonText = "Aceptar";
-            this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton21.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton21.ForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton21.IdleBorderThickness = 1;
-            this.bunifuThinButton21.IdleCornerRadius = 30;
-            this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.White;
-            this.bunifuThinButton21.Location = new System.Drawing.Point(184, 515);
-            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuThinButton21.Name = "bunifuThinButton21";
-            this.bunifuThinButton21.Size = new System.Drawing.Size(125, 44);
-            this.bunifuThinButton21.TabIndex = 43;
-            this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuThinButton21.Click += new System.EventHandler(this.bunifuThinButton21_Click);
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
             // Cancelar
             // 
-            this.Cancelar.ActiveBorderThickness = 1;
-            this.Cancelar.ActiveCornerRadius = 20;
-            this.Cancelar.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(96)))), ((int)(((byte)(232)))));
-            this.Cancelar.ActiveForecolor = System.Drawing.Color.White;
-            this.Cancelar.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(96)))), ((int)(((byte)(232)))));
-            this.Cancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
-            this.Cancelar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Cancelar.BackgroundImage")));
-            this.Cancelar.ButtonText = "Cancelar";
-            this.Cancelar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Cancelar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cancelar.ForeColor = System.Drawing.Color.SeaGreen;
-            this.Cancelar.IdleBorderThickness = 1;
-            this.Cancelar.IdleCornerRadius = 30;
-            this.Cancelar.IdleFillColor = System.Drawing.Color.Transparent;
-            this.Cancelar.IdleForecolor = System.Drawing.Color.White;
-            this.Cancelar.IdleLineColor = System.Drawing.Color.White;
-            this.Cancelar.Location = new System.Drawing.Point(20, 515);
-            this.Cancelar.Margin = new System.Windows.Forms.Padding(5);
+            this.Cancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.Cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Cancelar.ForeColor = System.Drawing.Color.White;
+            this.Cancelar.Location = new System.Drawing.Point(36, 517);
             this.Cancelar.Name = "Cancelar";
-            this.Cancelar.Size = new System.Drawing.Size(125, 44);
-            this.Cancelar.TabIndex = 43;
-            this.Cancelar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Cancelar.Click += new System.EventHandler(this.Cancelar_Click);
+            this.Cancelar.Size = new System.Drawing.Size(103, 37);
+            this.Cancelar.TabIndex = 9;
+            this.Cancelar.Text = "Cancelar";
+            this.Cancelar.UseVisualStyleBackColor = false;
+            this.Cancelar.Click += new System.EventHandler(this.button3_Click);
             // 
             // emailtxt
             // 
             this.emailtxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.emailtxt.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(96)))), ((int)(((byte)(232)))));
-            this.emailtxt.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.emailtxt.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(96)))), ((int)(((byte)(232)))));
-            this.emailtxt.BorderThickness = 1;
-            this.emailtxt.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.emailtxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.emailtxt.Font = new System.Drawing.Font("Century Gothic", 11F);
             this.emailtxt.ForeColor = System.Drawing.Color.White;
-            this.emailtxt.isPassword = false;
-            this.emailtxt.Location = new System.Drawing.Point(38, 272);
-            this.emailtxt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.emailtxt.Location = new System.Drawing.Point(36, 275);
             this.emailtxt.Name = "emailtxt";
-            this.emailtxt.Size = new System.Drawing.Size(282, 22);
-            this.emailtxt.TabIndex = 9;
-            this.emailtxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.emailtxt.Size = new System.Drawing.Size(282, 25);
+            this.emailtxt.TabIndex = 4;
+            this.emailtxt.UseSystemPasswordChar = true;
             // 
-            // apellidotxt
+            // Aceptar
             // 
-            this.apellidotxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.apellidotxt.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(96)))), ((int)(((byte)(232)))));
-            this.apellidotxt.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.apellidotxt.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(96)))), ((int)(((byte)(232)))));
-            this.apellidotxt.BorderThickness = 1;
-            this.apellidotxt.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.apellidotxt.Font = new System.Drawing.Font("Century Gothic", 11F);
-            this.apellidotxt.ForeColor = System.Drawing.Color.White;
-            this.apellidotxt.isPassword = false;
-            this.apellidotxt.Location = new System.Drawing.Point(38, 213);
-            this.apellidotxt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.apellidotxt.Name = "apellidotxt";
-            this.apellidotxt.Size = new System.Drawing.Size(282, 22);
-            this.apellidotxt.TabIndex = 9;
-            this.apellidotxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Aceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.Aceptar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Aceptar.ForeColor = System.Drawing.Color.White;
+            this.Aceptar.Location = new System.Drawing.Point(217, 517);
+            this.Aceptar.Name = "Aceptar";
+            this.Aceptar.Size = new System.Drawing.Size(103, 37);
+            this.Aceptar.TabIndex = 8;
+            this.Aceptar.Text = "Aceptar";
+            this.Aceptar.UseVisualStyleBackColor = false;
+            this.Aceptar.Click += new System.EventHandler(this.button2_Click);
             // 
-            // nombretxt
+            // contraseñaactual
             // 
-            this.nombretxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.nombretxt.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(96)))), ((int)(((byte)(232)))));
-            this.nombretxt.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.nombretxt.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(96)))), ((int)(((byte)(232)))));
-            this.nombretxt.BorderThickness = 1;
-            this.nombretxt.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.nombretxt.Font = new System.Drawing.Font("Century Gothic", 11F);
-            this.nombretxt.ForeColor = System.Drawing.Color.White;
-            this.nombretxt.isPassword = false;
-            this.nombretxt.Location = new System.Drawing.Point(38, 151);
-            this.nombretxt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.nombretxt.Name = "nombretxt";
-            this.nombretxt.Size = new System.Drawing.Size(282, 22);
-            this.nombretxt.TabIndex = 9;
-            this.nombretxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.contraseñaactual.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.contraseñaactual.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.contraseñaactual.Font = new System.Drawing.Font("Century Gothic", 11F);
+            this.contraseñaactual.ForeColor = System.Drawing.Color.White;
+            this.contraseñaactual.Location = new System.Drawing.Point(37, 458);
+            this.contraseñaactual.Name = "contraseñaactual";
+            this.contraseñaactual.Size = new System.Drawing.Size(282, 25);
+            this.contraseñaactual.TabIndex = 7;
+            this.contraseñaactual.UseSystemPasswordChar = true;
             // 
             // usuariotxt
             // 
             this.usuariotxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.usuariotxt.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(96)))), ((int)(((byte)(232)))));
-            this.usuariotxt.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.usuariotxt.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(96)))), ((int)(((byte)(232)))));
-            this.usuariotxt.BorderThickness = 1;
-            this.usuariotxt.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.usuariotxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.usuariotxt.Font = new System.Drawing.Font("Century Gothic", 11F);
             this.usuariotxt.ForeColor = System.Drawing.Color.White;
-            this.usuariotxt.isPassword = false;
-            this.usuariotxt.Location = new System.Drawing.Point(37, 91);
-            this.usuariotxt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.usuariotxt.Location = new System.Drawing.Point(38, 91);
             this.usuariotxt.Name = "usuariotxt";
-            this.usuariotxt.Size = new System.Drawing.Size(282, 22);
-            this.usuariotxt.TabIndex = 9;
-            this.usuariotxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.usuariotxt.Size = new System.Drawing.Size(282, 25);
+            this.usuariotxt.TabIndex = 1;
+            // 
+            // nombretxt
+            // 
+            this.nombretxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.nombretxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.nombretxt.Font = new System.Drawing.Font("Century Gothic", 11F);
+            this.nombretxt.ForeColor = System.Drawing.Color.White;
+            this.nombretxt.Location = new System.Drawing.Point(37, 148);
+            this.nombretxt.Name = "nombretxt";
+            this.nombretxt.Size = new System.Drawing.Size(282, 25);
+            this.nombretxt.TabIndex = 2;
+            // 
+            // apellidotxt
+            // 
+            this.apellidotxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.apellidotxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.apellidotxt.Font = new System.Drawing.Font("Century Gothic", 11F);
+            this.apellidotxt.ForeColor = System.Drawing.Color.White;
+            this.apellidotxt.Location = new System.Drawing.Point(38, 213);
+            this.apellidotxt.Name = "apellidotxt";
+            this.apellidotxt.Size = new System.Drawing.Size(282, 25);
+            this.apellidotxt.TabIndex = 3;
+            // 
+            // contraseñatxt
+            // 
+            this.contraseñatxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.contraseñatxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.contraseñatxt.Font = new System.Drawing.Font("Century Gothic", 11F);
+            this.contraseñatxt.ForeColor = System.Drawing.Color.White;
+            this.contraseñatxt.Location = new System.Drawing.Point(38, 331);
+            this.contraseñatxt.Name = "contraseñatxt";
+            this.contraseñatxt.Size = new System.Drawing.Size(282, 25);
+            this.contraseñatxt.TabIndex = 5;
+            // 
+            // confirmarcontraseñatxt
+            // 
+            this.confirmarcontraseñatxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.confirmarcontraseñatxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.confirmarcontraseñatxt.Font = new System.Drawing.Font("Century Gothic", 11F);
+            this.confirmarcontraseñatxt.ForeColor = System.Drawing.Color.White;
+            this.confirmarcontraseñatxt.Location = new System.Drawing.Point(37, 397);
+            this.confirmarcontraseñatxt.Name = "confirmarcontraseñatxt";
+            this.confirmarcontraseñatxt.Size = new System.Drawing.Size(282, 25);
+            this.confirmarcontraseñatxt.TabIndex = 6;
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.linkLabel1.Location = new System.Drawing.Point(136, 313);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(34, 13);
+            this.linkLabel1.TabIndex = 11;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Editar";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // label12
             // 
@@ -449,86 +442,16 @@
             // 
             // editarbtn
             // 
-            this.editarbtn.Activecolor = System.Drawing.Color.Transparent;
-            this.editarbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
-            this.editarbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.editarbtn.BorderRadius = 0;
-            this.editarbtn.ButtonText = "Editar perfil";
-            this.editarbtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.editarbtn.DisabledColor = System.Drawing.Color.Gray;
-            this.editarbtn.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.editarbtn.Iconcolor = System.Drawing.Color.Transparent;
-            this.editarbtn.Iconimage = null;
-            this.editarbtn.Iconimage_right = null;
-            this.editarbtn.Iconimage_right_Selected = null;
-            this.editarbtn.Iconimage_Selected = null;
-            this.editarbtn.IconMarginLeft = 0;
-            this.editarbtn.IconMarginRight = 0;
-            this.editarbtn.IconRightVisible = true;
-            this.editarbtn.IconRightZoom = 0D;
-            this.editarbtn.IconVisible = true;
-            this.editarbtn.IconZoom = 90D;
-            this.editarbtn.IsTab = false;
-            this.editarbtn.Location = new System.Drawing.Point(140, 502);
-            this.editarbtn.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.editarbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.editarbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.editarbtn.ForeColor = System.Drawing.Color.White;
+            this.editarbtn.Location = new System.Drawing.Point(196, 515);
             this.editarbtn.Name = "editarbtn";
-            this.editarbtn.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
-            this.editarbtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.editarbtn.OnHoverTextColor = System.Drawing.Color.White;
-            this.editarbtn.selected = false;
-            this.editarbtn.Size = new System.Drawing.Size(190, 29);
-            this.editarbtn.TabIndex = 42;
-            this.editarbtn.Text = "Editar perfil";
-            this.editarbtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.editarbtn.Textcolor = System.Drawing.Color.White;
-            this.editarbtn.TextFont = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.editarbtn.Click += new System.EventHandler(this.editarbtn_Click);
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.linkLabel1.Location = new System.Drawing.Point(136, 313);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(34, 13);
-            this.linkLabel1.TabIndex = 44;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Editar";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-            // 
-            // confirmarcontraseñatxt
-            // 
-            this.confirmarcontraseñatxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.confirmarcontraseñatxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.confirmarcontraseñatxt.Font = new System.Drawing.Font("Century Gothic", 11F);
-            this.confirmarcontraseñatxt.ForeColor = System.Drawing.Color.White;
-            this.confirmarcontraseñatxt.Location = new System.Drawing.Point(37, 397);
-            this.confirmarcontraseñatxt.Name = "confirmarcontraseñatxt";
-            this.confirmarcontraseñatxt.Size = new System.Drawing.Size(282, 25);
-            this.confirmarcontraseñatxt.TabIndex = 43;
-            // 
-            // contraseñaactual
-            // 
-            this.contraseñaactual.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.contraseñaactual.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.contraseñaactual.Font = new System.Drawing.Font("Century Gothic", 11F);
-            this.contraseñaactual.ForeColor = System.Drawing.Color.White;
-            this.contraseñaactual.Location = new System.Drawing.Point(37, 458);
-            this.contraseñaactual.Name = "contraseñaactual";
-            this.contraseñaactual.Size = new System.Drawing.Size(282, 25);
-            this.contraseñaactual.TabIndex = 43;
-            this.contraseñaactual.UseSystemPasswordChar = true;
-            // 
-            // contraseñatxt
-            // 
-            this.contraseñatxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.contraseñatxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.contraseñatxt.Font = new System.Drawing.Font("Century Gothic", 11F);
-            this.contraseñatxt.ForeColor = System.Drawing.Color.White;
-            this.contraseñatxt.Location = new System.Drawing.Point(38, 331);
-            this.contraseñatxt.Name = "contraseñatxt";
-            this.contraseñatxt.Size = new System.Drawing.Size(282, 25);
-            this.contraseñatxt.TabIndex = 43;
+            this.editarbtn.Size = new System.Drawing.Size(101, 37);
+            this.editarbtn.TabIndex = 10;
+            this.editarbtn.Text = "Editar";
+            this.editarbtn.UseVisualStyleBackColor = false;
+            this.editarbtn.Click += new System.EventHandler(this.button1_Click);
             // 
             // PerfildeUsuario
             // 
@@ -556,6 +479,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PerfildeUsuario";
             this.Load += new System.EventHandler(this.PerfildeUsuario_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PerfildeUsuario_MouseDown);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -581,7 +505,6 @@
         private System.Windows.Forms.Label emailbl;
         private System.Windows.Forms.Label tipocuentalbl;
         private System.Windows.Forms.Button cerrarbtn;
-        private Bunifu.Framework.UI.BunifuFlatButton editarbtn;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label11;
@@ -589,15 +512,16 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private Bunifu.Framework.UI.BunifuMetroTextbox emailtxt;
-        private Bunifu.Framework.UI.BunifuMetroTextbox apellidotxt;
-        private Bunifu.Framework.UI.BunifuMetroTextbox nombretxt;
-        private Bunifu.Framework.UI.BunifuMetroTextbox usuariotxt;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
-        private Bunifu.Framework.UI.BunifuThinButton2 Cancelar;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.TextBox confirmarcontraseñatxt;
         private System.Windows.Forms.TextBox contraseñaactual;
         private System.Windows.Forms.TextBox contraseñatxt;
+        private System.Windows.Forms.TextBox emailtxt;
+        private System.Windows.Forms.TextBox usuariotxt;
+        private System.Windows.Forms.TextBox nombretxt;
+        private System.Windows.Forms.TextBox apellidotxt;
+        private System.Windows.Forms.Button editarbtn;
+        private System.Windows.Forms.Button Aceptar;
+        private System.Windows.Forms.Button Cancelar;
     }
 }

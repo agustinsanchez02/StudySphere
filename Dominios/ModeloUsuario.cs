@@ -55,6 +55,11 @@ namespace Dominios
             return user.Login(usuario, pass);
 
         }
+        public bool GuardarArchivo(string nombre, string extension, byte[] file)
+        {
+            return user.GuardarArchivo(nombre, extension, file);
+        }
+
         public void ObtenerUsuarioCompleto(string usuario)
         {
             user.ObtenetUsuarioCompleto(usuario);
