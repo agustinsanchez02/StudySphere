@@ -38,16 +38,16 @@
             this.nombretxt = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.rtfData = new System.Windows.Forms.RichTextBox();
             this.axAcroPDF1 = new AxAcroPDFLib.AxAcroPDF();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.rtfData = new System.Windows.Forms.RichTextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -81,6 +81,7 @@
             this.splitContainer1.Panel1.Controls.Add(this.nombretxt);
             this.splitContainer1.Panel1.Controls.Add(this.label2);
             this.splitContainer1.Panel1.Controls.Add(this.label1);
+            this.splitContainer1.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel1_Paint);
             this.splitContainer1.Panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.splitContainer1_Panel1_MouseDown);
             // 
             // splitContainer1.Panel2
@@ -166,6 +167,25 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre:";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(33, 19);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(727, 770);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 43;
+            this.pictureBox1.TabStop = false;
+            // 
+            // rtfData
+            // 
+            this.rtfData.Location = new System.Drawing.Point(33, 19);
+            this.rtfData.Name = "rtfData";
+            this.rtfData.ReadOnly = true;
+            this.rtfData.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.ForcedBoth;
+            this.rtfData.Size = new System.Drawing.Size(727, 770);
+            this.rtfData.TabIndex = 42;
+            this.rtfData.Text = "";
+            // 
             // axAcroPDF1
             // 
             this.axAcroPDF1.Enabled = true;
@@ -178,25 +198,6 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // rtfData
-            // 
-            this.rtfData.Location = new System.Drawing.Point(33, 19);
-            this.rtfData.Name = "rtfData";
-            this.rtfData.ReadOnly = true;
-            this.rtfData.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.ForcedBoth;
-            this.rtfData.Size = new System.Drawing.Size(727, 770);
-            this.rtfData.TabIndex = 42;
-            this.rtfData.Text = "";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(33, 19);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(727, 770);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 43;
-            this.pictureBox1.TabStop = false;
             // 
             // Subir_Archivo
             // 
@@ -217,8 +218,8 @@
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF1)).EndInit();
             this.ResumeLayout(false);
 
         }
