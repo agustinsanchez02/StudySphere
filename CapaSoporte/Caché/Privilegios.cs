@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CapaSoporte.Caché
 {
-    public class Privilegios
+    public static class Privilegios
     {
         public const string Admin = "0";
         public const string StudyBasic = "1";

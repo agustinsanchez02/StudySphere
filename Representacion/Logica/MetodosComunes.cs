@@ -7,7 +7,6 @@ using System.Diagnostics;
 using System.IO;
 using System.Net.Mail;
 using System.Net;
-using COMUN;
 using System.Text.RegularExpressions;
 using System.Globalization;
 

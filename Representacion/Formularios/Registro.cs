@@ -156,7 +156,7 @@ namespace Representacion
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void Registro_MouseDown(object sender, MouseEventArgs e)

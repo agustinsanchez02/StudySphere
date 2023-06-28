@@ -13,9 +13,6 @@ C:\Users\agusp\source\repos\Studysphere\Representacion\bin\Debug\EntityFramework
 C:\Users\agusp\source\repos\Studysphere\Representacion\bin\Debug\FontAwesome.Sharp.dll
 C:\Users\agusp\source\repos\Studysphere\Representacion\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\agusp\source\repos\Studysphere\Representacion\bin\Debug\SkiaSharp.dll
-C:\Users\agusp\source\repos\Studysphere\Representacion\bin\Debug\Syncfusion.Compression.Base.dll
-C:\Users\agusp\source\repos\Studysphere\Representacion\bin\Debug\Syncfusion.Licensing.dll
-C:\Users\agusp\source\repos\Studysphere\Representacion\bin\Debug\Syncfusion.XlsIO.Base.dll
 C:\Users\agusp\source\repos\Studysphere\Representacion\bin\Debug\System.Buffers.dll
 C:\Users\agusp\source\repos\Studysphere\Representacion\bin\Debug\System.Memory.dll
 C:\Users\agusp\source\repos\Studysphere\Representacion\bin\Debug\System.Numerics.Vectors.dll
@@ -33,8 +30,6 @@ C:\Users\agusp\source\repos\Studysphere\Representacion\bin\Debug\EntityFramework
 C:\Users\agusp\source\repos\Studysphere\Representacion\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
 C:\Users\agusp\source\repos\Studysphere\Representacion\bin\Debug\SkiaSharp.pdb
 C:\Users\agusp\source\repos\Studysphere\Representacion\bin\Debug\SkiaSharp.xml
-C:\Users\agusp\source\repos\Studysphere\Representacion\bin\Debug\Syncfusion.Compression.Base.xml
-C:\Users\agusp\source\repos\Studysphere\Representacion\bin\Debug\Syncfusion.XlsIO.Base.xml
 C:\Users\agusp\source\repos\Studysphere\Representacion\bin\Debug\System.Buffers.xml
 C:\Users\agusp\source\repos\Studysphere\Representacion\bin\Debug\System.Memory.xml
 C:\Users\agusp\source\repos\Studysphere\Representacion\bin\Debug\System.Numerics.Vectors.xml
@@ -71,13 +66,8 @@ C:\Users\agusp\source\repos\Studysphere\Representacion\obj\Debug\Representacion.
 C:\Users\agusp\source\repos\Studysphere\Representacion\obj\Debug\Representacion.pdb
 C:\Users\agusp\source\repos\Studysphere\Representacion\bin\Debug\CapaSoporte.dll
 C:\Users\agusp\source\repos\Studysphere\Representacion\bin\Debug\CapaSoporte.pdb
-C:\Users\agusp\source\repos\Studysphere\Representacion\bin\Debug\MercadoPago.dll
-C:\Users\agusp\source\repos\Studysphere\Representacion\bin\Debug\Newtonsoft.Json.dll
 C:\Users\agusp\source\repos\Studysphere\Representacion\bin\Debug\Dominios.dll.config
 C:\Users\agusp\source\repos\Studysphere\Representacion\bin\Debug\AccesoADatos.dll.config
-C:\Users\agusp\source\repos\Studysphere\Representacion\bin\Debug\MercadoPago.pdb
-C:\Users\agusp\source\repos\Studysphere\Representacion\bin\Debug\MercadoPago.xml
-C:\Users\agusp\source\repos\Studysphere\Representacion\bin\Debug\Newtonsoft.Json.xml
 C:\Users\agusp\source\repos\Studysphere\Representacion\obj\Debug\Representacion.Formularios.CorreoRecuperoPass.resources
 C:\Users\agusp\source\repos\Studysphere\Representacion\bin\Debug\CircularProgressBar.dll
 C:\Users\agusp\source\repos\Studysphere\Representacion\bin\Debug\WinFormAnimation.dll
@@ -85,3 +75,7 @@ C:\Users\agusp\source\repos\Studysphere\Representacion\bin\Debug\CircularProgres
 C:\Users\agusp\source\repos\Studysphere\Representacion\obj\Debug\Representacion.Formularios.Bienvenida.resources
 C:\Users\agusp\source\repos\Studysphere\Representacion\obj\Debug\Representacion.MetodoDePago.resources
 C:\Users\agusp\source\repos\Studysphere\Representacion\obj\Debug\Representacion.PerfildeUsuario.resources
+C:\Users\agusp\source\repos\Studysphere\Representacion\obj\Debug\Representacion.VistaAdministrador.resources
+C:\Users\agusp\source\repos\Studysphere\Representacion\obj\Debug\Representacion.AdministrarArchivos.resources
+C:\Users\agusp\source\repos\Studysphere\Representacion\obj\Debug\Representacion.AdministrarUsuarios.resources
+C:\Users\agusp\source\repos\Studysphere\Representacion\bin\Debug\Guna.UI.dll

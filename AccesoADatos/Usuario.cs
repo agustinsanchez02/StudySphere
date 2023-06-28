@@ -132,36 +132,7 @@ namespace AccesoDatos
                 }
             }
         }
-        public bool GuardarArchivo(string nombre, string extension, byte[] file)
-        {
-            using (var connection = GetConnection())
-            {
-                connection.Open();
-                using (var command = new SqlCommand())
-                {
-                    command.Connection = connection;
-                    command.CommandText = "INSERT INTO Archivos (Nombre,Extension, doc) VALUES (@nombre, @extension,@doc)";
-                    command.Parameters.AddWithValue("@nombre", nombre); //nombretxt.Text.Trim());
-                    command.Parameters.AddWithValue("@extension", extension); //Path.GetExtension(openFileDialog1.FileName));
-                    command.Parameters.AddWithValue("@doc", file);
-                    command.CommandType = CommandType.Text;
-                    int r = command.ExecuteNonQuery();
 
-                    if (r > 0)
-                    {
-                        return true;
-                        //MessageBox.Show("Archivo subido con exito.");
-                    }
-                    else
-                    {
-                        return false;
-                       // MessageBox.Show("No se ha podido Cambiar la contraseña.");
-                    }
-                }
-
-               
-            }
-        }
         public void ObtenetUsuarioCompleto(string user)
         {
             using (var connection = GetConnection())

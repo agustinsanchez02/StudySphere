@@ -41,7 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Caché\CacheArchivos.cs" />
     <Compile Include="Caché\CacheUsuario.cs" />
+    <Compile Include="Caché\ConexionSQL.cs" />
     <Compile Include="Caché\Precios.cs" />
     <Compile Include="Caché\Privilegios.cs" />
     <Compile Include="Caché\TipoCuenta.cs" />

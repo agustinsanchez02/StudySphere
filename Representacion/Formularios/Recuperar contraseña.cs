@@ -19,6 +19,8 @@ namespace Representacion
 {
     public partial class Form1 : Form
     {
+        public string Mail { get; }
+
         public Form1(string mail)
         {
             InitializeComponent();

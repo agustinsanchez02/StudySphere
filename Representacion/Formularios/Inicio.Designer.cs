@@ -51,8 +51,6 @@
             this.CerrarSesionBTN = new System.Windows.Forms.Button();
             this.SubirArchivoBTN = new System.Windows.Forms.Button();
             this.Buscarbtn = new System.Windows.Forms.Button();
-            this.IniciarSesionBTN = new System.Windows.Forms.Button();
-            this.RegistrarseBTN = new System.Windows.Forms.Button();
             this.lblnombre = new System.Windows.Forms.Label();
             this.lblmail = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
@@ -71,7 +69,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button1.Location = new System.Drawing.Point(993, 2);
+            this.button1.Location = new System.Drawing.Point(1241, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(25, 24);
             this.button1.TabIndex = 40;
@@ -146,7 +144,7 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(0, -4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(215, 623);
+            this.panel1.Size = new System.Drawing.Size(215, 740);
             this.panel1.TabIndex = 6;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
@@ -251,7 +249,7 @@
             this.Buscartxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Buscartxt.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Buscartxt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(169)))), ((int)(((byte)(181)))));
-            this.Buscartxt.Location = new System.Drawing.Point(280, 98);
+            this.Buscartxt.Location = new System.Drawing.Point(280, 123);
             this.Buscartxt.Name = "Buscartxt";
             this.Buscartxt.Size = new System.Drawing.Size(701, 26);
             this.Buscartxt.TabIndex = 44;
@@ -264,12 +262,13 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.ForeColor = System.Drawing.Color.DimGray;
-            this.label7.Location = new System.Drawing.Point(219, 71);
+            this.label7.Location = new System.Drawing.Point(221, 90);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(799, 13);
+            this.label7.Size = new System.Drawing.Size(1033, 13);
             this.label7.TabIndex = 45;
             this.label7.Text = "_________________________________________________________________________________" +
-    "___________________________________________________";
+    "________________________________________________________________________________" +
+    "__________";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
@@ -278,7 +277,7 @@
             this.lblTipoCuenta.AutoSize = true;
             this.lblTipoCuenta.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTipoCuenta.ForeColor = System.Drawing.Color.White;
-            this.lblTipoCuenta.Location = new System.Drawing.Point(307, 12);
+            this.lblTipoCuenta.Location = new System.Drawing.Point(328, 11);
             this.lblTipoCuenta.Name = "lblTipoCuenta";
             this.lblTipoCuenta.Size = new System.Drawing.Size(100, 14);
             this.lblTipoCuenta.TabIndex = 48;
@@ -290,9 +289,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox6.Image = global::Representacion.Properties.Resources.USuario__2___1_;
-            this.pictureBox6.Location = new System.Drawing.Point(236, 12);
+            this.pictureBox6.Location = new System.Drawing.Point(224, 12);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(65, 65);
+            this.pictureBox6.Size = new System.Drawing.Size(86, 75);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 47;
             this.pictureBox6.TabStop = false;
@@ -302,7 +301,7 @@
             this.CerrarSesionBTN.Font = new System.Drawing.Font("Verdana", 7F);
             this.CerrarSesionBTN.Image = global::Representacion.Properties.Resources.Salir;
             this.CerrarSesionBTN.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.CerrarSesionBTN.Location = new System.Drawing.Point(882, 33);
+            this.CerrarSesionBTN.Location = new System.Drawing.Point(1124, 33);
             this.CerrarSesionBTN.Name = "CerrarSesionBTN";
             this.CerrarSesionBTN.Size = new System.Drawing.Size(116, 35);
             this.CerrarSesionBTN.TabIndex = 46;
@@ -315,7 +314,7 @@
             this.SubirArchivoBTN.Font = new System.Drawing.Font("Verdana", 7F);
             this.SubirArchivoBTN.Image = global::Representacion.Properties.Resources.Añadir;
             this.SubirArchivoBTN.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.SubirArchivoBTN.Location = new System.Drawing.Point(749, 33);
+            this.SubirArchivoBTN.Location = new System.Drawing.Point(982, 32);
             this.SubirArchivoBTN.Name = "SubirArchivoBTN";
             this.SubirArchivoBTN.Size = new System.Drawing.Size(116, 35);
             this.SubirArchivoBTN.TabIndex = 46;
@@ -328,42 +327,18 @@
             this.Buscarbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.Buscarbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Buscarbtn.Image = global::Representacion.Properties.Resources.Buscar;
-            this.Buscarbtn.Location = new System.Drawing.Point(236, 91);
+            this.Buscarbtn.Location = new System.Drawing.Point(236, 116);
             this.Buscarbtn.Name = "Buscarbtn";
             this.Buscarbtn.Size = new System.Drawing.Size(38, 39);
             this.Buscarbtn.TabIndex = 43;
             this.Buscarbtn.UseVisualStyleBackColor = false;
-            // 
-            // IniciarSesionBTN
-            // 
-            this.IniciarSesionBTN.Font = new System.Drawing.Font("Verdana", 7F);
-            this.IniciarSesionBTN.Image = global::Representacion.Properties.Resources.Salir;
-            this.IniciarSesionBTN.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.IniciarSesionBTN.Location = new System.Drawing.Point(882, 33);
-            this.IniciarSesionBTN.Name = "IniciarSesionBTN";
-            this.IniciarSesionBTN.Size = new System.Drawing.Size(116, 35);
-            this.IniciarSesionBTN.TabIndex = 46;
-            this.IniciarSesionBTN.Text = "     Iniciar sesión";
-            this.IniciarSesionBTN.UseVisualStyleBackColor = true;
-            // 
-            // RegistrarseBTN
-            // 
-            this.RegistrarseBTN.Font = new System.Drawing.Font("Verdana", 7F);
-            this.RegistrarseBTN.Image = global::Representacion.Properties.Resources.Añadir;
-            this.RegistrarseBTN.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.RegistrarseBTN.Location = new System.Drawing.Point(749, 33);
-            this.RegistrarseBTN.Name = "RegistrarseBTN";
-            this.RegistrarseBTN.Size = new System.Drawing.Size(116, 35);
-            this.RegistrarseBTN.TabIndex = 46;
-            this.RegistrarseBTN.Text = "     Registrarse";
-            this.RegistrarseBTN.UseVisualStyleBackColor = true;
             // 
             // lblnombre
             // 
             this.lblnombre.AutoSize = true;
             this.lblnombre.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblnombre.ForeColor = System.Drawing.Color.White;
-            this.lblnombre.Location = new System.Drawing.Point(307, 33);
+            this.lblnombre.Location = new System.Drawing.Point(328, 32);
             this.lblnombre.Name = "lblnombre";
             this.lblnombre.Size = new System.Drawing.Size(56, 14);
             this.lblnombre.TabIndex = 48;
@@ -374,7 +349,7 @@
             this.lblmail.AutoSize = true;
             this.lblmail.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblmail.ForeColor = System.Drawing.Color.White;
-            this.lblmail.Location = new System.Drawing.Point(307, 54);
+            this.lblmail.Location = new System.Drawing.Point(328, 53);
             this.lblmail.Name = "lblmail";
             this.lblmail.Size = new System.Drawing.Size(40, 14);
             this.lblmail.TabIndex = 48;
@@ -384,7 +359,7 @@
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.linkLabel1.Location = new System.Drawing.Point(675, 54);
+            this.linkLabel1.Location = new System.Drawing.Point(328, 77);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(43, 13);
             this.linkLabel1.TabIndex = 49;
@@ -397,7 +372,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.ClientSize = new System.Drawing.Size(1019, 609);
+            this.ClientSize = new System.Drawing.Size(1267, 736);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.lblmail);
             this.Controls.Add(this.lblnombre);
@@ -410,8 +385,6 @@
             this.Controls.Add(this.Buscarbtn);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.IniciarSesionBTN);
-            this.Controls.Add(this.RegistrarseBTN);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Inicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -449,9 +422,7 @@
         private System.Windows.Forms.TextBox Buscartxt;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button SubirArchivoBTN;
-        private System.Windows.Forms.Button RegistrarseBTN;
         private System.Windows.Forms.Button CerrarSesionBTN;
-        private System.Windows.Forms.Button IniciarSesionBTN;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label lblTipoCuenta;

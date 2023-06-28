@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CapaSoporte.Caché
 {
-    public class Precios
+    public static class Precios
     {
         public static int precioA { get; set; }
         public static int precioM { get; set; }

@@ -7,6 +7,7 @@ using COMUN;
 using AccesoDatos;
 using CapaSoporte.Caché;
 
+
 namespace Dominios
 {
     public class ModeloUsuario
@@ -14,6 +15,7 @@ namespace Dominios
 
 
         Usuario user = new Usuario();
+
 
         //Atributos
         private int Id;
@@ -55,10 +57,7 @@ namespace Dominios
             return user.Login(usuario, pass);
 
         }
-        public bool GuardarArchivo(string nombre, string extension, byte[] file)
-        {
-            return user.GuardarArchivo(nombre, extension, file);
-        }
+        
 
         public void ObtenerUsuarioCompleto(string usuario)
         {
@@ -69,6 +68,7 @@ namespace Dominios
         {
             return user.ObtenerUsuario(Mail);
         }
+
 
         public void obtenerprecio(int precioA, int precioM)
         {

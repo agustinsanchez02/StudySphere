@@ -19,6 +19,7 @@ using System.Reflection;
 using System.Runtime.InteropServices;
 using Dominios;
 using Representacion.Formularios;
+using CapaSoporte.Caché;
 
 namespace Representacion
 {
@@ -97,9 +98,18 @@ namespace Representacion
                         this.Hide();
                         Bienvenida bienvenida = new Bienvenida();
                         bienvenida.ShowDialog();
-                        Inicio inicio = new Inicio();
-                        inicio.Show();
-                        inicio.FormClosed += CerrarSesion;
+                        if (CacheUsuario.Privilegios == 0)
+                        {
+                            VistaAdministrador vistaAdministrador = new VistaAdministrador();
+                            vistaAdministrador.Show();
+                        }
+                        else
+                        {
+                            Inicio inicio = new Inicio();
+                            inicio.Show();
+                            inicio.FormClosed += CerrarSesion;
+                        }
+
                     }
                     else
                     {
@@ -121,7 +131,7 @@ namespace Representacion
 
         private void Cerrar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void iniciar_sesion_MouseDown(object sender, MouseEventArgs e)

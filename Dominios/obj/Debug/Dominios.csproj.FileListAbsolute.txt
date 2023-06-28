@@ -13,9 +13,4 @@ C:\Users\agusp\source\repos\Studysphere\Dominios\obj\Debug\Dominios.pdb
 C:\Users\agusp\source\repos\Studysphere\Dominios\bin\Debug\CapaSoporte.dll
 C:\Users\agusp\source\repos\Studysphere\Dominios\bin\Debug\CapaSoporte.pdb
 C:\Users\agusp\source\repos\Studysphere\Dominios\bin\Debug\Dominios.dll.config
-C:\Users\agusp\source\repos\Studysphere\Dominios\bin\Debug\MercadoPago.dll
-C:\Users\agusp\source\repos\Studysphere\Dominios\bin\Debug\Newtonsoft.Json.dll
 C:\Users\agusp\source\repos\Studysphere\Dominios\bin\Debug\AccesoADatos.dll.config
-C:\Users\agusp\source\repos\Studysphere\Dominios\bin\Debug\MercadoPago.pdb
-C:\Users\agusp\source\repos\Studysphere\Dominios\bin\Debug\MercadoPago.xml
-C:\Users\agusp\source\repos\Studysphere\Dominios\bin\Debug\Newtonsoft.Json.xml

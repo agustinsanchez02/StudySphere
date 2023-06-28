@@ -106,8 +106,9 @@ namespace Representacion
         private void SubirArchivoBTN_Click(object sender, EventArgs e)
         {
             Subir_Archivo subir = new Subir_Archivo();
-            subir.Show();
             this.Hide();
+            subir.ShowDialog();
+            this.Show();
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
