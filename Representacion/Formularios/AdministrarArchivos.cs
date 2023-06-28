@@ -74,7 +74,8 @@ namespace Representacion
                 lista = cache.FiltroDocumentos();
 
                 foreach(CacheArchivos item in lista)
-                {
+                { 
+
                     string direccion = AppDomain.CurrentDomain.BaseDirectory;
                     string carpeta = direccion + "/temp/";
                     string ubicacioncompleta = carpeta + item.Extension;
