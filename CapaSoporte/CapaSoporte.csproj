@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Caché\CacheArchivos.cs" />
+    <Compile Include="Caché\CacheEditarUsuario.cs" />
     <Compile Include="Caché\CacheUsuario.cs" />
     <Compile Include="Caché\ConexionSQL.cs" />
     <Compile Include="Caché\Precios.cs" />
