@@ -94,7 +94,7 @@ namespace Representacion
         private void CargarDatosUsuario()
         {
 
-                    nombretxt.Text = dgv.Rows[dgv.CurrentRow.Index].Cells[0].Value.ToString();
+                    
                     /*apellidotxt.Text = dgv.SelectedRows[3].ToString();
                     usuariotxt.Text = dgv.SelectedRows[1].ToString();
                     emailtxt.Text = dgv.SelectedRows[4].ToString();  */         

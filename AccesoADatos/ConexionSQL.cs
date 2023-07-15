@@ -12,7 +12,7 @@ namespace AccesoDatos
         private readonly string ConnectionString;
         public ConexionSQL()
         {
-            ConnectionString = "Data Source = DESKTOP-Q3EK3GI\\SQLEXPRESS; Initial Catalog = StudySphere; Integrated Security = True";
+            ConnectionString = "Data Source = DESKTOP-J6FH9OJ\\SQLEXPRESS; Initial Catalog = StudySphere; Integrated Security = True";
         }
         protected SqlConnection GetConnection()
         {

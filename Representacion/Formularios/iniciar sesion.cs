@@ -182,6 +182,7 @@ namespace Representacion
             registro.Show();
 
         }
+
     }
 }
 
