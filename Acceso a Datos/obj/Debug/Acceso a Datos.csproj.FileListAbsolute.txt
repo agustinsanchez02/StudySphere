@@ -1,0 +1,9 @@
+C:\Users\agusp\source\repos\StudySphere\Acceso a Datos\bin\Debug\Acceso a Datos.dll
+C:\Users\agusp\source\repos\StudySphere\Acceso a Datos\bin\Debug\Acceso a Datos.pdb
+C:\Users\agusp\source\repos\StudySphere\Acceso a Datos\bin\Debug\Modelo.dll
+C:\Users\agusp\source\repos\StudySphere\Acceso a Datos\bin\Debug\Modelo.pdb
+C:\Users\agusp\source\repos\StudySphere\Acceso a Datos\obj\Debug\Acceso a Datos.csproj.AssemblyReference.cache
+C:\Users\agusp\source\repos\StudySphere\Acceso a Datos\obj\Debug\Acceso a Datos.csproj.CoreCompileInputs.cache
+C:\Users\agusp\source\repos\StudySphere\Acceso a Datos\obj\Debug\Acceso a Datos.csproj.CopyComplete
+C:\Users\agusp\source\repos\StudySphere\Acceso a Datos\obj\Debug\Acceso a Datos.dll
+C:\Users\agusp\source\repos\StudySphere\Acceso a Datos\obj\Debug\Acceso a Datos.pdb
