@@ -20,7 +20,7 @@ namespace Vista
         Controladora.ContextoUsuario ContextoUsuarios = new Controladora.ContextoUsuario();
         Controladora.TipoCuenta tipoCuenta = new Controladora.TipoCuenta();
         Controladora.ContextoArchivo contextoArchivo = new Controladora.ContextoArchivo();
-        Controladora.ContextoArchivo Archivo = new Controladora.ContextoArchivo();
+        Controladora.ContextoAuditoria contextoAuditoria = new Controladora.ContextoAuditoria();
         int visualizar = 0;
 
         public Inicio()
@@ -31,14 +31,7 @@ namespace Vista
         private extern static void ReleaseCapture();
         [DllImport("User32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
-        private void CerrarSesion_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Estas seguro que deseas cerrar la sesión?", "Precaución",
-                MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-            {
-                this.Close();
-            }
-        }
+       
         private void Inicio_Load(object sender, EventArgs e)
         {
             CargarDatosUsuario();
@@ -56,6 +49,8 @@ namespace Vista
             if (MessageBox.Show("Estas seguro que deseas salir de la aplicación?", "Precaución",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
+                string descripcion = "El usuario " + ContextoUsuarios.ObtenerUsuarioActual() + " ha cerrado sesión forzadamente a las " + DateTime.Now.Hour + ":" + DateTime.Now.Minute + ":" + DateTime.Now.Second;
+                contextoAuditoria.AuditoriaLogOut(ContextoUsuarios.ObtenerUsuarioActual().ToString(), ContextoUsuarios.ObtenerEmailActual().ToString(), descripcion);
                 Application.Exit();
             }
         }
@@ -78,16 +73,13 @@ namespace Vista
             }
         }
 
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void CerrarSesionBTN_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Estas seguro que deseas cerrar la sesión?", "Precaución",
                MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
+                string descripcion = "El usuario " + ContextoUsuarios.ObtenerUsuarioActual() + " ha cerrado sesión a las " + DateTime.Now.Hour + ":" + DateTime.Now.Minute + ":" + DateTime.Now.Second ;
+                contextoAuditoria.AuditoriaLogOut(ContextoUsuarios.ObtenerUsuarioActual().ToString(), ContextoUsuarios.ObtenerEmailActual().ToString(), descripcion);
                 iniciar_sesion iniciar_Sesion = new iniciar_sesion();
                 this.Hide();
                 iniciar_Sesion.Show();
@@ -119,16 +111,6 @@ namespace Vista
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void verArchivobtn_Click(object sender, EventArgs e)

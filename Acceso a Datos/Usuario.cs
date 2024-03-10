@@ -10,7 +10,7 @@ using MODELO.Entidades;
 
 namespace Acceso_a_Datos
 {
-    public class Usuario : SQL
+    public class Usuario 
     {
         public Usuario(int id, string user, string contrasena, string nombre, string apellido, string email, string telefono,int permisos) => usuario = new MODELO.Entidades.Usuario(id, user, contrasena, nombre, apellido, email, telefono, permisos);
         public Usuario() => usuario = new MODELO.Entidades.Usuario();
@@ -21,12 +21,12 @@ namespace Acceso_a_Datos
         #region Editar Perfil
         public void editarperfil(int Id, string Usuario, string Nombre, string Apellido, string Email, string Telefono, int permisos)
         {
-            using (var connection = GetConnection())
+            using (SqlConnection connection = new SqlConnection(SQL.Instance.Conexion))
             {
-                connection.Open();
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
+                    connection.Open();
                     command.CommandText = "update Usuarios set Usuario=@usuario, Nombre=@nombre, " +
                                            " Apellido=@apellido, Email=@email, Telefono=@telefono, Permisos=@permisos  Where IDusuario =@id ";
                     command.Parameters.AddWithValue("@usuario", Usuario);
@@ -39,17 +39,18 @@ namespace Acceso_a_Datos
                     command.Parameters.AddWithValue("@id", Id);
                     command.CommandType = CommandType.Text;
                     command.ExecuteNonQuery();
+                    connection.Close();
                 }
             }
         }
         public void editarPerfilyPass(int Id, string Usuario, string Nombre, string Apellido, string Email, string Telefono, string Contraseña)
         {
-            using (var connection = GetConnection())
+            using (SqlConnection connection = new SqlConnection(SQL.Instance.Conexion))
             {
-                connection.Open();
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
+                    connection.Open();
                     command.CommandText = "update Usuarios set Usuario=@usuario, Nombre=@nombre, " +
                                            " Apellido=@apellido, Email=@email, Telefono=@telefono, Contraseña=@contraseña Where IDusuario =@id ";
                     command.Parameters.AddWithValue("@usuario", Usuario);
@@ -61,6 +62,7 @@ namespace Acceso_a_Datos
                     command.Parameters.AddWithValue("@id", Id);
                     command.CommandType = CommandType.Text;
                     command.ExecuteNonQuery();
+                    connection.Close();
                 }
             }
         }
@@ -69,12 +71,12 @@ namespace Acceso_a_Datos
         #region Agregar Usuario
         public string AgregarUsuario(string Usuario,string Contraseña, string Nombre, string Apellido, string email, string Telefono )
         {
-            using (var connection = GetConnection())
+            using (SqlConnection connection = new SqlConnection(SQL.Instance.Conexion))
             {
-                connection.Open();
                 using(var command = new SqlCommand())
                 {
                     command.Connection = connection;
+                    connection.Open();
                     command.CommandText = "INSERT INTO Usuarios VALUES('" + Usuario + "', '" + Contraseña + "', '" + Nombre + "', '" + Apellido + "', '" + email + "', '" + Telefono + "' , 1)";
                     command.CommandType = CommandType.Text;
                     int r = command.ExecuteNonQuery();
@@ -85,10 +87,12 @@ namespace Acceso_a_Datos
                         MailMessage correo = Mail.Mail_Registro(email, Nombre, Apellido, Usuario);
                         cliente.Send(correo);
                         string mensaje = string.Empty;
+                        connection.Close();
                         return "Usuario registrado exitosamente";
                     }
                     else
                     {
+                        connection.Close();
                         return "No se ha podido registrar el usuario.";
                     }
                 }
@@ -99,12 +103,12 @@ namespace Acceso_a_Datos
         #region Login
         public string Login(string user, string password)
         {
-            using (var connection = GetConnection())
+            using (SqlConnection connection = new SqlConnection(SQL.Instance.Conexion))
             {
-                connection.Open();
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
+                    connection.Open();
                     command.CommandText = "select * from Usuarios where Usuario=@user and Contraseña=@password";
                     command.Parameters.AddWithValue("@user", user);
                     command.Parameters.AddWithValue("@password", MetodosComunes.Encrypt.GetSHA256(password));
@@ -123,10 +127,12 @@ namespace Acceso_a_Datos
                             CacheUsuario.Telefono = reader.GetString(6);
                             CacheUsuario.Permisos = reader.GetInt32(7);
                         }
+                        connection.Close();
                         return "Agregado";
                     }
                     else
                     {
+                        connection.Close();
                         return "Error";
                     }
                 }
@@ -144,12 +150,12 @@ namespace Acceso_a_Datos
         }
         public virtual bool ObtenerUsuarioMail(string Mail)
         {
-            using (var connection = GetConnection())
+            using (SqlConnection connection = new SqlConnection(SQL.Instance.Conexion))
             {
-                connection.Open();
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
+                    connection.Open();
                     command.CommandText = "select * from Usuarios where Email=@email";
                     command.Parameters.AddWithValue("@email", Mail);
                     command.CommandType = CommandType.Text;
@@ -161,10 +167,12 @@ namespace Acceso_a_Datos
                             usuario.User = reader.GetString(1);
                             usuario.Email = reader.GetString(5);
                         }
+                        connection.Close();
                         return true;
                     }
                     else
                     {
+                        connection.Close();
                         return false;
                     }
                 }
@@ -175,12 +183,12 @@ namespace Acceso_a_Datos
         #region Permisos
         public void Permisos(int privilegios, string user)
         {
-            using (var connection = GetConnection())
+            using (SqlConnection connection = new SqlConnection(SQL.Instance.Conexion))
             {
-                connection.Open();
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
+                    connection.Open();
                     command.CommandText = "update Usuarios set Permisos = '"+ privilegios+"' where Usuario = '"+user +"'";
                     command.CommandType = CommandType.Text;
                     SqlDataReader reader = command.ExecuteReader();
@@ -198,6 +206,7 @@ namespace Acceso_a_Datos
 
                         }
                     }
+                    connection.Close();
                 }
             }
         }
@@ -206,12 +215,12 @@ namespace Acceso_a_Datos
         #region Obtener Usuario Completo
         public void ObtenetUsuarioCompleto(string user)
         {
-            using (var connection = GetConnection())
+            using (SqlConnection connection = new SqlConnection(SQL.Instance.Conexion))
             {
-                connection.Open();
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
+                    connection.Open();
                     command.CommandText = "select * from Usuarios where Usuario= '"+ user + "'";
                     command.CommandType = CommandType.Text;
                     SqlDataReader reader = command.ExecuteReader();
@@ -230,6 +239,7 @@ namespace Acceso_a_Datos
 
                         }
                     }
+                    connection.Close();
                 }
             }
         }
@@ -246,12 +256,12 @@ namespace Acceso_a_Datos
         #region Cambiar Contraseña
         public string CambiarContraseña( string pass, string mail)
         {
-            using (var connection = GetConnection())
+            using (SqlConnection connection = new SqlConnection(SQL.Instance.Conexion))
             {
-                connection.Open();
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
+                    connection.Open();
                     command.CommandText = "UPDATE Usuarios SET Contraseña =  '" + pass + "' WHERE Email = '" + mail + "'";
                     command.CommandType = CommandType.Text;
                     int r = command.ExecuteNonQuery();
@@ -261,10 +271,12 @@ namespace Acceso_a_Datos
                         MailMessage correo = Mail.Mail_cambiopass(mail);
                         cliente.Send(correo);
                         string mensaje = string.Empty;
+                        connection.Close();
                         return "Contraseña cambiada exitosamente";
                     }
                     else
                     {
+                        connection.Close();
                         return "Error";
                     }
                 }
@@ -274,12 +286,12 @@ namespace Acceso_a_Datos
         #region Editar Perfil
         public string EditarPerfil(int id, string user, string pass, string nombre, string apellido, string email)
         {
-            using (var connection = GetConnection())
+            using (SqlConnection connection = new SqlConnection(SQL.Instance.Conexion))
             {
-                connection.Open();
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
+                    connection.Open();
                     command.CommandText = "update Usuarios set Usuario=@usuario, Contraseña=@contraseña, Nombre=@nombre, " +
                                            " Apellido=@apellido, Email=@email, Where IDusuario =@id ";
                     command.Parameters.AddWithValue("@usuario", user);
@@ -290,6 +302,7 @@ namespace Acceso_a_Datos
                     command.Parameters.AddWithValue("@id", id);
                     command.CommandType = CommandType.Text;
                     command.ExecuteNonQuery();
+                    connection.Close();
                     return "Usuario editado exitosamente";
                 }
             }
@@ -298,16 +311,17 @@ namespace Acceso_a_Datos
         #region Eliminar Usuario
         public bool EliminarUsuario(int id)
         {
-            using (var connection = GetConnection())
+            using (SqlConnection connection = new SqlConnection(SQL.Instance.Conexion))
             {
-                connection.Open();
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
+                    connection.Open();
                     command.CommandText = "delete from Usuarios where IDusuario = @id";
                     command.Parameters.AddWithValue("@id", id);
                     command.CommandType = CommandType.Text;
                     command.ExecuteNonQuery();
+                    connection.Close();
                     return true;
                 }
             }
@@ -317,12 +331,12 @@ namespace Acceso_a_Datos
         public DataTable ListarUsuario()
         {
             DataTable dataTable = new DataTable();
-            using (var connection = GetConnection())
+            using (SqlConnection connection = new SqlConnection(SQL.Instance.Conexion))
             {
-                connection.Open();
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
+                    connection.Open();
                     command.CommandText = "select IDusuario, Usuario, Nombre, Apellido, Email, Telefono, Permisos from Usuarios";
                     command.CommandType = CommandType.Text;
                     SqlDataReader resultado = command.ExecuteReader();
@@ -330,6 +344,7 @@ namespace Acceso_a_Datos
                     {
                         dataTable.Load(resultado);
                     }
+                    connection.Close();
                     return dataTable;
                 }
             }
@@ -340,12 +355,12 @@ namespace Acceso_a_Datos
         public DataTable UsuarioPorId()
         {
             DataTable table = new DataTable();
-            using (var connection = GetConnection())
+            using (SqlConnection connection = new SqlConnection(SQL.Instance.Conexion))
             {
-                connection.Open();
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
+                    connection.Open();
                     command.CommandText = "Select * from Usuarios where IDusuario = @id";
                     command.Parameters.AddWithValue("@id", usuario.Idusuario);
                     command.CommandType = CommandType.Text;
@@ -353,6 +368,7 @@ namespace Acceso_a_Datos
                     table.Load(lector);
                     lector.Close();
                 }
+                connection.Close();
                 return table;
             }
         }

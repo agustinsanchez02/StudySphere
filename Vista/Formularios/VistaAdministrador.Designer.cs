@@ -156,9 +156,9 @@
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(119, 400);
+            this.button2.Location = new System.Drawing.Point(137, 402);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(117, 57);
+            this.button2.Size = new System.Drawing.Size(116, 57);
             this.button2.TabIndex = 55;
             this.button2.Text = "Salir";
             this.button2.UseVisualStyleBackColor = false;

@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Acceso_a_Datos
 {
-    public class Archivo: SQL
+    public class Archivo
     {
         #region Atributos
         public virtual int? Idarchivo { get; set; }
@@ -29,13 +29,12 @@ namespace Acceso_a_Datos
 
         public bool GuardarArchivo(string nombre,long tamaño ,string extension, byte[] file, int IDUsuario, string Materia, string Carrera)
         {
-            using (var connection = GetConnection())
+            using (SqlConnection connection = new SqlConnection(SQL.Instance.Conexion))
             {
-
-                connection.Open();
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
+                    connection.Open();
                     command.CommandText = "INSERT INTO Archivo (Nombre, Tamaño, FechaCreacion ,Extension, Documento, IDUsuario, Materia, Carrera) VALUES ('" + nombre+ "','" + tamaño + "', GETDATE(),'" + extension +"', @file ,'" + IDUsuario + "','" + Materia + "','" +Carrera + "')";
                     command.Parameters.AddWithValue("@file", file);
                     command.CommandType = CommandType.Text;
@@ -43,10 +42,12 @@ namespace Acceso_a_Datos
 
                     if (r > 0)
                     {
+                        connection.Close();
                         return true;
                     }
                     else
                     {
+                        connection.Close();
                         return false;
                     }
                 }
@@ -55,12 +56,13 @@ namespace Acceso_a_Datos
         public DataTable FiltroArchivo(string texto)
         {
             DataTable dataTable = new DataTable();
-            using (var connection = GetConnection())
+            using (SqlConnection connection = new SqlConnection(SQL.Instance.Conexion))
             {
-                connection.Open();
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
+                    connection.Open();
+
                     command.CommandText = "select IDArchivo, Archivo.Nombre, extension ,Tamaño, Materia, Carrera, FechaCreacion, Archivo.IDUsuario, Usuarios.Nombre from Archivo JOIN Usuarios ON Archivo.IDUsuario = Usuarios.IDUsuario where Materia = '"+ texto+"' OR Carrera = '"+ texto+"'";
                     command.CommandType = CommandType.Text;
                     SqlDataReader resultado = command.ExecuteReader();
@@ -76,12 +78,12 @@ namespace Acceso_a_Datos
         public DataTable ListarDocs()
         {
             DataTable dataTable = new DataTable();
-            using (var connection = GetConnection())
+            using (SqlConnection connection = new SqlConnection(SQL.Instance.Conexion))
             {
-                connection.Open();
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
+                    connection.Open();
                     command.CommandText = "select IDArchivo, Archivo.Nombre, extension ,Tamaño, Materia, Carrera, FechaCreacion, Archivo.IDUsuario, Usuarios.Nombre from Archivo JOIN Usuarios ON Archivo.IDUsuario = Usuarios.IDUsuario";
                     command.CommandType = CommandType.Text;
                     SqlDataReader resultado = command.ExecuteReader();
@@ -89,6 +91,7 @@ namespace Acceso_a_Datos
                     {
                         dataTable.Load(resultado);
                     }
+                    connection.Close();
                     return dataTable;
                 }
             }
@@ -97,12 +100,12 @@ namespace Acceso_a_Datos
         public DataTable ArchivoPorId(int id)
         {
             DataTable table = new DataTable();
-            using (var connection = GetConnection())
+            using (SqlConnection connection = new SqlConnection(SQL.Instance.Conexion))
             {
-                connection.Open();
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
+                    connection.Open();
                     command.CommandText = "Select * from Archivo where IDArchivo = @id";
                     command.Parameters.AddWithValue("@id", id);
                     command.CommandType = CommandType.Text;
@@ -110,6 +113,7 @@ namespace Acceso_a_Datos
                     table.Load(lector);
                     lector.Close();
                 }
+                connection.Close();
                 return table;
             }
         }
@@ -138,17 +142,18 @@ namespace Acceso_a_Datos
 
         public bool BorrarArchivo(int id)
         {
-            using (var connection = GetConnection())
+            using (SqlConnection connection = new SqlConnection(SQL.Instance.Conexion))
             {
-                connection.Open();
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
+                    connection.Open();
                     command.CommandText = "delete from Archivo where IDArchivo = @id";
                     command.Parameters.AddWithValue("@id", id);
                     command.CommandType = CommandType.Text;
                     command.ExecuteNonQuery();
                 }
+                connection.Close();
                 return true;
             }
         }

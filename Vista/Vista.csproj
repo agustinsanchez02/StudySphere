@@ -513,6 +513,9 @@
     <EmbeddedResource Include="Formularios\PerfildeUsuario.resx">
       <DependentUpon>PerfildeUsuario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ReportesAuditoria.resx">
+      <DependentUpon>ReportesAuditoria.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

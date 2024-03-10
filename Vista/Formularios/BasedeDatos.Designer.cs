@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.Bkpbtn = new System.Windows.Forms.Button();
             this.Explorar = new System.Windows.Forms.Button();
             this.Rutatxt = new System.Windows.Forms.TextBox();
@@ -53,6 +53,16 @@
             this.panel1.Size = new System.Drawing.Size(812, 91);
             this.panel1.TabIndex = 60;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Vista.Properties.Resources.pictureBox1_Image;
+            this.pictureBox2.Location = new System.Drawing.Point(-24, -121);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(273, 381);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -64,21 +74,11 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "BASE DE DATOS";
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Vista.Properties.Resources.pictureBox1_Image;
-            this.pictureBox2.Location = new System.Drawing.Point(-24, -121);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(273, 381);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            // 
             // Bkpbtn
             // 
             this.Bkpbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.Bkpbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Bkpbtn.Location = new System.Drawing.Point(196, 150);
+            this.Bkpbtn.Location = new System.Drawing.Point(160, 152);
             this.Bkpbtn.Name = "Bkpbtn";
             this.Bkpbtn.Size = new System.Drawing.Size(91, 31);
             this.Bkpbtn.TabIndex = 61;
@@ -89,7 +89,7 @@
             // Explorar
             // 
             this.Explorar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Explorar.Location = new System.Drawing.Point(492, 230);
+            this.Explorar.Location = new System.Drawing.Point(572, 233);
             this.Explorar.Name = "Explorar";
             this.Explorar.Size = new System.Drawing.Size(28, 20);
             this.Explorar.TabIndex = 63;
@@ -99,16 +99,16 @@
             // 
             // Rutatxt
             // 
-            this.Rutatxt.Location = new System.Drawing.Point(100, 231);
+            this.Rutatxt.Location = new System.Drawing.Point(64, 233);
             this.Rutatxt.Name = "Rutatxt";
             this.Rutatxt.ReadOnly = true;
-            this.Rutatxt.Size = new System.Drawing.Size(386, 20);
+            this.Rutatxt.Size = new System.Drawing.Size(502, 20);
             this.Rutatxt.TabIndex = 62;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(53, 234);
+            this.label2.Location = new System.Drawing.Point(17, 236);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(30, 13);
             this.label2.TabIndex = 64;
@@ -117,7 +117,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(53, 159);
+            this.label3.Location = new System.Drawing.Point(17, 161);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(90, 13);
             this.label3.TabIndex = 65;
@@ -127,7 +127,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Location = new System.Drawing.Point(526, 230);
+            this.button1.Location = new System.Drawing.Point(511, 272);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(89, 25);
             this.button1.TabIndex = 66;

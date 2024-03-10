@@ -56,6 +56,7 @@ namespace Vista
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(805, 107);
             this.panel1.TabIndex = 1;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
             // label1
             // 
@@ -98,6 +99,7 @@ namespace Vista
             this.Agregar.TabIndex = 54;
             this.Agregar.Text = "Agregar";
             this.Agregar.UseVisualStyleBackColor = false;
+            this.Agregar.Click += new System.EventHandler(this.Agregar_Click);
             // 
             // Eliminar
             // 
@@ -110,6 +112,7 @@ namespace Vista
             this.Eliminar.TabIndex = 56;
             this.Eliminar.Text = "Eliminar";
             this.Eliminar.UseVisualStyleBackColor = false;
+            this.Eliminar.Click += new System.EventHandler(this.Eliminar_Click);
             // 
             // VerArchivo
             // 
@@ -122,6 +125,7 @@ namespace Vista
             this.VerArchivo.TabIndex = 57;
             this.VerArchivo.Text = "Ver archivo";
             this.VerArchivo.UseVisualStyleBackColor = false;
+            this.VerArchivo.Click += new System.EventHandler(this.VerArchivo_Click);
             // 
             // button2
             // 
@@ -134,6 +138,7 @@ namespace Vista
             this.button2.TabIndex = 56;
             this.button2.Text = "Salir";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // dgv
             // 
@@ -160,7 +165,8 @@ namespace Vista
             this.Name = "AdministrarArchivos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdministrarArchivos";
-            this.Load += new System.EventHandler(this.AdministrarArchivos_Load_1);
+            this.Load += new System.EventHandler(this.AdministrarArchivos_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.AdministrarArchivos_MouseDown);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

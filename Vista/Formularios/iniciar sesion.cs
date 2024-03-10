@@ -21,7 +21,8 @@ namespace Vista
 {
     public partial class iniciar_sesion : Form
     {
-        Controladora.ContextoUsuario ContextoUsuario = new Controladora.ContextoUsuario();
+        ContextoAuditoria contextoAuditoria = new ContextoAuditoria();  
+        ContextoUsuario ContextoUsuario = new ContextoUsuario();
         public iniciar_sesion()
         {
             InitializeComponent();
@@ -129,14 +130,6 @@ namespace Vista
             this.Hide();
         }
 
-        private void bunifuFlatButton2_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Registro registro = new Registro();
-            registro.Show();
-
-        }
-
         private void Registrarsebtn_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -144,7 +137,7 @@ namespace Vista
             registro.Show();
         }
 
-        private void IniciarSesionbtn_Click_1(object sender, EventArgs e)
+        private void IniciarSesionbtn_Click(object sender, EventArgs e)
         {
             if (Usuario.Text != "Usuario/Mail")
             {
@@ -154,6 +147,8 @@ namespace Vista
                     var loginvalido = contextousuario.iniciosesion(Usuario.Text, Contraseña.Text);
                     if (loginvalido == "Agregado")
                     {
+                        string detalle = "el usuaio "+Usuario.Text+" ha iniciado sesion a las "+ DateTime.Now.Hour + ":"+ DateTime.Now.Minute+":" + DateTime.Now.Second;
+                        contextoAuditoria.AuditorialogIn(contextousuario.ObtenerUsuarioActual().ToString(), contextousuario.ObtenerEmailActual().ToString(), detalle);
                         this.Hide();
                         Bienvenida bienvenida = new Bienvenida();
                         bienvenida.ShowDialog();
@@ -186,6 +181,11 @@ namespace Vista
             {
                 msgError("Por favor Ingresa un Usuario o Mail.");
             }
+        }
+
+        private void iniciar_sesion_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

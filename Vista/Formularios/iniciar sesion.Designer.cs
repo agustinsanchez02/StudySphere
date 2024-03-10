@@ -32,216 +32,208 @@ namespace Vista
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(iniciar_sesion));
-            Contraseña = new TextBox();
-            Usuario = new TextBox();
-            label1 = new Label();
-            linkLabel1 = new LinkLabel();
-            Cerrar = new Button();
-            lblErrorMensaje = new Label();
-            Ojo = new Button();
-            pictureBox1 = new PictureBox();
-            pctCorreo = new PictureBox();
-            pctContraseña = new PictureBox();
-            IniciarSesionbtn = new Button();
-            Registrarsebtn = new Button();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pctCorreo).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pctContraseña).BeginInit();
-            SuspendLayout();
+            this.Contraseña = new System.Windows.Forms.TextBox();
+            this.Usuario = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.Cerrar = new System.Windows.Forms.Button();
+            this.IniciarSesionbtn = new System.Windows.Forms.Button();
+            this.Registrarsebtn = new System.Windows.Forms.Button();
+            this.lblErrorMensaje = new System.Windows.Forms.Label();
+            this.Ojo = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pctCorreo = new System.Windows.Forms.PictureBox();
+            this.pctContraseña = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctCorreo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctContraseña)).BeginInit();
+            this.SuspendLayout();
             // 
             // Contraseña
             // 
-            Contraseña.BackColor = Color.FromArgb(41, 41, 41);
-            Contraseña.BorderStyle = BorderStyle.None;
-            Contraseña.Font = new Font("Verdana", 21F, FontStyle.Regular, GraphicsUnit.Point);
-            Contraseña.ForeColor = Color.Gray;
-            Contraseña.Location = new Point(415, 273);
-            Contraseña.Margin = new Padding(4, 3, 4, 3);
-            Contraseña.Name = "Contraseña";
-            Contraseña.Size = new Size(441, 35);
-            Contraseña.TabIndex = 2;
-            Contraseña.Text = "Contraseña";
-            Contraseña.Enter += Contraseña_Enter;
-            Contraseña.Leave += Contraseña_Leave;
+            this.Contraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.Contraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Contraseña.Font = new System.Drawing.Font("Verdana", 21F);
+            this.Contraseña.ForeColor = System.Drawing.Color.Gray;
+            this.Contraseña.Location = new System.Drawing.Point(356, 237);
+            this.Contraseña.Name = "Contraseña";
+            this.Contraseña.Size = new System.Drawing.Size(378, 35);
+            this.Contraseña.TabIndex = 2;
+            this.Contraseña.Text = "Contraseña";
+            this.Contraseña.Enter += new System.EventHandler(this.Contraseña_Enter);
+            this.Contraseña.Leave += new System.EventHandler(this.Contraseña_Leave);
             // 
             // Usuario
             // 
-            Usuario.BackColor = Color.FromArgb(41, 41, 41);
-            Usuario.BorderStyle = BorderStyle.None;
-            Usuario.Font = new Font("Verdana", 21F, FontStyle.Regular, GraphicsUnit.Point);
-            Usuario.ForeColor = Color.Gray;
-            Usuario.Location = new Point(416, 197);
-            Usuario.Margin = new Padding(4, 3, 4, 3);
-            Usuario.Name = "Usuario";
-            Usuario.Size = new Size(440, 35);
-            Usuario.TabIndex = 1;
-            Usuario.Text = "Usuario/Mail";
-            Usuario.Enter += Usuario_Enter;
-            Usuario.Leave += Usuario_Leave;
+            this.Usuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.Usuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Usuario.Font = new System.Drawing.Font("Verdana", 21F);
+            this.Usuario.ForeColor = System.Drawing.Color.Gray;
+            this.Usuario.Location = new System.Drawing.Point(357, 171);
+            this.Usuario.Name = "Usuario";
+            this.Usuario.Size = new System.Drawing.Size(377, 35);
+            this.Usuario.TabIndex = 1;
+            this.Usuario.Text = "Usuario/Mail";
+            this.Usuario.Enter += new System.EventHandler(this.Usuario_Enter);
+            this.Usuario.Leave += new System.EventHandler(this.Usuario_Leave);
             // 
             // label1
             // 
-            label1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            label1.AutoSize = true;
-            label1.Font = new Font("Verdana", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = Color.White;
-            label1.Location = new Point(482, 91);
-            label1.Margin = new Padding(4, 0, 4, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(236, 23);
-            label1.TabIndex = 16;
-            label1.Text = "INICIE SESIÓN AQUÍ";
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(413, 79);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(236, 23);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "INICIE SESIÓN AQUÍ";
             // 
             // linkLabel1
             // 
-            linkLabel1.ActiveLinkColor = Color.FromArgb(255, 255, 192);
-            linkLabel1.AutoSize = true;
-            linkLabel1.Cursor = Cursors.Hand;
-            linkLabel1.Font = new Font("Verdana", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            linkLabel1.ForeColor = Color.White;
-            linkLabel1.LinkColor = Color.White;
-            linkLabel1.Location = new Point(541, 469);
-            linkLabel1.Margin = new Padding(4, 0, 4, 0);
-            linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(191, 17);
-            linkLabel1.TabIndex = 5;
-            linkLabel1.TabStop = true;
-            linkLabel1.Text = "¿Olvidaste tu contraseña?";
-            linkLabel1.VisitedLinkColor = Color.Silver;
-            linkLabel1.LinkClicked += linkLabel1_LinkClicked;
+            this.linkLabel1.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.linkLabel1.Font = new System.Drawing.Font("Verdana", 10F);
+            this.linkLabel1.ForeColor = System.Drawing.Color.White;
+            this.linkLabel1.LinkColor = System.Drawing.Color.White;
+            this.linkLabel1.Location = new System.Drawing.Point(464, 406);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(191, 17);
+            this.linkLabel1.TabIndex = 5;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "¿Olvidaste tu contraseña?";
+            this.linkLabel1.VisitedLinkColor = System.Drawing.Color.Silver;
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // Cerrar
             // 
-            Cerrar.BackColor = Color.FromArgb(41, 41, 41);
-            Cerrar.BackgroundImageLayout = ImageLayout.Center;
-            Cerrar.FlatStyle = FlatStyle.Popup;
-            Cerrar.ForeColor = SystemColors.ButtonHighlight;
-            Cerrar.ImeMode = ImeMode.NoControl;
-            Cerrar.Location = new Point(882, 2);
-            Cerrar.Margin = new Padding(4, 3, 4, 3);
-            Cerrar.Name = "Cerrar";
-            Cerrar.Size = new Size(29, 28);
-            Cerrar.TabIndex = 40;
-            Cerrar.Text = "X";
-            Cerrar.TextImageRelation = TextImageRelation.ImageAboveText;
-            Cerrar.UseVisualStyleBackColor = false;
-            Cerrar.Click += Cerrar_Click;
-            // 
-            // lblErrorMensaje
-            // 
-            lblErrorMensaje.AutoSize = true;
-            lblErrorMensaje.Font = new Font("Verdana", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblErrorMensaje.Image = Properties.Resources.Error;
-            lblErrorMensaje.ImageAlign = ContentAlignment.MiddleLeft;
-            lblErrorMensaje.Location = new Point(413, 332);
-            lblErrorMensaje.Margin = new Padding(4, 0, 4, 0);
-            lblErrorMensaje.Name = "lblErrorMensaje";
-            lblErrorMensaje.Size = new Size(120, 18);
-            lblErrorMensaje.TabIndex = 42;
-            lblErrorMensaje.Text = "Error Mensaje";
-            lblErrorMensaje.Visible = false;
-            // 
-            // Ojo
-            // 
-            Ojo.BackgroundImage = (Image)resources.GetObject("Ojo.BackgroundImage");
-            Ojo.BackgroundImageLayout = ImageLayout.Stretch;
-            Ojo.FlatStyle = FlatStyle.Flat;
-            Ojo.ForeColor = Color.FromArgb(30, 30, 30);
-            Ojo.Location = new Point(863, 283);
-            Ojo.Margin = new Padding(4, 3, 4, 3);
-            Ojo.Name = "Ojo";
-            Ojo.Size = new Size(34, 35);
-            Ojo.TabIndex = 3;
-            Ojo.UseVisualStyleBackColor = true;
-            Ojo.Click += Ojo_Click;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Dock = DockStyle.Left;
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(0, 0);
-            pictureBox1.Margin = new Padding(4, 3, 4, 3);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(331, 519);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 15;
-            pictureBox1.TabStop = false;
-            pictureBox1.MouseDown += pictureBox1_MouseDown;
-            // 
-            // pctCorreo
-            // 
-            pctCorreo.Location = new Point(416, 202);
-            pctCorreo.Margin = new Padding(4, 3, 4, 3);
-            pctCorreo.Name = "pctCorreo";
-            pctCorreo.Size = new Size(440, 40);
-            pctCorreo.TabIndex = 30;
-            pctCorreo.TabStop = false;
-            // 
-            // pctContraseña
-            // 
-            pctContraseña.Location = new Point(415, 278);
-            pctContraseña.Margin = new Padding(4, 3, 4, 3);
-            pctContraseña.Name = "pctContraseña";
-            pctContraseña.Size = new Size(441, 40);
-            pctContraseña.TabIndex = 31;
-            pctContraseña.TabStop = false;
+            this.Cerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.Cerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Cerrar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Cerrar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Cerrar.Location = new System.Drawing.Point(756, 2);
+            this.Cerrar.Name = "Cerrar";
+            this.Cerrar.Size = new System.Drawing.Size(25, 24);
+            this.Cerrar.TabIndex = 40;
+            this.Cerrar.Text = "X";
+            this.Cerrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.Cerrar.UseVisualStyleBackColor = false;
+            this.Cerrar.Click += new System.EventHandler(this.Cerrar_Click);
             // 
             // IniciarSesionbtn
             // 
-            IniciarSesionbtn.BackColor = Color.FromArgb(41, 41, 41);
-            IniciarSesionbtn.FlatStyle = FlatStyle.Flat;
-            IniciarSesionbtn.ForeColor = Color.Gray;
-            IniciarSesionbtn.Location = new Point(572, 378);
-            IniciarSesionbtn.Name = "IniciarSesionbtn";
-            IniciarSesionbtn.Size = new Size(131, 39);
-            IniciarSesionbtn.TabIndex = 4;
-            IniciarSesionbtn.Text = "Iniciar Sesión";
-            IniciarSesionbtn.UseVisualStyleBackColor = false;
-            IniciarSesionbtn.Click += IniciarSesionbtn_Click_1;
+            this.IniciarSesionbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.IniciarSesionbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.IniciarSesionbtn.ForeColor = System.Drawing.Color.Gray;
+            this.IniciarSesionbtn.Location = new System.Drawing.Point(490, 328);
+            this.IniciarSesionbtn.Name = "IniciarSesionbtn";
+            this.IniciarSesionbtn.Size = new System.Drawing.Size(112, 34);
+            this.IniciarSesionbtn.TabIndex = 4;
+            this.IniciarSesionbtn.Text = "Iniciar Sesión";
+            this.IniciarSesionbtn.UseVisualStyleBackColor = false;
+            this.IniciarSesionbtn.Click += new System.EventHandler(this.IniciarSesionbtn_Click);
             // 
             // Registrarsebtn
             // 
-            Registrarsebtn.BackColor = Color.FromArgb(30, 30, 30);
-            Registrarsebtn.FlatStyle = FlatStyle.Popup;
-            Registrarsebtn.ForeColor = Color.White;
-            Registrarsebtn.Location = new Point(744, 2);
-            Registrarsebtn.Name = "Registrarsebtn";
-            Registrarsebtn.Size = new Size(131, 39);
-            Registrarsebtn.TabIndex = 6;
-            Registrarsebtn.Text = "Registrarse";
-            Registrarsebtn.UseVisualStyleBackColor = false;
-            Registrarsebtn.Click += Registrarsebtn_Click;
+            this.Registrarsebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.Registrarsebtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Registrarsebtn.ForeColor = System.Drawing.Color.White;
+            this.Registrarsebtn.Location = new System.Drawing.Point(638, 2);
+            this.Registrarsebtn.Name = "Registrarsebtn";
+            this.Registrarsebtn.Size = new System.Drawing.Size(112, 34);
+            this.Registrarsebtn.TabIndex = 6;
+            this.Registrarsebtn.Text = "Registrarse";
+            this.Registrarsebtn.UseVisualStyleBackColor = false;
+            this.Registrarsebtn.Click += new System.EventHandler(this.Registrarsebtn_Click);
+            // 
+            // lblErrorMensaje
+            // 
+            this.lblErrorMensaje.AutoSize = true;
+            this.lblErrorMensaje.Font = new System.Drawing.Font("Verdana", 12F);
+            this.lblErrorMensaje.Image = global::Vista.Properties.Resources.Error;
+            this.lblErrorMensaje.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblErrorMensaje.Location = new System.Drawing.Point(354, 288);
+            this.lblErrorMensaje.Name = "lblErrorMensaje";
+            this.lblErrorMensaje.Size = new System.Drawing.Size(120, 18);
+            this.lblErrorMensaje.TabIndex = 42;
+            this.lblErrorMensaje.Text = "Error Mensaje";
+            this.lblErrorMensaje.Visible = false;
+            // 
+            // Ojo
+            // 
+            this.Ojo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Ojo.BackgroundImage")));
+            this.Ojo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Ojo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Ojo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.Ojo.Location = new System.Drawing.Point(740, 245);
+            this.Ojo.Name = "Ojo";
+            this.Ojo.Size = new System.Drawing.Size(29, 30);
+            this.Ojo.TabIndex = 3;
+            this.Ojo.UseVisualStyleBackColor = true;
+            this.Ojo.Click += new System.EventHandler(this.Ojo_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(284, 450);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 15;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
+            // 
+            // pctCorreo
+            // 
+            this.pctCorreo.Location = new System.Drawing.Point(357, 175);
+            this.pctCorreo.Name = "pctCorreo";
+            this.pctCorreo.Size = new System.Drawing.Size(377, 35);
+            this.pctCorreo.TabIndex = 30;
+            this.pctCorreo.TabStop = false;
+            // 
+            // pctContraseña
+            // 
+            this.pctContraseña.Location = new System.Drawing.Point(356, 241);
+            this.pctContraseña.Name = "pctContraseña";
+            this.pctContraseña.Size = new System.Drawing.Size(378, 35);
+            this.pctContraseña.TabIndex = 31;
+            this.pctContraseña.TabStop = false;
             // 
             // iniciar_sesion
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(30, 30, 30);
-            ClientSize = new Size(915, 519);
-            Controls.Add(Registrarsebtn);
-            Controls.Add(IniciarSesionbtn);
-            Controls.Add(lblErrorMensaje);
-            Controls.Add(Ojo);
-            Controls.Add(Cerrar);
-            Controls.Add(linkLabel1);
-            Controls.Add(Contraseña);
-            Controls.Add(Usuario);
-            Controls.Add(label1);
-            Controls.Add(pictureBox1);
-            Controls.Add(pctCorreo);
-            Controls.Add(pctContraseña);
-            FormBorderStyle = FormBorderStyle.None;
-            Icon = (Icon)resources.GetObject("$this.Icon");
-            Margin = new Padding(4, 3, 4, 3);
-            Name = "iniciar_sesion";
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "Iniciar Sesion";
-            MouseDown += iniciar_sesion_MouseDown;
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pctCorreo).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pctContraseña).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.ClientSize = new System.Drawing.Size(784, 450);
+            this.Controls.Add(this.Registrarsebtn);
+            this.Controls.Add(this.IniciarSesionbtn);
+            this.Controls.Add(this.lblErrorMensaje);
+            this.Controls.Add(this.Ojo);
+            this.Controls.Add(this.Cerrar);
+            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.Contraseña);
+            this.Controls.Add(this.Usuario);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pctCorreo);
+            this.Controls.Add(this.pctContraseña);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "iniciar_sesion";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Iniciar Sesion";
+            this.Load += new System.EventHandler(this.iniciar_sesion_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctCorreo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctContraseña)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Controladora;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,7 +15,9 @@ namespace Vista
 {
     public partial class VistaAdministrador : Form
     {
-        Controladora.ContextoUsuario modeloUsuario = new Controladora.ContextoUsuario();
+        ContextoUsuario modeloUsuario = new ContextoUsuario();
+        ContextoAuditoria contextoAuditoria = new ContextoAuditoria();
+        ContextoUsuario ContextoUsuarios = new ContextoUsuario();
         public VistaAdministrador()
         {
             InitializeComponent();
@@ -53,6 +56,8 @@ namespace Vista
 
         private void button2_Click(object sender, EventArgs e)
         {
+            string descripcion = "El usuario " + ContextoUsuarios.ObtenerUsuarioActual() + " ha cerrado sesión a las " + DateTime.Now.Hour + ":" + DateTime.Now.Minute + ":" + DateTime.Now.Second;
+            contextoAuditoria.AuditoriaLogOut(ContextoUsuarios.ObtenerUsuarioActual().ToString(), ContextoUsuarios.ObtenerEmailActual().ToString(), descripcion);
             Application.Exit();
         }
 

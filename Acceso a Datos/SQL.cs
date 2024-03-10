@@ -4,18 +4,30 @@ namespace Acceso_a_Datos
 {
     public class SQL
     {
-        private readonly string ConnectionString;
-        public SQL()
+        private static SQL _instance;
+        private static readonly object _lock = new object();
+
+        public string Conexion { get; private set; }
+
+        private SQL()
         {
-            ConnectionString = "Data Source = DESKTOP-I5B1LQK\\SQLEXPRESS; Initial Catalog = StudySphereAPP; Integrated Security = True";
+            Conexion = "Data Source = DESKTOP-I5B1LQK\\SQLEXPRESS; Initial Catalog = StudySphereAPP; Integrated Security = True";
         }
-        protected SqlConnection GetConnection()
+
+        public static SQL Instance
         {
-            return new SqlConnection(ConnectionString);
-
+            get
+            {
+                lock (_lock)
+                {
+                    if (_instance == null)
+                    {
+                        _instance = new SQL();
+                    }
+                    return _instance;
+                }
+            }
         }
-
-
 
     }
 }

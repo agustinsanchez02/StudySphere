@@ -32,338 +32,317 @@ namespace Vista
         /// </summary>
         private void InitializeComponent()
         {
-            button2 = new Button();
-            Eliminar = new Button();
-            Editar = new Button();
-            panel1 = new Panel();
-            pictureBox2 = new PictureBox();
-            label1 = new Label();
-            emailtxt = new TextBox();
-            usuariotxt = new TextBox();
-            nombretxt = new TextBox();
-            apellidotxt = new TextBox();
-            label7 = new Label();
-            label8 = new Label();
-            label9 = new Label();
-            label10 = new Label();
-            button1 = new Button();
-            dgv = new DataGridView();
-            label2 = new Label();
-            telefonotxt = new TextBox();
-            label3 = new Label();
-            contraseñatxt = new TextBox();
-            label4 = new Label();
-            permisostxt = new TextBox();
-            panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dgv).BeginInit();
-            SuspendLayout();
+            this.button2 = new System.Windows.Forms.Button();
+            this.Eliminar = new System.Windows.Forms.Button();
+            this.Editar = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.emailtxt = new System.Windows.Forms.TextBox();
+            this.usuariotxt = new System.Windows.Forms.TextBox();
+            this.nombretxt = new System.Windows.Forms.TextBox();
+            this.apellidotxt = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.dgv = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
+            this.telefonotxt = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.contraseñatxt = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.permisostxt = new System.Windows.Forms.TextBox();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
+            this.SuspendLayout();
             // 
             // button2
             // 
-            button2.BackColor = Color.FromArgb(50, 50, 50);
-            button2.FlatStyle = FlatStyle.Popup;
-            button2.ForeColor = Color.White;
-            button2.Location = new Point(746, 366);
-            button2.Margin = new Padding(4, 3, 4, 3);
-            button2.Name = "button2";
-            button2.Size = new Size(119, 66);
-            button2.TabIndex = 62;
-            button2.Text = "Salir";
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click;
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(639, 317);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(102, 57);
+            this.button2.TabIndex = 62;
+            this.button2.Text = "Salir";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Eliminar
             // 
-            Eliminar.BackColor = Color.FromArgb(50, 50, 50);
-            Eliminar.FlatStyle = FlatStyle.Popup;
-            Eliminar.ForeColor = Color.White;
-            Eliminar.Location = new Point(820, 200);
-            Eliminar.Margin = new Padding(4, 3, 4, 3);
-            Eliminar.Name = "Eliminar";
-            Eliminar.Size = new Size(119, 66);
-            Eliminar.TabIndex = 63;
-            Eliminar.Text = "Eliminar";
-            Eliminar.UseVisualStyleBackColor = false;
-            Eliminar.Click += Eliminar_Click;
+            this.Eliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Eliminar.ForeColor = System.Drawing.Color.White;
+            this.Eliminar.Location = new System.Drawing.Point(703, 173);
+            this.Eliminar.Name = "Eliminar";
+            this.Eliminar.Size = new System.Drawing.Size(102, 57);
+            this.Eliminar.TabIndex = 63;
+            this.Eliminar.Text = "Eliminar";
+            this.Eliminar.UseVisualStyleBackColor = false;
+            this.Eliminar.Click += new System.EventHandler(this.Eliminar_Click);
             // 
             // Editar
             // 
-            Editar.BackColor = Color.FromArgb(50, 50, 50);
-            Editar.FlatStyle = FlatStyle.Popup;
-            Editar.ForeColor = Color.White;
-            Editar.Location = new Point(660, 200);
-            Editar.Margin = new Padding(4, 3, 4, 3);
-            Editar.Name = "Editar";
-            Editar.Size = new Size(119, 66);
-            Editar.TabIndex = 61;
-            Editar.Text = "Editar";
-            Editar.UseVisualStyleBackColor = false;
-            Editar.Click += Editar_Click;
+            this.Editar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.Editar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Editar.ForeColor = System.Drawing.Color.White;
+            this.Editar.Location = new System.Drawing.Point(566, 173);
+            this.Editar.Name = "Editar";
+            this.Editar.Size = new System.Drawing.Size(102, 57);
+            this.Editar.TabIndex = 61;
+            this.Editar.Text = "Editar";
+            this.Editar.UseVisualStyleBackColor = false;
+            this.Editar.Click += new System.EventHandler(this.Editar_Click);
             // 
             // panel1
             // 
-            panel1.BackColor = Color.FromArgb(20, 20, 20);
-            panel1.Controls.Add(pictureBox2);
-            panel1.Controls.Add(label1);
-            panel1.Location = new Point(0, 0);
-            panel1.Margin = new Padding(4, 3, 4, 3);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1374, 134);
-            panel1.TabIndex = 59;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1178, 116);
+            this.panel1.TabIndex = 59;
             // 
             // pictureBox2
             // 
-            pictureBox2.Image = Properties.Resources.pictureBox1_Image;
-            pictureBox2.Location = new Point(-14, -107);
-            pictureBox2.Margin = new Padding(4, 3, 4, 3);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(314, 328);
-            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox2.TabIndex = 1;
-            pictureBox2.TabStop = false;
+            this.pictureBox2.Image = global::Vista.Properties.Resources.pictureBox1_Image;
+            this.pictureBox2.Location = new System.Drawing.Point(-12, -93);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(269, 284);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Microsoft Sans Serif", 30F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.ForeColor = Color.White;
-            label1.Location = new Point(355, 38);
-            label1.Margin = new Padding(4, 0, 4, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(514, 46);
-            label1.TabIndex = 0;
-            label1.Text = "ADMINISTRAR USUARIOS";
-            label1.Click += label1_Click;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(304, 33);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(514, 46);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "ADMINISTRAR USUARIOS";
             // 
             // emailtxt
             // 
-            emailtxt.BackColor = Color.FromArgb(50, 50, 50);
-            emailtxt.BorderStyle = BorderStyle.FixedSingle;
-            emailtxt.Font = new Font("Microsoft Sans Serif", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            emailtxt.ForeColor = Color.White;
-            emailtxt.Location = new Point(1000, 345);
-            emailtxt.Margin = new Padding(4, 3, 4, 3);
-            emailtxt.Name = "emailtxt";
-            emailtxt.Size = new Size(329, 24);
-            emailtxt.TabIndex = 73;
+            this.emailtxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.emailtxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.emailtxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.emailtxt.ForeColor = System.Drawing.Color.White;
+            this.emailtxt.Location = new System.Drawing.Point(857, 299);
+            this.emailtxt.Name = "emailtxt";
+            this.emailtxt.Size = new System.Drawing.Size(282, 24);
+            this.emailtxt.TabIndex = 73;
             // 
             // usuariotxt
             // 
-            usuariotxt.BackColor = Color.FromArgb(50, 50, 50);
-            usuariotxt.BorderStyle = BorderStyle.FixedSingle;
-            usuariotxt.Font = new Font("Microsoft Sans Serif", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            usuariotxt.ForeColor = Color.White;
-            usuariotxt.Location = new Point(1000, 174);
-            usuariotxt.Margin = new Padding(4, 3, 4, 3);
-            usuariotxt.Name = "usuariotxt";
-            usuariotxt.Size = new Size(329, 24);
-            usuariotxt.TabIndex = 66;
+            this.usuariotxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.usuariotxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.usuariotxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.usuariotxt.ForeColor = System.Drawing.Color.White;
+            this.usuariotxt.Location = new System.Drawing.Point(857, 151);
+            this.usuariotxt.Name = "usuariotxt";
+            this.usuariotxt.Size = new System.Drawing.Size(282, 24);
+            this.usuariotxt.TabIndex = 66;
             // 
             // nombretxt
             // 
-            nombretxt.BackColor = Color.FromArgb(50, 50, 50);
-            nombretxt.BorderStyle = BorderStyle.FixedSingle;
-            nombretxt.Font = new Font("Microsoft Sans Serif", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            nombretxt.ForeColor = Color.White;
-            nombretxt.Location = new Point(1000, 231);
-            nombretxt.Margin = new Padding(4, 3, 4, 3);
-            nombretxt.Name = "nombretxt";
-            nombretxt.Size = new Size(329, 24);
-            nombretxt.TabIndex = 71;
+            this.nombretxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.nombretxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.nombretxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.nombretxt.ForeColor = System.Drawing.Color.White;
+            this.nombretxt.Location = new System.Drawing.Point(857, 200);
+            this.nombretxt.Name = "nombretxt";
+            this.nombretxt.Size = new System.Drawing.Size(282, 24);
+            this.nombretxt.TabIndex = 71;
             // 
             // apellidotxt
             // 
-            apellidotxt.BackColor = Color.FromArgb(50, 50, 50);
-            apellidotxt.BorderStyle = BorderStyle.FixedSingle;
-            apellidotxt.Font = new Font("Microsoft Sans Serif", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            apellidotxt.ForeColor = Color.White;
-            apellidotxt.Location = new Point(1000, 288);
-            apellidotxt.Margin = new Padding(4, 3, 4, 3);
-            apellidotxt.Name = "apellidotxt";
-            apellidotxt.Size = new Size(329, 24);
-            apellidotxt.TabIndex = 72;
+            this.apellidotxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.apellidotxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.apellidotxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.apellidotxt.ForeColor = System.Drawing.Color.White;
+            this.apellidotxt.Location = new System.Drawing.Point(857, 250);
+            this.apellidotxt.Name = "apellidotxt";
+            this.apellidotxt.Size = new System.Drawing.Size(282, 24);
+            this.apellidotxt.TabIndex = 72;
             // 
             // label7
             // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Verdana", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label7.ForeColor = Color.White;
-            label7.Location = new Point(1000, 149);
-            label7.Margin = new Padding(4, 0, 4, 0);
-            label7.Name = "label7";
-            label7.Size = new Size(61, 17);
-            label7.TabIndex = 67;
-            label7.Text = "Usuario";
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Verdana", 10F);
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(857, 129);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(61, 17);
+            this.label7.TabIndex = 67;
+            this.label7.Text = "Usuario";
             // 
             // label8
             // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Verdana", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label8.ForeColor = Color.White;
-            label8.Location = new Point(1000, 206);
-            label8.Margin = new Padding(4, 0, 4, 0);
-            label8.Name = "label8";
-            label8.Size = new Size(63, 17);
-            label8.TabIndex = 68;
-            label8.Text = "Nombre";
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Verdana", 10F);
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(857, 179);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(63, 17);
+            this.label8.TabIndex = 68;
+            this.label8.Text = "Nombre";
             // 
             // label9
             // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Verdana", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label9.ForeColor = Color.White;
-            label9.Location = new Point(1000, 263);
-            label9.Margin = new Padding(4, 0, 4, 0);
-            label9.Name = "label9";
-            label9.Size = new Size(62, 17);
-            label9.TabIndex = 69;
-            label9.Text = "Apellido";
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Verdana", 10F);
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(857, 228);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(62, 17);
+            this.label9.TabIndex = 69;
+            this.label9.Text = "Apellido";
             // 
             // label10
             // 
-            label10.AutoSize = true;
-            label10.Font = new Font("Verdana", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label10.ForeColor = Color.White;
-            label10.Location = new Point(1000, 320);
-            label10.Margin = new Padding(4, 0, 4, 0);
-            label10.Name = "label10";
-            label10.Size = new Size(44, 17);
-            label10.TabIndex = 70;
-            label10.Text = "Email";
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Verdana", 10F);
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(857, 277);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(44, 17);
+            this.label10.TabIndex = 70;
+            this.label10.Text = "Email";
             // 
             // button1
             // 
-            button1.BackColor = Color.FromArgb(50, 50, 50);
-            button1.FlatStyle = FlatStyle.Popup;
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(1113, 566);
-            button1.Margin = new Padding(4, 3, 4, 3);
-            button1.Name = "button1";
-            button1.Size = new Size(102, 37);
-            button1.TabIndex = 74;
-            button1.Text = "Guardar";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(954, 491);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(87, 32);
+            this.button1.TabIndex = 74;
+            this.button1.Text = "Guardar";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dgv
             // 
-            dgv.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgv.Location = new Point(12, 140);
-            dgv.Name = "dgv";
-            dgv.RowTemplate.Height = 25;
-            dgv.Size = new Size(606, 372);
-            dgv.TabIndex = 75;
+            this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv.Location = new System.Drawing.Point(10, 121);
+            this.dgv.Name = "dgv";
+            this.dgv.RowTemplate.Height = 25;
+            this.dgv.Size = new System.Drawing.Size(519, 322);
+            this.dgv.TabIndex = 75;
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Verdana", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.ForeColor = Color.White;
-            label2.Location = new Point(1000, 377);
-            label2.Margin = new Padding(4, 0, 4, 0);
-            label2.Name = "label2";
-            label2.Size = new Size(66, 17);
-            label2.TabIndex = 70;
-            label2.Text = "Telefono";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Verdana", 10F);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(857, 327);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(66, 17);
+            this.label2.TabIndex = 70;
+            this.label2.Text = "Telefono";
             // 
             // telefonotxt
             // 
-            telefonotxt.BackColor = Color.FromArgb(50, 50, 50);
-            telefonotxt.BorderStyle = BorderStyle.FixedSingle;
-            telefonotxt.Font = new Font("Microsoft Sans Serif", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            telefonotxt.ForeColor = Color.White;
-            telefonotxt.Location = new Point(1000, 402);
-            telefonotxt.Margin = new Padding(4, 3, 4, 3);
-            telefonotxt.Name = "telefonotxt";
-            telefonotxt.Size = new Size(329, 24);
-            telefonotxt.TabIndex = 73;
+            this.telefonotxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.telefonotxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.telefonotxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.telefonotxt.ForeColor = System.Drawing.Color.White;
+            this.telefonotxt.Location = new System.Drawing.Point(857, 348);
+            this.telefonotxt.Name = "telefonotxt";
+            this.telefonotxt.Size = new System.Drawing.Size(282, 24);
+            this.telefonotxt.TabIndex = 73;
             // 
             // label3
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Verdana", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.ForeColor = Color.White;
-            label3.Location = new Point(1000, 434);
-            label3.Margin = new Padding(4, 0, 4, 0);
-            label3.Name = "label3";
-            label3.Size = new Size(89, 17);
-            label3.TabIndex = 70;
-            label3.Text = "Contraseña";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Verdana", 10F);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(857, 376);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(89, 17);
+            this.label3.TabIndex = 70;
+            this.label3.Text = "Contraseña";
             // 
             // contraseñatxt
             // 
-            contraseñatxt.BackColor = Color.FromArgb(50, 50, 50);
-            contraseñatxt.BorderStyle = BorderStyle.FixedSingle;
-            contraseñatxt.Font = new Font("Microsoft Sans Serif", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            contraseñatxt.ForeColor = Color.White;
-            contraseñatxt.Location = new Point(1000, 459);
-            contraseñatxt.Margin = new Padding(4, 3, 4, 3);
-            contraseñatxt.Name = "contraseñatxt";
-            contraseñatxt.Size = new Size(329, 24);
-            contraseñatxt.TabIndex = 73;
+            this.contraseñatxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.contraseñatxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.contraseñatxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.contraseñatxt.ForeColor = System.Drawing.Color.White;
+            this.contraseñatxt.Location = new System.Drawing.Point(857, 398);
+            this.contraseñatxt.Name = "contraseñatxt";
+            this.contraseñatxt.Size = new System.Drawing.Size(282, 24);
+            this.contraseñatxt.TabIndex = 73;
             // 
             // label4
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Verdana", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.ForeColor = Color.White;
-            label4.Location = new Point(1000, 491);
-            label4.Margin = new Padding(4, 0, 4, 0);
-            label4.Name = "label4";
-            label4.Size = new Size(71, 17);
-            label4.TabIndex = 70;
-            label4.Text = "Permisos";
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Verdana", 10F);
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(857, 426);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(71, 17);
+            this.label4.TabIndex = 70;
+            this.label4.Text = "Permisos";
             // 
             // permisostxt
             // 
-            permisostxt.BackColor = Color.FromArgb(50, 50, 50);
-            permisostxt.BorderStyle = BorderStyle.FixedSingle;
-            permisostxt.Font = new Font("Microsoft Sans Serif", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            permisostxt.ForeColor = Color.White;
-            permisostxt.Location = new Point(1000, 516);
-            permisostxt.Margin = new Padding(4, 3, 4, 3);
-            permisostxt.Name = "permisostxt";
-            permisostxt.Size = new Size(329, 24);
-            permisostxt.TabIndex = 73;
+            this.permisostxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.permisostxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.permisostxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.permisostxt.ForeColor = System.Drawing.Color.White;
+            this.permisostxt.Location = new System.Drawing.Point(857, 447);
+            this.permisostxt.Name = "permisostxt";
+            this.permisostxt.Size = new System.Drawing.Size(282, 24);
+            this.permisostxt.TabIndex = 73;
             // 
             // AdministrarUsuarios
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(30, 30, 30);
-            ClientSize = new Size(1371, 628);
-            Controls.Add(dgv);
-            Controls.Add(button1);
-            Controls.Add(permisostxt);
-            Controls.Add(contraseñatxt);
-            Controls.Add(telefonotxt);
-            Controls.Add(emailtxt);
-            Controls.Add(usuariotxt);
-            Controls.Add(nombretxt);
-            Controls.Add(apellidotxt);
-            Controls.Add(label4);
-            Controls.Add(label7);
-            Controls.Add(label3);
-            Controls.Add(label8);
-            Controls.Add(label2);
-            Controls.Add(label9);
-            Controls.Add(label10);
-            Controls.Add(button2);
-            Controls.Add(Eliminar);
-            Controls.Add(Editar);
-            Controls.Add(panel1);
-            FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(4, 3, 4, 3);
-            Name = "AdministrarUsuarios";
-            Text = "AdministrarUsuarios";
-            Load += AdministrarUsuarios_Load;
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dgv).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.ClientSize = new System.Drawing.Size(1175, 544);
+            this.Controls.Add(this.dgv);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.permisostxt);
+            this.Controls.Add(this.contraseñatxt);
+            this.Controls.Add(this.telefonotxt);
+            this.Controls.Add(this.emailtxt);
+            this.Controls.Add(this.usuariotxt);
+            this.Controls.Add(this.nombretxt);
+            this.Controls.Add(this.apellidotxt);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.Eliminar);
+            this.Controls.Add(this.Editar);
+            this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "AdministrarUsuarios";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "AdministrarUsuarios";
+            this.Load += new System.EventHandler(this.AdministrarUsuarios_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion

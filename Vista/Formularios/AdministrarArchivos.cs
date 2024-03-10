@@ -45,14 +45,6 @@ namespace Vista
             LlenarData();
         }
 
-        private void Editar_Click(object sender, EventArgs e)
-        {
-            if (dgv.SelectedRows.Count > 0)
-            {
-            }
-
-        }
-
         private void AdministrarArchivos_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
@@ -125,14 +117,5 @@ namespace Vista
             administrador.Show();
         }
 
-        private void dgv_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void AdministrarArchivos_Load_1(object sender, EventArgs e)
-        {
-
-        }
     }
 }

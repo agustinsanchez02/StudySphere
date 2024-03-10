@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ContextoArchivo.cs" />
+    <Compile Include="ContextoAuditoria.cs" />
     <Compile Include="ContextoBKP.cs" />
     <Compile Include="ContextoMail.cs" />
     <Compile Include="ContextoUsuario.cs" />

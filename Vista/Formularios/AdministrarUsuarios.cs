@@ -77,16 +77,6 @@ namespace Vista
             }
         }
 
-        private void Agregar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Editar_Click(object sender, EventArgs e)
         {
             this.Width = 1371;

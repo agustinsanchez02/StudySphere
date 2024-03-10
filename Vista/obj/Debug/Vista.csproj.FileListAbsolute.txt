@@ -3,7 +3,6 @@ C:\Users\agusp\source\repos\StudySphere\Vista\bin\Debug\Vista.exe
 C:\Users\agusp\source\repos\StudySphere\Vista\bin\Debug\Vista.pdb
 C:\Users\agusp\source\repos\StudySphere\Vista\bin\Debug\aa-ER\Vista.resources.dll
 C:\Users\agusp\source\repos\StudySphere\Vista\bin\Debug\Acceso a Datos.dll
-C:\Users\agusp\source\repos\StudySphere\Vista\bin\Debug\Aspose.PDF.dll
 C:\Users\agusp\source\repos\StudySphere\Vista\bin\Debug\AxInterop.AcroPDFLib.dll
 C:\Users\agusp\source\repos\StudySphere\Vista\bin\Debug\Azure.Core.dll
 C:\Users\agusp\source\repos\StudySphere\Vista\bin\Debug\Azure.Identity.dll
@@ -66,7 +65,6 @@ C:\Users\agusp\source\repos\StudySphere\Vista\bin\Debug\WinFormAnimation.dll
 C:\Users\agusp\source\repos\StudySphere\Vista\bin\Debug\Modelo.dll
 C:\Users\agusp\source\repos\StudySphere\Vista\bin\Debug\Acceso a Datos.pdb
 C:\Users\agusp\source\repos\StudySphere\Vista\bin\Debug\Controladora.pdb
-C:\Users\agusp\source\repos\StudySphere\Vista\bin\Debug\Aspose.PDF.xml
 C:\Users\agusp\source\repos\StudySphere\Vista\bin\Debug\Azure.Core.xml
 C:\Users\agusp\source\repos\StudySphere\Vista\bin\Debug\Azure.Identity.xml
 C:\Users\agusp\source\repos\StudySphere\Vista\bin\Debug\BitMiracle.Docotic.Pdf.xml
@@ -157,3 +155,4 @@ C:\Users\agusp\source\repos\StudySphere\Vista\obj\Debug\Vista.exe
 C:\Users\agusp\source\repos\StudySphere\Vista\obj\Debug\Vista.pdb
 C:\Users\agusp\source\repos\StudySphere\Vista\obj\Debug\Vista.Formularios.BasedeDatos.resources
 C:\Users\agusp\source\repos\StudySphere\Vista\obj\Debug\Vista.Graficos.resources
+C:\Users\agusp\source\repos\StudySphere\Vista\obj\Debug\Vista.Formularios.ReportesAuditoria.resources
