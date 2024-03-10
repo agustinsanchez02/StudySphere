@@ -9,8 +9,6 @@ namespace Acceso_a_Datos
 {
     public class BKP
     {
-        private readonly string ConnectionString;
-
         public string GenerarBKP()
         {
             string NombreBackup = (DateTime.Today.Day.ToString() + "-" + DateTime.Today.Month.ToString() + "-" + DateTime.Today.Year.ToString() + "-" + DateTime.Now.Hour.ToString() + "-" + DateTime.Now.Minute.ToString() + "-" + DateTime.Now.Second.ToString() + "-StudySphereAPP.bak");

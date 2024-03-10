@@ -1,0 +1,6 @@
+C:\Users\agusp\source\repos\StudySphere\Modelo\bin\Release\Modelo.dll
+C:\Users\agusp\source\repos\StudySphere\Modelo\bin\Release\Modelo.pdb
+C:\Users\agusp\source\repos\StudySphere\Modelo\obj\Release\Modelo.csproj.AssemblyReference.cache
+C:\Users\agusp\source\repos\StudySphere\Modelo\obj\Release\Modelo.csproj.CoreCompileInputs.cache
+C:\Users\agusp\source\repos\StudySphere\Modelo\obj\Release\Modelo.dll
+C:\Users\agusp\source\repos\StudySphere\Modelo\obj\Release\Modelo.pdb

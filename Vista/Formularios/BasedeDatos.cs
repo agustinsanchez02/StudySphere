@@ -13,7 +13,6 @@ namespace Vista.Formularios
     public partial class BasedeDatos : Form
     {
         ContextoBKP contextoBKP = new ContextoBKP();
-        string path;
         public BasedeDatos()
         {
             InitializeComponent();

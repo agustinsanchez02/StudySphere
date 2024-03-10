@@ -1,0 +1,11 @@
+C:\Users\agusp\source\repos\StudySphere\Controladora\bin\Release\Controladora.dll
+C:\Users\agusp\source\repos\StudySphere\Controladora\bin\Release\Controladora.pdb
+C:\Users\agusp\source\repos\StudySphere\Controladora\bin\Release\Acceso a Datos.dll
+C:\Users\agusp\source\repos\StudySphere\Controladora\bin\Release\Modelo.dll
+C:\Users\agusp\source\repos\StudySphere\Controladora\bin\Release\Acceso a Datos.pdb
+C:\Users\agusp\source\repos\StudySphere\Controladora\bin\Release\Modelo.pdb
+C:\Users\agusp\source\repos\StudySphere\Controladora\obj\Release\Controladora.csproj.AssemblyReference.cache
+C:\Users\agusp\source\repos\StudySphere\Controladora\obj\Release\Controladora.csproj.CoreCompileInputs.cache
+C:\Users\agusp\source\repos\StudySphere\Controladora\obj\Release\Controladora.csproj.CopyComplete
+C:\Users\agusp\source\repos\StudySphere\Controladora\obj\Release\Controladora.dll
+C:\Users\agusp\source\repos\StudySphere\Controladora\obj\Release\Controladora.pdb

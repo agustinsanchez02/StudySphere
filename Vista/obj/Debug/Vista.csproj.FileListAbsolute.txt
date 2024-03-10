@@ -133,13 +133,16 @@ C:\Users\agusp\source\repos\StudySphere\Vista\bin\Debug\zh-Hant\Microsoft.Data.S
 C:\Users\agusp\source\repos\StudySphere\Vista\obj\Debug\Vista.csproj.AssemblyReference.cache
 C:\Users\agusp\source\repos\StudySphere\Vista\obj\Debug\Vista.AdministrarArchivos.resources
 C:\Users\agusp\source\repos\StudySphere\Vista\obj\Debug\Vista.AdministrarUsuarios.resources
+C:\Users\agusp\source\repos\StudySphere\Vista\obj\Debug\Vista.Formularios.BasedeDatos.resources
 C:\Users\agusp\source\repos\StudySphere\Vista\obj\Debug\Vista.Formularios.Bienvenida.resources
 C:\Users\agusp\source\repos\StudySphere\Vista\obj\Debug\Vista.CodigoConfirmacion.resources
 C:\Users\agusp\source\repos\StudySphere\Vista\obj\Debug\Vista.CorreoRecuperoPass.resources
+C:\Users\agusp\source\repos\StudySphere\Vista\obj\Debug\Vista.Graficos.resources
 C:\Users\agusp\source\repos\StudySphere\Vista\obj\Debug\Vista.iniciar_sesion.resources
 C:\Users\agusp\source\repos\StudySphere\Vista\obj\Debug\Vista.Inicio.resources
 C:\Users\agusp\source\repos\StudySphere\Vista\obj\Debug\Vista.MetodoDePago.resources
 C:\Users\agusp\source\repos\StudySphere\Vista\obj\Debug\Vista.PerfildeUsuario.resources
+C:\Users\agusp\source\repos\StudySphere\Vista\obj\Debug\Vista.Formularios.ReportesAuditoria.resources
 C:\Users\agusp\source\repos\StudySphere\Vista\obj\Debug\Vista.Properties.Resources.resources
 C:\Users\agusp\source\repos\StudySphere\Vista\obj\Debug\Vista.RecuperarContraseña.resources
 C:\Users\agusp\source\repos\StudySphere\Vista\obj\Debug\Vista.Registro.resources
@@ -153,6 +156,3 @@ C:\Users\agusp\source\repos\StudySphere\Vista\obj\Debug\aa-ER\Vista.resources.dl
 C:\Users\agusp\source\repos\StudySphere\Vista\obj\Debug\Vista.csproj.CopyComplete
 C:\Users\agusp\source\repos\StudySphere\Vista\obj\Debug\Vista.exe
 C:\Users\agusp\source\repos\StudySphere\Vista\obj\Debug\Vista.pdb
-C:\Users\agusp\source\repos\StudySphere\Vista\obj\Debug\Vista.Formularios.BasedeDatos.resources
-C:\Users\agusp\source\repos\StudySphere\Vista\obj\Debug\Vista.Graficos.resources
-C:\Users\agusp\source\repos\StudySphere\Vista\obj\Debug\Vista.Formularios.ReportesAuditoria.resources
