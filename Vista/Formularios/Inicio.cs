@@ -12,6 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using Controladora;
 
 namespace Vista
 {
@@ -158,6 +159,14 @@ namespace Vista
                             };
                             visualizar = visualizar + 1;
                             Process.Start(psi);
+                            string Id = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                            string nombre = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+                            string extension = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+                            int tamaño = Convert.ToInt32(dataGridView1.CurrentRow.Cells[3].Value);
+                            string materia = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+                            string carrera = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+                            string Descripcion = "El usuario " + ContextoUsuarios.ObtenerUsuarioActual() + " ha Visualizado un archivo con ID " + id + " llamado " + nombre + " con extension " + extension + ", materia " + materia + " y carrera " + carrera + " a las " + DateTime.Now.Hour + ":" + DateTime.Now.Minute + ":" + DateTime.Now.Second;
+                            contextoAuditoria.AuditoriaVisualizacionArchivo("Archivos", ContextoUsuarios.ObtenerUsuarioActual(), Descripcion, nombre, extension, tamaño, DateTime.Now, materia, carrera);
                         }
                         catch (Exception ex)
                         {
@@ -198,6 +207,14 @@ namespace Vista
                         if (dialog.ShowDialog() == DialogResult.OK)
                         {
                             File.WriteAllBytes(dialog.FileName + item.Extension, item.Doc);
+                            string Id = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                            string nombre = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+                            string extension = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+                            int tamaño = Convert.ToInt32(dataGridView1.CurrentRow.Cells[3].Value);
+                            string materia = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+                            string carrera = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+                            string Descripcion = "El usuario " + ContextoUsuarios.ObtenerUsuarioActual() + " ha Descargado un archivo con ID " + id + " llamado " + nombre + " con extension " + extension + ", materia " + materia + " y carrera " + carrera + " a las " + DateTime.Now.Hour + ":" + DateTime.Now.Minute + ":" + DateTime.Now.Second;
+                            contextoAuditoria.AuditoriaDescargaArchivo("Archivos", ContextoUsuarios.ObtenerUsuarioActual(), Descripcion, nombre, extension, tamaño, DateTime.Now, materia, carrera);
                             MessageBox.Show("Archivo descargado exitosamente");
                         }
                     }

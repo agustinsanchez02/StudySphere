@@ -27,5 +27,13 @@ namespace Controladora
         {
             auditoria.AuditoriaBajaArchivo(modulo, usuario, descripcion, nombre, extension, tamaño, fechacreacion, Materia, Carrera);
         }
+        public void AuditoriaVisualizacionArchivo(string modulo, string usuario, string descripcion, string nombre, string extension, int tamaño, DateTime fechacreacion, string Materia, string Carrera)
+        {
+            auditoria.AuditoriaVisualizacionArchivo(modulo, usuario, descripcion, nombre, extension, tamaño, fechacreacion, Materia, Carrera);
+        }
+        public void AuditoriaDescargaArchivo(string modulo, string usuario, string descripcion, string nombre, string extension, int tamaño, DateTime fechacreacion, string Materia, string Carrera)
+        {
+            auditoria.AuditoriaDescargaArchivo(modulo, usuario, descripcion, nombre, extension, tamaño, fechacreacion, Materia, Carrera);
+        }
     }
 }

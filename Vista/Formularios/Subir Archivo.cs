@@ -21,8 +21,9 @@ namespace Vista
 {
     public partial class Subir_Archivo : Form
     {
-        Controladora.ContextoArchivo contextoArchivo = new Controladora.ContextoArchivo();
-        Controladora.ContextoUsuario contextoUsuario = new Controladora.ContextoUsuario();
+        ContextoArchivo contextoArchivo = new ContextoArchivo();
+        ContextoUsuario contextoUsuario = new ContextoUsuario();
+        ContextoAuditoria contextoAuditoria = new ContextoAuditoria();
         public Subir_Archivo()
         {
             InitializeComponent();
@@ -114,6 +115,7 @@ namespace Vista
         {
             if (nombretxt.Text.Trim().Equals(""))
             {
+               
                 MessageBox.Show("Ingrese un nombre", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
@@ -140,8 +142,11 @@ namespace Vista
                             MemoryStream obj = new MemoryStream();
                             mystream.CopyTo(obj);
                             file = obj.ToArray();
-                            if (contextoArchivo.GuardarArchivo(nombretxt.Text.Trim(), Path.GetExtension(openFileDialog1.FileName), file, contextoUsuario.obtenerIDActual(), materiatxt.Text, carreratxt.Text) == true)
+                            FileInfo fi = new FileInfo(openFileDialog1.FileName);
+                            if (contextoArchivo.GuardarArchivo(nombretxt.Text.Trim(), Convert.ToInt32(fi.Length),Path.GetExtension(openFileDialog1.FileName), file, contextoUsuario.obtenerIDActual(), materiatxt.Text, carreratxt.Text) == true)
                             {
+                                string Descripcion = "El usuario "+ contextoUsuario.ObtenerUsuarioActual()+" ha subido un archivo llamado "+ nombretxt.Text+" con extension " + Path.GetExtension(openFileDialog1.FileName) +", a la materia "+ materiatxt.Text+" de la carrera "+ carreratxt.Text+" a las " +DateTime.Now.Hour+ ":" + DateTime.Now.Minute +":"+DateTime.Now.Second;
+                                contextoAuditoria.AuditoriaAltaArchivo("Archivos", contextoUsuario.ObtenerUsuarioActual(), Descripcion, nombretxt.Text.Trim(), Path.GetExtension(openFileDialog1.FileName), Convert.ToInt32(fi.Length), DateTime.Now, materiatxt.Text, carreratxt.Text);
                                 MessageBox.Show("Archivo subido con exito.");
                             }
                             else
