@@ -35,12 +35,14 @@
             this.lblmail = new System.Windows.Forms.Label();
             this.lblnombre = new System.Windows.Forms.Label();
             this.lblTipoCuenta = new System.Windows.Forms.Label();
-            this.Cancelar = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.AdministrarUsuarios = new System.Windows.Forms.Button();
+            this.AdministrarArchivos = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.Reportesbtn = new System.Windows.Forms.Button();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.bkpbtn = new System.Windows.Forms.Button();
+            this.AdministrarMaterias = new System.Windows.Forms.Button();
+            this.AdministrarCarreras = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -125,38 +127,38 @@
             this.lblTipoCuenta.TabIndex = 52;
             this.lblTipoCuenta.Text = "Tipo de cuenta";
             // 
-            // Cancelar
+            // AdministrarUsuarios
             // 
-            this.Cancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.Cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Cancelar.ForeColor = System.Drawing.Color.White;
-            this.Cancelar.Location = new System.Drawing.Point(42, 206);
-            this.Cancelar.Name = "Cancelar";
-            this.Cancelar.Size = new System.Drawing.Size(102, 57);
-            this.Cancelar.TabIndex = 53;
-            this.Cancelar.Text = "Administrar Usuarios";
-            this.Cancelar.UseVisualStyleBackColor = false;
-            this.Cancelar.Click += new System.EventHandler(this.Cancelar_Click);
+            this.AdministrarUsuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.AdministrarUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.AdministrarUsuarios.ForeColor = System.Drawing.Color.White;
+            this.AdministrarUsuarios.Location = new System.Drawing.Point(42, 206);
+            this.AdministrarUsuarios.Name = "AdministrarUsuarios";
+            this.AdministrarUsuarios.Size = new System.Drawing.Size(102, 57);
+            this.AdministrarUsuarios.TabIndex = 53;
+            this.AdministrarUsuarios.Text = "Administrar Usuarios";
+            this.AdministrarUsuarios.UseVisualStyleBackColor = false;
+            this.AdministrarUsuarios.Click += new System.EventHandler(this.AdministrarUsuarios_Click);
             // 
-            // button1
+            // AdministrarArchivos
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(256, 206);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(102, 57);
-            this.button1.TabIndex = 54;
-            this.button1.Text = "Administrar Archivos";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.AdministrarArchivos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.AdministrarArchivos.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.AdministrarArchivos.ForeColor = System.Drawing.Color.White;
+            this.AdministrarArchivos.Location = new System.Drawing.Point(256, 206);
+            this.AdministrarArchivos.Name = "AdministrarArchivos";
+            this.AdministrarArchivos.Size = new System.Drawing.Size(102, 57);
+            this.AdministrarArchivos.TabIndex = 54;
+            this.AdministrarArchivos.Text = "Administrar Archivos";
+            this.AdministrarArchivos.UseVisualStyleBackColor = false;
+            this.AdministrarArchivos.Click += new System.EventHandler(this.AdministrarArchivos_Click);
             // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(137, 402);
+            this.button2.Location = new System.Drawing.Point(132, 527);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(116, 57);
             this.button2.TabIndex = 55;
@@ -183,7 +185,7 @@
             this.pictureBox6.Image = global::Vista.Properties.Resources.USuario__2___1_;
             this.pictureBox6.Location = new System.Drawing.Point(2, 98);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(68, 78);
+            this.pictureBox6.Size = new System.Drawing.Size(72, 62);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 49;
             this.pictureBox6.TabStop = false;
@@ -200,14 +202,42 @@
             this.bkpbtn.UseVisualStyleBackColor = false;
             this.bkpbtn.Click += new System.EventHandler(this.bkpbtn_Click);
             // 
+            // AdministrarMaterias
+            // 
+            this.AdministrarMaterias.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.AdministrarMaterias.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.AdministrarMaterias.ForeColor = System.Drawing.Color.White;
+            this.AdministrarMaterias.Location = new System.Drawing.Point(42, 411);
+            this.AdministrarMaterias.Name = "AdministrarMaterias";
+            this.AdministrarMaterias.Size = new System.Drawing.Size(102, 57);
+            this.AdministrarMaterias.TabIndex = 53;
+            this.AdministrarMaterias.Text = "Administrar Materias";
+            this.AdministrarMaterias.UseVisualStyleBackColor = false;
+            this.AdministrarMaterias.Click += new System.EventHandler(this.AdministrarMaterias_Click);
+            // 
+            // AdministrarCarreras
+            // 
+            this.AdministrarCarreras.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.AdministrarCarreras.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.AdministrarCarreras.ForeColor = System.Drawing.Color.White;
+            this.AdministrarCarreras.Location = new System.Drawing.Point(256, 411);
+            this.AdministrarCarreras.Name = "AdministrarCarreras";
+            this.AdministrarCarreras.Size = new System.Drawing.Size(102, 57);
+            this.AdministrarCarreras.TabIndex = 54;
+            this.AdministrarCarreras.Text = "Administrar Carreras";
+            this.AdministrarCarreras.UseVisualStyleBackColor = false;
+            this.AdministrarCarreras.Click += new System.EventHandler(this.AdministrarCarreras_Click);
+            // 
             // VistaAdministrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.ClientSize = new System.Drawing.Size(405, 469);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.Cancelar);
+            this.ClientSize = new System.Drawing.Size(405, 596);
+            this.Controls.Add(this.AdministrarCarreras);
+            this.Controls.Add(this.AdministrarMaterias);
+            this.Controls.Add(this.AdministrarArchivos);
+            this.Controls.Add(this.AdministrarUsuarios);
             this.Controls.Add(this.bkpbtn);
             this.Controls.Add(this.Reportesbtn);
             this.Controls.Add(this.button2);
@@ -240,11 +270,13 @@
         private System.Windows.Forms.Label lblTipoCuenta;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Button Cerrar;
-        private System.Windows.Forms.Button Cancelar;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button AdministrarUsuarios;
+        private System.Windows.Forms.Button AdministrarArchivos;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button Reportesbtn;
         private System.Windows.Forms.Button bkpbtn;
+        private System.Windows.Forms.Button AdministrarMaterias;
+        private System.Windows.Forms.Button AdministrarCarreras;
     }
 }

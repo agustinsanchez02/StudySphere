@@ -38,23 +38,23 @@ namespace Vista
             this.button2 = new System.Windows.Forms.Button();
             this.Explorar = new System.Windows.Forms.Button();
             this.archivotxt = new System.Windows.Forms.TextBox();
-            this.carreratxt = new System.Windows.Forms.TextBox();
-            this.materiatxt = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.nombretxt = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.rtfData = new System.Windows.Forms.RichTextBox();
             this.axAcroPDF1 = new AxAcroPDFLib.AxAcroPDF();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.CarreraCB = new System.Windows.Forms.ComboBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Materiacb = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -81,17 +81,18 @@ namespace Vista
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.Materiacb);
+            this.splitContainer1.Panel1.Controls.Add(this.CarreraCB);
             this.splitContainer1.Panel1.Controls.Add(this.button3);
             this.splitContainer1.Panel1.Controls.Add(this.button2);
             this.splitContainer1.Panel1.Controls.Add(this.Explorar);
             this.splitContainer1.Panel1.Controls.Add(this.archivotxt);
-            this.splitContainer1.Panel1.Controls.Add(this.carreratxt);
-            this.splitContainer1.Panel1.Controls.Add(this.materiatxt);
             this.splitContainer1.Panel1.Controls.Add(this.label4);
             this.splitContainer1.Panel1.Controls.Add(this.nombretxt);
             this.splitContainer1.Panel1.Controls.Add(this.label3);
             this.splitContainer1.Panel1.Controls.Add(this.label2);
             this.splitContainer1.Panel1.Controls.Add(this.label1);
+            this.splitContainer1.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel1_Paint);
             // 
             // splitContainer1.Panel2
             // 
@@ -148,20 +149,6 @@ namespace Vista
             this.archivotxt.TabIndex = 4;
             this.archivotxt.TextChanged += new System.EventHandler(this.archivotxt_TextChanged);
             // 
-            // carreratxt
-            // 
-            this.carreratxt.Location = new System.Drawing.Point(82, 116);
-            this.carreratxt.Name = "carreratxt";
-            this.carreratxt.Size = new System.Drawing.Size(174, 20);
-            this.carreratxt.TabIndex = 3;
-            // 
-            // materiatxt
-            // 
-            this.materiatxt.Location = new System.Drawing.Point(84, 83);
-            this.materiatxt.Name = "materiatxt";
-            this.materiatxt.Size = new System.Drawing.Size(172, 20);
-            this.materiatxt.TabIndex = 2;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -209,15 +196,6 @@ namespace Vista
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre:";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(33, 19);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(727, 770);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 43;
-            this.pictureBox1.TabStop = false;
-            // 
             // rtfData
             // 
             this.rtfData.Location = new System.Drawing.Point(33, 19);
@@ -241,6 +219,32 @@ namespace Vista
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // CarreraCB
+            // 
+            this.CarreraCB.FormattingEnabled = true;
+            this.CarreraCB.Location = new System.Drawing.Point(84, 117);
+            this.CarreraCB.Name = "CarreraCB";
+            this.CarreraCB.Size = new System.Drawing.Size(172, 21);
+            this.CarreraCB.TabIndex = 42;
+            this.CarreraCB.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(33, 19);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(727, 770);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 43;
+            this.pictureBox1.TabStop = false;
+            // 
+            // Materiacb
+            // 
+            this.Materiacb.FormattingEnabled = true;
+            this.Materiacb.Location = new System.Drawing.Point(84, 82);
+            this.Materiacb.Name = "Materiacb";
+            this.Materiacb.Size = new System.Drawing.Size(172, 21);
+            this.Materiacb.TabIndex = 43;
+            // 
             // Subir_Archivo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -259,8 +263,8 @@ namespace Vista
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -280,9 +284,9 @@ namespace Vista
         private AxAcroPDFLib.AxAcroPDF axAcroPDF1;
         private RichTextBox rtfData;
         private PictureBox pictureBox1;
-        private TextBox carreratxt;
-        private TextBox materiatxt;
         private Label label4;
         private Label label3;
+        private ComboBox CarreraCB;
+        private ComboBox Materiacb;
     }
 }

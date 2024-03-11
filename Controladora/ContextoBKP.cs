@@ -10,13 +10,13 @@ namespace Controladora
     public class ContextoBKP
     {
         BKP BKP = new BKP(); 
-        public string GenerarBKP()
+        public void GenerarBKP()
         {
-            return BKP.GenerarBKP();
+            BKP.GenerarBKP();
         }
-        public string RestaurarBKP(string path)
+        public void RestaurarBKP()
         {
-            return BKP.RestaurarBKP(path);
+            BKP.RestaurarBKP();
         }
     }
 }

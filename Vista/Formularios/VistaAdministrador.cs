@@ -40,14 +40,14 @@ namespace Vista
             lblmail.Text = modeloUsuario.ObtenerEmailActual();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void AdministrarArchivos_Click(object sender, EventArgs e)
         {
             this.Hide();
             AdministrarArchivos administrarArchivos = new AdministrarArchivos();
             administrarArchivos.Show();
         }
 
-        private void Cancelar_Click(object sender, EventArgs e)
+        private void AdministrarUsuarios_Click(object sender, EventArgs e)
         {
             this.Hide();
             AdministrarUsuarios administrarUsuarios = new AdministrarUsuarios();
@@ -58,7 +58,9 @@ namespace Vista
         {
             string descripcion = "El usuario " + ContextoUsuarios.ObtenerUsuarioActual() + " ha cerrado sesión a las " + DateTime.Now.Hour + ":" + DateTime.Now.Minute + ":" + DateTime.Now.Second;
             contextoAuditoria.AuditoriaLogOut(ContextoUsuarios.ObtenerUsuarioActual().ToString(), ContextoUsuarios.ObtenerEmailActual().ToString(), descripcion);
-            Application.Exit();
+            this.Close();
+            iniciar_sesion iniciar_Sesion= new iniciar_sesion();
+            iniciar_Sesion.Show();
         }
 
         private void bkpbtn_Click(object sender, EventArgs e)
@@ -66,6 +68,20 @@ namespace Vista
             BasedeDatos basedeDatos = new BasedeDatos();
             basedeDatos.Show();
             this.Hide();
+        }
+
+        private void AdministrarMaterias_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AdministrarMaterias administrarMaterias = new AdministrarMaterias();
+            administrarMaterias.Show();
+        }
+
+        private void AdministrarCarreras_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AdministrarCarreras administrarCarreras = new AdministrarCarreras();
+            administrarCarreras.Show();
         }
     }
 }

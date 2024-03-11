@@ -50,8 +50,6 @@ namespace Vista
             this.dgv = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.telefonotxt = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.contraseñatxt = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.permisostxt = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
@@ -64,7 +62,7 @@ namespace Vista
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(639, 317);
+            this.button2.Location = new System.Drawing.Point(932, 326);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(102, 57);
             this.button2.TabIndex = 62;
@@ -77,7 +75,7 @@ namespace Vista
             this.Eliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Eliminar.ForeColor = System.Drawing.Color.White;
-            this.Eliminar.Location = new System.Drawing.Point(703, 173);
+            this.Eliminar.Location = new System.Drawing.Point(996, 182);
             this.Eliminar.Name = "Eliminar";
             this.Eliminar.Size = new System.Drawing.Size(102, 57);
             this.Eliminar.TabIndex = 63;
@@ -90,7 +88,7 @@ namespace Vista
             this.Editar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.Editar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Editar.ForeColor = System.Drawing.Color.White;
-            this.Editar.Location = new System.Drawing.Point(566, 173);
+            this.Editar.Location = new System.Drawing.Point(859, 182);
             this.Editar.Name = "Editar";
             this.Editar.Size = new System.Drawing.Size(102, 57);
             this.Editar.TabIndex = 61;
@@ -105,7 +103,7 @@ namespace Vista
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1178, 116);
+            this.panel1.Size = new System.Drawing.Size(1445, 116);
             this.panel1.TabIndex = 59;
             // 
             // pictureBox2
@@ -123,7 +121,7 @@ namespace Vista
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(304, 33);
+            this.label1.Location = new System.Drawing.Point(455, 22);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(514, 46);
             this.label1.TabIndex = 0;
@@ -135,7 +133,7 @@ namespace Vista
             this.emailtxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.emailtxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.emailtxt.ForeColor = System.Drawing.Color.White;
-            this.emailtxt.Location = new System.Drawing.Point(857, 299);
+            this.emailtxt.Location = new System.Drawing.Point(1150, 293);
             this.emailtxt.Name = "emailtxt";
             this.emailtxt.Size = new System.Drawing.Size(282, 24);
             this.emailtxt.TabIndex = 73;
@@ -146,7 +144,7 @@ namespace Vista
             this.usuariotxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.usuariotxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.usuariotxt.ForeColor = System.Drawing.Color.White;
-            this.usuariotxt.Location = new System.Drawing.Point(857, 151);
+            this.usuariotxt.Location = new System.Drawing.Point(1150, 145);
             this.usuariotxt.Name = "usuariotxt";
             this.usuariotxt.Size = new System.Drawing.Size(282, 24);
             this.usuariotxt.TabIndex = 66;
@@ -157,7 +155,7 @@ namespace Vista
             this.nombretxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.nombretxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.nombretxt.ForeColor = System.Drawing.Color.White;
-            this.nombretxt.Location = new System.Drawing.Point(857, 200);
+            this.nombretxt.Location = new System.Drawing.Point(1150, 194);
             this.nombretxt.Name = "nombretxt";
             this.nombretxt.Size = new System.Drawing.Size(282, 24);
             this.nombretxt.TabIndex = 71;
@@ -168,7 +166,7 @@ namespace Vista
             this.apellidotxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.apellidotxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.apellidotxt.ForeColor = System.Drawing.Color.White;
-            this.apellidotxt.Location = new System.Drawing.Point(857, 250);
+            this.apellidotxt.Location = new System.Drawing.Point(1150, 244);
             this.apellidotxt.Name = "apellidotxt";
             this.apellidotxt.Size = new System.Drawing.Size(282, 24);
             this.apellidotxt.TabIndex = 72;
@@ -178,7 +176,7 @@ namespace Vista
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Verdana", 10F);
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(857, 129);
+            this.label7.Location = new System.Drawing.Point(1150, 123);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(61, 17);
             this.label7.TabIndex = 67;
@@ -189,7 +187,7 @@ namespace Vista
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Verdana", 10F);
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(857, 179);
+            this.label8.Location = new System.Drawing.Point(1150, 173);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(63, 17);
             this.label8.TabIndex = 68;
@@ -200,7 +198,7 @@ namespace Vista
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Verdana", 10F);
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(857, 228);
+            this.label9.Location = new System.Drawing.Point(1150, 222);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(62, 17);
             this.label9.TabIndex = 69;
@@ -211,7 +209,7 @@ namespace Vista
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Verdana", 10F);
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(857, 277);
+            this.label10.Location = new System.Drawing.Point(1150, 271);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(44, 17);
             this.label10.TabIndex = 70;
@@ -222,7 +220,7 @@ namespace Vista
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(954, 491);
+            this.button1.Location = new System.Drawing.Point(1247, 448);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(87, 32);
             this.button1.TabIndex = 74;
@@ -232,11 +230,12 @@ namespace Vista
             // 
             // dgv
             // 
+            this.dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv.Location = new System.Drawing.Point(10, 121);
             this.dgv.Name = "dgv";
             this.dgv.RowTemplate.Height = 25;
-            this.dgv.Size = new System.Drawing.Size(519, 322);
+            this.dgv.Size = new System.Drawing.Size(827, 322);
             this.dgv.TabIndex = 75;
             // 
             // label2
@@ -244,7 +243,7 @@ namespace Vista
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Verdana", 10F);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(857, 327);
+            this.label2.Location = new System.Drawing.Point(1150, 321);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(66, 17);
             this.label2.TabIndex = 70;
@@ -256,39 +255,17 @@ namespace Vista
             this.telefonotxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.telefonotxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.telefonotxt.ForeColor = System.Drawing.Color.White;
-            this.telefonotxt.Location = new System.Drawing.Point(857, 348);
+            this.telefonotxt.Location = new System.Drawing.Point(1150, 342);
             this.telefonotxt.Name = "telefonotxt";
             this.telefonotxt.Size = new System.Drawing.Size(282, 24);
             this.telefonotxt.TabIndex = 73;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Verdana", 10F);
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(857, 376);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(89, 17);
-            this.label3.TabIndex = 70;
-            this.label3.Text = "Contraseña";
-            // 
-            // contraseñatxt
-            // 
-            this.contraseñatxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.contraseñatxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.contraseñatxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.contraseñatxt.ForeColor = System.Drawing.Color.White;
-            this.contraseñatxt.Location = new System.Drawing.Point(857, 398);
-            this.contraseñatxt.Name = "contraseñatxt";
-            this.contraseñatxt.Size = new System.Drawing.Size(282, 24);
-            this.contraseñatxt.TabIndex = 73;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Verdana", 10F);
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(857, 426);
+            this.label4.Location = new System.Drawing.Point(1150, 369);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(71, 17);
             this.label4.TabIndex = 70;
@@ -300,7 +277,7 @@ namespace Vista
             this.permisostxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.permisostxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.permisostxt.ForeColor = System.Drawing.Color.White;
-            this.permisostxt.Location = new System.Drawing.Point(857, 447);
+            this.permisostxt.Location = new System.Drawing.Point(1150, 390);
             this.permisostxt.Name = "permisostxt";
             this.permisostxt.Size = new System.Drawing.Size(282, 24);
             this.permisostxt.TabIndex = 73;
@@ -310,11 +287,10 @@ namespace Vista
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.ClientSize = new System.Drawing.Size(1175, 544);
+            this.ClientSize = new System.Drawing.Size(1444, 544);
             this.Controls.Add(this.dgv);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.permisostxt);
-            this.Controls.Add(this.contraseñatxt);
             this.Controls.Add(this.telefonotxt);
             this.Controls.Add(this.emailtxt);
             this.Controls.Add(this.usuariotxt);
@@ -322,7 +298,6 @@ namespace Vista
             this.Controls.Add(this.apellidotxt);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label9);
@@ -365,8 +340,6 @@ namespace Vista
         private DataGridView dgv;
         private Label label2;
         private TextBox telefonotxt;
-        private Label label3;
-        private TextBox contraseñatxt;
         private Label label4;
         private TextBox permisostxt;
     }

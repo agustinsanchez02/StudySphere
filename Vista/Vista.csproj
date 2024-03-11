@@ -381,6 +381,18 @@
     <Compile Include="Formularios\AdministrarArchivos.Designer.cs">
       <DependentUpon>AdministrarArchivos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\AdministrarCarreras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\AdministrarCarreras.Designer.cs">
+      <DependentUpon>AdministrarCarreras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\AdministrarMaterias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\AdministrarMaterias.Designer.cs">
+      <DependentUpon>AdministrarMaterias.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\AdministrarUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -482,6 +494,12 @@
     </Compile>
     <EmbeddedResource Include="Formularios\AdministrarArchivos.resx">
       <DependentUpon>AdministrarArchivos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\AdministrarCarreras.resx">
+      <DependentUpon>AdministrarCarreras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\AdministrarMaterias.resx">
+      <DependentUpon>AdministrarMaterias.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\AdministrarUsuarios.resx">
       <DependentUpon>AdministrarUsuarios.cs</DependentUpon>

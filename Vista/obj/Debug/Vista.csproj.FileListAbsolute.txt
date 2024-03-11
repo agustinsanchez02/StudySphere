@@ -156,3 +156,5 @@ C:\Users\agusp\source\repos\StudySphere\Vista\obj\Debug\aa-ER\Vista.resources.dl
 C:\Users\agusp\source\repos\StudySphere\Vista\obj\Debug\Vista.csproj.CopyComplete
 C:\Users\agusp\source\repos\StudySphere\Vista\obj\Debug\Vista.exe
 C:\Users\agusp\source\repos\StudySphere\Vista\obj\Debug\Vista.pdb
+C:\Users\agusp\source\repos\StudySphere\Vista\obj\Debug\Vista.Formularios.AdministrarCarreras.resources
+C:\Users\agusp\source\repos\StudySphere\Vista\obj\Debug\Vista.Formularios.AdministrarMaterias.resources

@@ -44,7 +44,9 @@
     <Compile Include="ContextoArchivo.cs" />
     <Compile Include="ContextoAuditoria.cs" />
     <Compile Include="ContextoBKP.cs" />
+    <Compile Include="ContextoCarrera.cs" />
     <Compile Include="ContextoMail.cs" />
+    <Compile Include="ContextoMateria.cs" />
     <Compile Include="ContextoUsuario.cs" />
     <Compile Include="Permisos.cs" />
     <Compile Include="Precios.cs" />
@@ -55,6 +57,10 @@
     <ProjectReference Include="..\Acceso a Datos\Acceso a Datos.csproj">
       <Project>{63aaf329-503e-4f8f-b8c0-0898c716afc6}</Project>
       <Name>Acceso a Datos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Modelo\Modelo.csproj">
+      <Project>{2A511955-ACEF-4BC4-901E-E437E7272E27}</Project>
+      <Name>Modelo</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
