@@ -44,7 +44,11 @@
     <Compile Include="Archivo.cs" />
     <Compile Include="Auditoria.cs" />
     <Compile Include="BKP.cs" />
+    <Compile Include="Carrera.cs" />
+    <Compile Include="Graficos.cs" />
+    <Compile Include="Grupos.cs" />
     <Compile Include="Mail.cs" />
+    <Compile Include="Materias.cs" />
     <Compile Include="MetodosComunes.cs" />
     <Compile Include="Precios.cs" />
     <Compile Include="Privilegios.cs" />

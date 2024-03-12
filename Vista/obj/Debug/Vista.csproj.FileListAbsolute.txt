@@ -142,7 +142,6 @@ C:\Users\agusp\source\repos\StudySphere\Vista\obj\Debug\Vista.iniciar_sesion.res
 C:\Users\agusp\source\repos\StudySphere\Vista\obj\Debug\Vista.Inicio.resources
 C:\Users\agusp\source\repos\StudySphere\Vista\obj\Debug\Vista.MetodoDePago.resources
 C:\Users\agusp\source\repos\StudySphere\Vista\obj\Debug\Vista.PerfildeUsuario.resources
-C:\Users\agusp\source\repos\StudySphere\Vista\obj\Debug\Vista.Formularios.ReportesAuditoria.resources
 C:\Users\agusp\source\repos\StudySphere\Vista\obj\Debug\Vista.Properties.Resources.resources
 C:\Users\agusp\source\repos\StudySphere\Vista\obj\Debug\Vista.RecuperarContraseña.resources
 C:\Users\agusp\source\repos\StudySphere\Vista\obj\Debug\Vista.Registro.resources
@@ -156,3 +155,7 @@ C:\Users\agusp\source\repos\StudySphere\Vista\obj\Debug\aa-ER\Vista.resources.dl
 C:\Users\agusp\source\repos\StudySphere\Vista\obj\Debug\Vista.csproj.CopyComplete
 C:\Users\agusp\source\repos\StudySphere\Vista\obj\Debug\Vista.exe
 C:\Users\agusp\source\repos\StudySphere\Vista\obj\Debug\Vista.pdb
+C:\Users\agusp\source\repos\StudySphere\Vista\obj\Debug\Vista.Formularios.AdministrarCarreras.resources
+C:\Users\agusp\source\repos\StudySphere\Vista\obj\Debug\Vista.Formularios.AdministrarMaterias.resources
+C:\Users\agusp\source\repos\StudySphere\Vista\obj\Debug\Vista.Formularios.GraficosAuditoria.resources
+C:\Users\agusp\source\repos\StudySphere\Vista\obj\Debug\Vista.Formularios.AdministrarGrupos.resources

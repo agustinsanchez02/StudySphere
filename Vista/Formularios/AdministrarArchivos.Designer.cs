@@ -54,7 +54,7 @@ namespace Vista
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(805, 107);
+            this.panel1.Size = new System.Drawing.Size(1309, 107);
             this.panel1.TabIndex = 1;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
@@ -63,7 +63,7 @@ namespace Vista
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(274, 31);
+            this.label1.Location = new System.Drawing.Point(601, 28);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(514, 46);
             this.label1.TabIndex = 0;
@@ -93,7 +93,7 @@ namespace Vista
             this.Agregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.Agregar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Agregar.ForeColor = System.Drawing.Color.White;
-            this.Agregar.Location = new System.Drawing.Point(628, 124);
+            this.Agregar.Location = new System.Drawing.Point(1152, 124);
             this.Agregar.Name = "Agregar";
             this.Agregar.Size = new System.Drawing.Size(102, 57);
             this.Agregar.TabIndex = 54;
@@ -106,7 +106,7 @@ namespace Vista
             this.Eliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Eliminar.ForeColor = System.Drawing.Color.White;
-            this.Eliminar.Location = new System.Drawing.Point(628, 208);
+            this.Eliminar.Location = new System.Drawing.Point(1152, 208);
             this.Eliminar.Name = "Eliminar";
             this.Eliminar.Size = new System.Drawing.Size(102, 57);
             this.Eliminar.TabIndex = 56;
@@ -119,7 +119,7 @@ namespace Vista
             this.VerArchivo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.VerArchivo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.VerArchivo.ForeColor = System.Drawing.Color.White;
-            this.VerArchivo.Location = new System.Drawing.Point(628, 296);
+            this.VerArchivo.Location = new System.Drawing.Point(1152, 296);
             this.VerArchivo.Name = "VerArchivo";
             this.VerArchivo.Size = new System.Drawing.Size(102, 57);
             this.VerArchivo.TabIndex = 57;
@@ -132,7 +132,7 @@ namespace Vista
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(628, 380);
+            this.button2.Location = new System.Drawing.Point(1152, 380);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(102, 58);
             this.button2.TabIndex = 56;
@@ -142,11 +142,19 @@ namespace Vista
             // 
             // dgv
             // 
+            this.dgv.AllowUserToAddRows = false;
+            this.dgv.AllowUserToDeleteRows = false;
+            this.dgv.AllowUserToResizeColumns = false;
+            this.dgv.AllowUserToResizeRows = false;
+            this.dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv.Location = new System.Drawing.Point(10, 124);
+            this.dgv.MultiSelect = false;
             this.dgv.Name = "dgv";
+            this.dgv.ReadOnly = true;
             this.dgv.RowTemplate.Height = 25;
-            this.dgv.Size = new System.Drawing.Size(585, 314);
+            this.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv.Size = new System.Drawing.Size(1114, 314);
             this.dgv.TabIndex = 58;
             // 
             // AdministrarArchivos
@@ -154,7 +162,7 @@ namespace Vista
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.ClientSize = new System.Drawing.Size(804, 450);
+            this.ClientSize = new System.Drawing.Size(1273, 450);
             this.Controls.Add(this.dgv);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.VerArchivo);

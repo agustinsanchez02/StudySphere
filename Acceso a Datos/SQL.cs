@@ -1,4 +1,6 @@
-﻿using System.Data.SqlClient;
+﻿using System;
+using System.Data.SqlClient;
+
 
 namespace Acceso_a_Datos
 {
@@ -11,7 +13,7 @@ namespace Acceso_a_Datos
 
         private SQL()
         {
-            Conexion = "Data Source = DESKTOP-I5B1LQK\\SQLEXPRESS; Initial Catalog = StudySphereAPP; Integrated Security = True";
+            Conexion = "Data Source = 35.198.14.175; Initial Catalog = StudySphereAPP; Integrated Security = false ;UiD=sqlserver; Pwd=studysph3r3";
         }
 
         public static SQL Instance
@@ -28,6 +30,5 @@ namespace Acceso_a_Datos
                 }
             }
         }
-
     }
 }

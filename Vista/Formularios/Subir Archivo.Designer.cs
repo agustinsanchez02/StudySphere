@@ -34,12 +34,12 @@ namespace Vista
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Subir_Archivo));
             this.button1 = new System.Windows.Forms.Button();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.Materiacb = new System.Windows.Forms.ComboBox();
+            this.CarreraCB = new System.Windows.Forms.ComboBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.Explorar = new System.Windows.Forms.Button();
             this.archivotxt = new System.Windows.Forms.TextBox();
-            this.carreratxt = new System.Windows.Forms.TextBox();
-            this.materiatxt = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.nombretxt = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -81,17 +81,18 @@ namespace Vista
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.Materiacb);
+            this.splitContainer1.Panel1.Controls.Add(this.CarreraCB);
             this.splitContainer1.Panel1.Controls.Add(this.button3);
             this.splitContainer1.Panel1.Controls.Add(this.button2);
             this.splitContainer1.Panel1.Controls.Add(this.Explorar);
             this.splitContainer1.Panel1.Controls.Add(this.archivotxt);
-            this.splitContainer1.Panel1.Controls.Add(this.carreratxt);
-            this.splitContainer1.Panel1.Controls.Add(this.materiatxt);
             this.splitContainer1.Panel1.Controls.Add(this.label4);
             this.splitContainer1.Panel1.Controls.Add(this.nombretxt);
             this.splitContainer1.Panel1.Controls.Add(this.label3);
             this.splitContainer1.Panel1.Controls.Add(this.label2);
             this.splitContainer1.Panel1.Controls.Add(this.label1);
+            this.splitContainer1.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel1_Paint);
             // 
             // splitContainer1.Panel2
             // 
@@ -102,6 +103,25 @@ namespace Vista
             this.splitContainer1.SplitterDistance = 272;
             this.splitContainer1.TabIndex = 43;
             this.splitContainer1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.splitContainer1_MouseDown);
+            // 
+            // Materiacb
+            // 
+            this.Materiacb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Materiacb.FormattingEnabled = true;
+            this.Materiacb.Location = new System.Drawing.Point(84, 82);
+            this.Materiacb.Name = "Materiacb";
+            this.Materiacb.Size = new System.Drawing.Size(172, 21);
+            this.Materiacb.TabIndex = 43;
+            // 
+            // CarreraCB
+            // 
+            this.CarreraCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CarreraCB.FormattingEnabled = true;
+            this.CarreraCB.Location = new System.Drawing.Point(84, 117);
+            this.CarreraCB.Name = "CarreraCB";
+            this.CarreraCB.Size = new System.Drawing.Size(172, 21);
+            this.CarreraCB.TabIndex = 42;
+            this.CarreraCB.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // button3
             // 
@@ -147,20 +167,6 @@ namespace Vista
             this.archivotxt.Size = new System.Drawing.Size(503, 20);
             this.archivotxt.TabIndex = 4;
             this.archivotxt.TextChanged += new System.EventHandler(this.archivotxt_TextChanged);
-            // 
-            // carreratxt
-            // 
-            this.carreratxt.Location = new System.Drawing.Point(82, 116);
-            this.carreratxt.Name = "carreratxt";
-            this.carreratxt.Size = new System.Drawing.Size(174, 20);
-            this.carreratxt.TabIndex = 3;
-            // 
-            // materiatxt
-            // 
-            this.materiatxt.Location = new System.Drawing.Point(84, 83);
-            this.materiatxt.Name = "materiatxt";
-            this.materiatxt.Size = new System.Drawing.Size(172, 20);
-            this.materiatxt.TabIndex = 2;
             // 
             // label4
             // 
@@ -254,6 +260,7 @@ namespace Vista
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Subir_Archivo";
             this.Load += new System.EventHandler(this.Subir_Archivo_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Subir_Archivo_MouseDown_1);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
@@ -280,9 +287,9 @@ namespace Vista
         private AxAcroPDFLib.AxAcroPDF axAcroPDF1;
         private RichTextBox rtfData;
         private PictureBox pictureBox1;
-        private TextBox carreratxt;
-        private TextBox materiatxt;
         private Label label4;
         private Label label3;
+        private ComboBox CarreraCB;
+        private ComboBox Materiacb;
     }
 }

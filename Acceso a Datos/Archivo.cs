@@ -27,7 +27,7 @@ namespace Acceso_a_Datos
         #endregion
 
 
-        public bool GuardarArchivo(string nombre,long tamaño ,string extension, byte[] file, int IDUsuario, string Materia, string Carrera)
+        public bool GuardarArchivo(string nombre, long tamaño, string extension, byte[] file, int IDUsuario, string Materia, string Carrera)
         {
             using (SqlConnection connection = new SqlConnection(SQL.Instance.Conexion))
             {
@@ -35,7 +35,7 @@ namespace Acceso_a_Datos
                 {
                     command.Connection = connection;
                     connection.Open();
-                    command.CommandText = "INSERT INTO Archivo (Nombre, Tamaño, FechaCreacion ,Extension, Documento, IDUsuario, Materia, Carrera) VALUES ('" + nombre+ "','" + tamaño + "', GETDATE(),'" + extension +"', @file ,'" + IDUsuario + "','" + Materia + "','" +Carrera + "')";
+                    command.CommandText = "INSERT INTO Archivo (Nombre, Tamaño, FechaCreacion ,Extension, Documento, IDUsuario, Materia, Carrera) VALUES ('" + nombre + "','" + tamaño + "', GETDATE(),'" + extension + "', @file ,'" + IDUsuario + "','" + Materia + "','" + Carrera + "')";
                     command.Parameters.AddWithValue("@file", file);
                     command.CommandType = CommandType.Text;
                     int r = command.ExecuteNonQuery();
@@ -63,13 +63,14 @@ namespace Acceso_a_Datos
                     command.Connection = connection;
                     connection.Open();
 
-                    command.CommandText = "select IDArchivo, Archivo.Nombre, extension ,Tamaño, Materia, Carrera, FechaCreacion, Archivo.IDUsuario, Usuarios.Nombre from Archivo JOIN Usuarios ON Archivo.IDUsuario = Usuarios.IDUsuario where Materia = '"+ texto+"' OR Carrera = '"+ texto+"'";
+                    command.CommandText = "select IDArchivo, Archivo.Nombre, extension ,Tamaño, Materia, Carrera, FechaCreacion, Archivo.IDUsuario, Usuarios.Nombre from Archivo JOIN Usuarios ON Archivo.IDUsuario = Usuarios.IDUsuario where Materia LIKE '%" + texto + "%' OR Carrera LIKE '%" + texto + "%' OR Archivo.Nombre LIKE '%" + texto + "%'";
                     command.CommandType = CommandType.Text;
                     SqlDataReader resultado = command.ExecuteReader();
                     if (resultado.HasRows)
                     {
                         dataTable.Load(resultado);
                     }
+                    connection.Close();
                     return dataTable;
                 }
             }
@@ -85,6 +86,28 @@ namespace Acceso_a_Datos
                     command.Connection = connection;
                     connection.Open();
                     command.CommandText = "select IDArchivo, Archivo.Nombre, extension ,Tamaño, Materia, Carrera, FechaCreacion, Archivo.IDUsuario, Usuarios.Nombre from Archivo JOIN Usuarios ON Archivo.IDUsuario = Usuarios.IDUsuario";
+                    command.CommandType = CommandType.Text;
+                    SqlDataReader resultado = command.ExecuteReader();
+                    if (resultado.HasRows)
+                    {
+                        dataTable.Load(resultado);
+                    }
+                    connection.Close();
+                    return dataTable;
+                }
+            }
+        }
+
+        public DataTable ListarDocsUsuario(int id)
+        {
+            DataTable dataTable = new DataTable();
+            using (SqlConnection connection = new SqlConnection(SQL.Instance.Conexion))
+            {
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    connection.Open();
+                    command.CommandText = "select IDArchivo, Archivo.Nombre, extension ,Tamaño, Materia, Carrera, FechaCreacion, Archivo.IDUsuario, Usuarios.Nombre from Archivo JOIN Usuarios ON Archivo.IDUsuario = Usuarios.IDUsuario Where IDUsuario ="+ id ;
                     command.CommandType = CommandType.Text;
                     SqlDataReader resultado = command.ExecuteReader();
                     if (resultado.HasRows)
@@ -157,5 +180,7 @@ namespace Acceso_a_Datos
                 return true;
             }
         }
+
+      
     }
 }

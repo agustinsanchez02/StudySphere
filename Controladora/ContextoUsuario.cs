@@ -131,6 +131,18 @@ namespace Controladora
                 return "Error, intente nuevamente, "+ Convert.ToString(e)+""  ;
             }
         }
+        public string editarperfilAdmin(int Id, string Usuario, string Nombre, string Apellido, string Email, string telefono, int Permisos)
+        {
+            try
+            {
+                user.editarperfil(Id, Usuario, Nombre, Apellido, Email, telefono, Permisos);
+                return "El perfil se ha actualizado exitosamente. ";
+            }
+            catch (Exception e)
+            {
+                return "Error, intente nuevamente, " + Convert.ToString(e) + "";
+            }
+        }
         public string iniciosesion(string usuario, string pass)
         {
             return user.Login(usuario, pass);

@@ -16,9 +16,8 @@ namespace Controladora
             return archivos.Filtrodocumentos(id);
         }
        
-        public bool GuardarArchivo(string nombre ,string extension, byte[] file, int IDUsuario, string materia, string carrera)
+        public bool GuardarArchivo(string nombre, int tamaño ,string extension, byte[] file, int IDUsuario, string materia, string carrera)
         {
-            int tamaño = 3434;
             return archivos.GuardarArchivo(nombre,tamaño ,extension, file, IDUsuario, materia, carrera);
         }
 
@@ -31,9 +30,14 @@ namespace Controladora
         {
             return archivos.ListarDocs();
         }
+        public DataTable ListarDocsUsuario(int id)
+        {
+            return archivos.ListarDocsUsuario(id);
+        }
         public DataTable FiltroArchivo(string texto)
         {
             return archivos.FiltroArchivo(texto);
         }
+       
     }
 }

@@ -21,8 +21,11 @@ namespace Vista
 {
     public partial class Subir_Archivo : Form
     {
-        Controladora.ContextoArchivo contextoArchivo = new Controladora.ContextoArchivo();
-        Controladora.ContextoUsuario contextoUsuario = new Controladora.ContextoUsuario();
+        ContextoArchivo contextoArchivo = new ContextoArchivo();
+        ContextoUsuario contextoUsuario = new ContextoUsuario();
+        ContextoAuditoria contextoAuditoria = new ContextoAuditoria();
+        ContextoCarrera contextoCarrera = new ContextoCarrera();
+        ContextoMateria contextoMateria = new ContextoMateria();
         public Subir_Archivo()
         {
             InitializeComponent();
@@ -34,7 +37,7 @@ namespace Vista
         private void Explorar_Click_1(object sender, EventArgs e)
         {
             openFileDialog1.InitialDirectory = "c:\\";
-            openFileDialog1.Filter = "Todos los archivos (*.*)|*.*|Imágenes (*.jpeg, *.jpg, *.png)|*.jpeg;*.jpg;*.png|Documento PDF (*.PDF)|*.pdf|Documentos Word (*.doc, *.docx)|*.doc,*.docx)"; //Presentacion PowerPoint (*.ppt, *.pptx)|*.ppt;*.pptx|Document Excel (*.xls, *.xlsx)|*.xls;*.xlsx
+            openFileDialog1.Filter = "Todos los archivos (*.*)|*.*|Imágenes (*.jpeg, *.jpg, *.png)|*.jpeg;*.jpg;*.png|Documento PDF (*.PDF)|*.pdf|Documentos Word (*.doc, *.docx)|*.doc,*.docx|PowerPoint (*.ppt, *.pptx)|*.ppt, *.pptx|Document Excel (*.xls, *.xlsx)|*.xls;*.xlsx)";
             openFileDialog1.FilterIndex = 1;
             openFileDialog1.RestoreDirectory = true;
 
@@ -44,7 +47,6 @@ namespace Vista
                 var extension = Path.GetExtension(openFileDialog1.FileName);
                 if (extension == ".pdf")
                 {
-                    this.Width = 933;
                     this.Height = 273;
                     axAcroPDF1.Hide();
                     rtfData.Hide();
@@ -63,7 +65,6 @@ namespace Vista
                                 axAcroPDF1.Hide();
                                 pictureBox1.Hide();
                                 rtfData.Show();
-                                this.Width = 933;
                                 this.Height = 1046;
                                 object readOnly = true;
                                 object visible = true;
@@ -96,14 +97,32 @@ namespace Vista
                             axAcroPDF1.Hide();
                             rtfData.Hide();
                             pictureBox1.Show();
-                            this.Width = 933;
                             this.Height = 1046;
                             pictureBox1.Image = Image.FromFile(openFileDialog1.FileName);
                         }
                         else
                         {
-                            MessageBox.Show("Formato incompatible.\nLos formatos compatibles son pdf, word e imagenes", "Error");
-                            archivotxt.Text = "";
+                            if (extension == ".ppt" || extension == ".pptx")
+                            {
+                                this.Height = 273;
+                                axAcroPDF1.Hide();
+                                rtfData.Hide();
+                                pictureBox1.Hide();
+                            }
+                            else
+                            {
+                                if (extension == ".xls" || extension == ".xlsx")
+                                {
+                                    this.Height = 273;
+                                    axAcroPDF1.Hide();
+                                    rtfData.Hide();
+                                    pictureBox1.Hide();
+                                }else
+                                {
+                                    MessageBox.Show("Formato incompatible.\nLos formatos compatibles son pdf, word e imagenes", "Error");
+                                    archivotxt.Text = "";
+                                }
+                            }
                         }
                     }
                 }
@@ -114,12 +133,13 @@ namespace Vista
         {
             if (nombretxt.Text.Trim().Equals(""))
             {
+               
                 MessageBox.Show("Ingrese un nombre", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             else
             {
-                if(materiatxt.Text == "" || carreratxt.Text == "")
+                if(Materiacb.Text == "" || CarreraCB.Text == "")
                 {
                     MessageBox.Show("Ingrese una materia y carrera", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
@@ -140,8 +160,11 @@ namespace Vista
                             MemoryStream obj = new MemoryStream();
                             mystream.CopyTo(obj);
                             file = obj.ToArray();
-                            if (contextoArchivo.GuardarArchivo(nombretxt.Text.Trim(), Path.GetExtension(openFileDialog1.FileName), file, contextoUsuario.obtenerIDActual(), materiatxt.Text, carreratxt.Text) == true)
+                            FileInfo fi = new FileInfo(openFileDialog1.FileName);
+                            if (contextoArchivo.GuardarArchivo(nombretxt.Text.Trim(), Convert.ToInt32(fi.Length),Path.GetExtension(openFileDialog1.FileName), file, contextoUsuario.obtenerIDActual(), Materiacb.Text, CarreraCB.Text) == true)
                             {
+                                string Descripcion = "El usuario "+ contextoUsuario.ObtenerUsuarioActual()+" ha subido un archivo llamado "+ nombretxt.Text+" con extension " + Path.GetExtension(openFileDialog1.FileName) +", a la materia "+ Materiacb.Text+" de la carrera "+ CarreraCB.Text+" a las " +DateTime.Now.Hour+ ":" + DateTime.Now.Minute +":"+DateTime.Now.Second;
+                                contextoAuditoria.AuditoriaAltaArchivo("Archivos", contextoUsuario.ObtenerUsuarioActual(), Descripcion, nombretxt.Text.Trim(), Path.GetExtension(openFileDialog1.FileName), Convert.ToInt32(fi.Length), DateTime.Now, Materiacb.Text, CarreraCB.Text);
                                 MessageBox.Show("Archivo subido con exito.");
                             }
                             else
@@ -187,11 +210,15 @@ namespace Vista
 
         private void Subir_Archivo_Load(object sender, EventArgs e)
         {
-            this.Width = 933;
-            this.Height = 273;
+            this.Width = 800;
+            this.Height = 237;
             axAcroPDF1.Hide();
             rtfData.Hide();
             pictureBox1.Hide();
+            CarreraCB.DataSource = contextoCarrera.ListarCarreras();
+            CarreraCB.DisplayMember = "Nombre";
+            Materiacb.DataSource = contextoMateria.ListarMaterias();
+            Materiacb.DisplayMember = "Nombre";
         }
 
         private void splitContainer1_MouseDown(object sender, MouseEventArgs e)
@@ -203,6 +230,22 @@ namespace Vista
         private void archivotxt_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Subir_Archivo_MouseDown_1(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }

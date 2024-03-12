@@ -16,6 +16,8 @@ using System.Reflection;
 using System.Runtime.InteropServices;
 using Vista.Formularios;
 using Controladora;
+using Azure.Core;
+using System.Net;
 
 namespace Vista
 {
@@ -147,7 +149,8 @@ namespace Vista
                     var loginvalido = contextousuario.iniciosesion(Usuario.Text, Contraseña.Text);
                     if (loginvalido == "Agregado")
                     {
-                        string detalle = "el usuaio "+Usuario.Text+" ha iniciado sesion a las "+ DateTime.Now.Hour + ":"+ DateTime.Now.Minute+":" + DateTime.Now.Second;
+                        string externalip = new WebClient().DownloadString("http://icanhazip.com");
+                        string detalle = "el usuaio "+Usuario.Text+" ha iniciado sesion a las "+ DateTime.Now.Hour + ":"+ DateTime.Now.Minute+":" + DateTime.Now.Second +" con la IP publica: "+ externalip;
                         contextoAuditoria.AuditorialogIn(contextousuario.ObtenerUsuarioActual().ToString(), contextousuario.ObtenerEmailActual().ToString(), detalle);
                         this.Hide();
                         Bienvenida bienvenida = new Bienvenida();

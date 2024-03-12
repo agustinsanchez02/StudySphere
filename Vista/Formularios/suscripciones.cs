@@ -37,10 +37,8 @@ namespace Vista
             usuario.permisos(1, Usuario);
             Bienvenida bienvenida = new Bienvenida();
             bienvenida.ShowDialog();
-            Inicio inicio = new Inicio();
-            inicio.Show();
             iniciar_sesion iniciar_Sesion = new iniciar_sesion();
-            inicio.FormClosed += iniciar_Sesion.CerrarSesion;
+            iniciar_Sesion.Show();
         }
 
         private void bunifuFlatButton2_Click(object sender, EventArgs e)

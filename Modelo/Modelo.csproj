@@ -44,8 +44,10 @@
     <Compile Include="Administrador.cs" />
     <Compile Include="Archivo.cs" />
     <Compile Include="Busqueda.cs" />
+    <Compile Include="CacheGrupos.cs" />
     <Compile Include="CacheUsuario.cs" />
     <Compile Include="Carrera.cs" />
+    <Compile Include="Grupos.cs" />
     <Compile Include="Materia.cs" />
     <Compile Include="Precios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

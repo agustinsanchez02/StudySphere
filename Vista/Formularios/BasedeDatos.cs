@@ -20,22 +20,16 @@ namespace Vista.Formularios
 
         private void Bkpbtn_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(contextoBKP.GenerarBKP());
-        }
-
-        private void Explorar_Click(object sender, EventArgs e)
-        {
-            //obtener path
-            OpenFileDialog openFileDialog1 = new OpenFileDialog();
-            openFileDialog1.InitialDirectory = "C:\\Program Files\\Microsoft SQL Server\\MSSQL16.SQLEXPRESS\\MSSQL\\Backup";
-            openFileDialog1.Filter = "Archivos de BKP (*.bak)|*.bak";
-            openFileDialog1.FilterIndex = 1;
-            openFileDialog1.RestoreDirectory = true;
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            DialogResult dialogResult = MessageBox.Show("¿Desea ser redirigido a la consola de administracion?","Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dialogResult == DialogResult.Yes)
             {
-                Rutatxt.Text = openFileDialog1.FileName;
+                contextoBKP.GenerarBKP();
+            }else if (dialogResult == DialogResult.No)
+            {
+                return;
             }
         }
+
 
         private void Cancelarbtn_Click(object sender, EventArgs e)
         {
@@ -46,21 +40,14 @@ namespace Vista.Formularios
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (Rutatxt.Text == "")
+            DialogResult dialogResult = MessageBox.Show("¿Desea restaurar la base de datos?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dialogResult == DialogResult.Yes)
             {
-                MessageBox.Show("Seleccione un BackUp");
-                return;
+                contextoBKP.RestaurarBKP();
             }
-            if (MessageBox.Show("¿Desea restaurar la base de datos?", "Restaurar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+            else if (dialogResult == DialogResult.No)
             {
                 return;
-            }
-            else
-            {
-                MessageBox.Show(contextoBKP.RestaurarBKP(Rutatxt.Text));
-                this.Hide();
-                VistaAdministrador vistaAdministrador = new VistaAdministrador();
-                vistaAdministrador.Show();
             }
         }
     }

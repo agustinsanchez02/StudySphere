@@ -35,14 +35,21 @@
             this.lblmail = new System.Windows.Forms.Label();
             this.lblnombre = new System.Windows.Forms.Label();
             this.lblTipoCuenta = new System.Windows.Forms.Label();
-            this.Cancelar = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.AdministrarUsuarios = new System.Windows.Forms.Button();
+            this.AdministrarArchivos = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.Reportesbtn = new System.Windows.Forms.Button();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.bkpbtn = new System.Windows.Forms.Button();
+            this.AdministrarMaterias = new System.Windows.Forms.Button();
+            this.AdministrarCarreras = new System.Windows.Forms.Button();
+            this.reportepnl = new System.Windows.Forms.Panel();
+            this.auditoriapnlbtn = new System.Windows.Forms.Button();
+            this.Archivopnlbtn = new System.Windows.Forms.Button();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.Permisosbtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.reportepnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,7 +57,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(178, 32);
+            this.label1.Location = new System.Drawing.Point(200, 30);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(162, 32);
             this.label1.TabIndex = 0;
@@ -64,7 +71,7 @@
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Location = new System.Drawing.Point(2, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(440, 85);
+            this.panel1.Size = new System.Drawing.Size(473, 85);
             this.panel1.TabIndex = 1;
             // 
             // Cerrar
@@ -85,9 +92,9 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Vista.Properties.Resources.pictureBox1_Image;
-            this.pictureBox2.Location = new System.Drawing.Point(-46, -106);
+            this.pictureBox2.Location = new System.Drawing.Point(-62, -155);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(292, 349);
+            this.pictureBox2.Size = new System.Drawing.Size(331, 444);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 54;
             this.pictureBox2.TabStop = false;
@@ -125,40 +132,40 @@
             this.lblTipoCuenta.TabIndex = 52;
             this.lblTipoCuenta.Text = "Tipo de cuenta";
             // 
-            // Cancelar
+            // AdministrarUsuarios
             // 
-            this.Cancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.Cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Cancelar.ForeColor = System.Drawing.Color.White;
-            this.Cancelar.Location = new System.Drawing.Point(42, 206);
-            this.Cancelar.Name = "Cancelar";
-            this.Cancelar.Size = new System.Drawing.Size(102, 57);
-            this.Cancelar.TabIndex = 53;
-            this.Cancelar.Text = "Administrar Usuarios";
-            this.Cancelar.UseVisualStyleBackColor = false;
-            this.Cancelar.Click += new System.EventHandler(this.Cancelar_Click);
+            this.AdministrarUsuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.AdministrarUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.AdministrarUsuarios.ForeColor = System.Drawing.Color.White;
+            this.AdministrarUsuarios.Location = new System.Drawing.Point(42, 206);
+            this.AdministrarUsuarios.Name = "AdministrarUsuarios";
+            this.AdministrarUsuarios.Size = new System.Drawing.Size(102, 57);
+            this.AdministrarUsuarios.TabIndex = 53;
+            this.AdministrarUsuarios.Text = "Administrar Usuarios";
+            this.AdministrarUsuarios.UseVisualStyleBackColor = false;
+            this.AdministrarUsuarios.Click += new System.EventHandler(this.AdministrarUsuarios_Click);
             // 
-            // button1
+            // AdministrarArchivos
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(256, 206);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(102, 57);
-            this.button1.TabIndex = 54;
-            this.button1.Text = "Administrar Archivos";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.AdministrarArchivos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.AdministrarArchivos.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.AdministrarArchivos.ForeColor = System.Drawing.Color.White;
+            this.AdministrarArchivos.Location = new System.Drawing.Point(324, 206);
+            this.AdministrarArchivos.Name = "AdministrarArchivos";
+            this.AdministrarArchivos.Size = new System.Drawing.Size(102, 57);
+            this.AdministrarArchivos.TabIndex = 54;
+            this.AdministrarArchivos.Text = "Administrar Archivos";
+            this.AdministrarArchivos.UseVisualStyleBackColor = false;
+            this.AdministrarArchivos.Click += new System.EventHandler(this.AdministrarArchivos_Click);
             // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(137, 402);
+            this.button2.Location = new System.Drawing.Point(169, 635);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(116, 57);
+            this.button2.Size = new System.Drawing.Size(112, 40);
             this.button2.TabIndex = 55;
             this.button2.Text = "Salir";
             this.button2.UseVisualStyleBackColor = false;
@@ -168,12 +175,83 @@
             // 
             this.Reportesbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.Reportesbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Reportesbtn.Location = new System.Drawing.Point(256, 311);
+            this.Reportesbtn.Location = new System.Drawing.Point(324, 432);
             this.Reportesbtn.Name = "Reportesbtn";
             this.Reportesbtn.Size = new System.Drawing.Size(102, 57);
             this.Reportesbtn.TabIndex = 56;
             this.Reportesbtn.Text = "Reportes";
             this.Reportesbtn.UseVisualStyleBackColor = false;
+            this.Reportesbtn.Click += new System.EventHandler(this.Reportesbtn_Click);
+            // 
+            // bkpbtn
+            // 
+            this.bkpbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.bkpbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.bkpbtn.Location = new System.Drawing.Point(42, 432);
+            this.bkpbtn.Name = "bkpbtn";
+            this.bkpbtn.Size = new System.Drawing.Size(102, 57);
+            this.bkpbtn.TabIndex = 56;
+            this.bkpbtn.Text = "Base de Datos";
+            this.bkpbtn.UseVisualStyleBackColor = false;
+            this.bkpbtn.Click += new System.EventHandler(this.bkpbtn_Click);
+            // 
+            // AdministrarMaterias
+            // 
+            this.AdministrarMaterias.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.AdministrarMaterias.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.AdministrarMaterias.ForeColor = System.Drawing.Color.White;
+            this.AdministrarMaterias.Location = new System.Drawing.Point(42, 319);
+            this.AdministrarMaterias.Name = "AdministrarMaterias";
+            this.AdministrarMaterias.Size = new System.Drawing.Size(102, 57);
+            this.AdministrarMaterias.TabIndex = 53;
+            this.AdministrarMaterias.Text = "Administrar Materias";
+            this.AdministrarMaterias.UseVisualStyleBackColor = false;
+            this.AdministrarMaterias.Click += new System.EventHandler(this.AdministrarMaterias_Click);
+            // 
+            // AdministrarCarreras
+            // 
+            this.AdministrarCarreras.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.AdministrarCarreras.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.AdministrarCarreras.ForeColor = System.Drawing.Color.White;
+            this.AdministrarCarreras.Location = new System.Drawing.Point(324, 319);
+            this.AdministrarCarreras.Name = "AdministrarCarreras";
+            this.AdministrarCarreras.Size = new System.Drawing.Size(102, 57);
+            this.AdministrarCarreras.TabIndex = 54;
+            this.AdministrarCarreras.Text = "Administrar Carreras";
+            this.AdministrarCarreras.UseVisualStyleBackColor = false;
+            this.AdministrarCarreras.Click += new System.EventHandler(this.AdministrarCarreras_Click);
+            // 
+            // reportepnl
+            // 
+            this.reportepnl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.reportepnl.Controls.Add(this.auditoriapnlbtn);
+            this.reportepnl.Controls.Add(this.Archivopnlbtn);
+            this.reportepnl.Location = new System.Drawing.Point(208, 432);
+            this.reportepnl.Name = "reportepnl";
+            this.reportepnl.Size = new System.Drawing.Size(110, 77);
+            this.reportepnl.TabIndex = 57;
+            // 
+            // auditoriapnlbtn
+            // 
+            this.auditoriapnlbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.auditoriapnlbtn.Location = new System.Drawing.Point(17, 45);
+            this.auditoriapnlbtn.Name = "auditoriapnlbtn";
+            this.auditoriapnlbtn.Size = new System.Drawing.Size(75, 23);
+            this.auditoriapnlbtn.TabIndex = 0;
+            this.auditoriapnlbtn.Text = "Auditoria";
+            this.auditoriapnlbtn.UseVisualStyleBackColor = true;
+            this.auditoriapnlbtn.Click += new System.EventHandler(this.auditoriapnlbtn_Click);
+            // 
+            // Archivopnlbtn
+            // 
+            this.Archivopnlbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Archivopnlbtn.Location = new System.Drawing.Point(17, 11);
+            this.Archivopnlbtn.Name = "Archivopnlbtn";
+            this.Archivopnlbtn.Size = new System.Drawing.Size(75, 23);
+            this.Archivopnlbtn.TabIndex = 0;
+            this.Archivopnlbtn.Text = "Archivos";
+            this.Archivopnlbtn.UseVisualStyleBackColor = true;
+            this.Archivopnlbtn.Click += new System.EventHandler(this.Archivopnlbtn_Click);
             // 
             // pictureBox6
             // 
@@ -183,31 +261,35 @@
             this.pictureBox6.Image = global::Vista.Properties.Resources.USuario__2___1_;
             this.pictureBox6.Location = new System.Drawing.Point(2, 98);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(68, 78);
+            this.pictureBox6.Size = new System.Drawing.Size(96, 62);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 49;
             this.pictureBox6.TabStop = false;
             // 
-            // bkpbtn
+            // Permisosbtn
             // 
-            this.bkpbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.bkpbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.bkpbtn.Location = new System.Drawing.Point(42, 311);
-            this.bkpbtn.Name = "bkpbtn";
-            this.bkpbtn.Size = new System.Drawing.Size(102, 57);
-            this.bkpbtn.TabIndex = 56;
-            this.bkpbtn.Text = "Base de Datos";
-            this.bkpbtn.UseVisualStyleBackColor = false;
-            this.bkpbtn.Click += new System.EventHandler(this.bkpbtn_Click);
+            this.Permisosbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.Permisosbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Permisosbtn.Location = new System.Drawing.Point(169, 545);
+            this.Permisosbtn.Name = "Permisosbtn";
+            this.Permisosbtn.Size = new System.Drawing.Size(112, 57);
+            this.Permisosbtn.TabIndex = 56;
+            this.Permisosbtn.Text = "Permisos";
+            this.Permisosbtn.UseVisualStyleBackColor = false;
+            this.Permisosbtn.Click += new System.EventHandler(this.Permisosbtn_Click);
             // 
             // VistaAdministrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.ClientSize = new System.Drawing.Size(405, 469);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.Cancelar);
+            this.ClientSize = new System.Drawing.Size(470, 700);
+            this.Controls.Add(this.reportepnl);
+            this.Controls.Add(this.AdministrarCarreras);
+            this.Controls.Add(this.AdministrarMaterias);
+            this.Controls.Add(this.AdministrarArchivos);
+            this.Controls.Add(this.AdministrarUsuarios);
+            this.Controls.Add(this.Permisosbtn);
             this.Controls.Add(this.bkpbtn);
             this.Controls.Add(this.Reportesbtn);
             this.Controls.Add(this.button2);
@@ -220,11 +302,12 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "VistaAdministrador";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "VistaAdministrador";
+            this.Text = "U";
             this.Load += new System.EventHandler(this.VistaAdministrador_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.reportepnl.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -240,11 +323,17 @@
         private System.Windows.Forms.Label lblTipoCuenta;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Button Cerrar;
-        private System.Windows.Forms.Button Cancelar;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button AdministrarUsuarios;
+        private System.Windows.Forms.Button AdministrarArchivos;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button Reportesbtn;
         private System.Windows.Forms.Button bkpbtn;
+        private System.Windows.Forms.Button AdministrarMaterias;
+        private System.Windows.Forms.Button AdministrarCarreras;
+        private System.Windows.Forms.Panel reportepnl;
+        private System.Windows.Forms.Button auditoriapnlbtn;
+        private System.Windows.Forms.Button Archivopnlbtn;
+        private System.Windows.Forms.Button Permisosbtn;
     }
 }
