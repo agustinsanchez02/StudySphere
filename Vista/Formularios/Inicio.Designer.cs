@@ -50,23 +50,23 @@ namespace Vista
             this.Buscartxt = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.lblTipoCuenta = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.CerrarSesionBTN = new System.Windows.Forms.Button();
-            this.SubirArchivoBTN = new System.Windows.Forms.Button();
-            this.Buscarbtn = new System.Windows.Forms.Button();
             this.lblnombre = new System.Windows.Forms.Label();
             this.lblmail = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.verArchivobtn = new System.Windows.Forms.Button();
             this.Descargarbtn = new System.Windows.Forms.Button();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.CerrarSesionBTN = new System.Windows.Forms.Button();
+            this.SubirArchivoBTN = new System.Windows.Forms.Button();
+            this.Buscarbtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -76,7 +76,7 @@ namespace Vista
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button1.Location = new System.Drawing.Point(1037, -1);
+            this.button1.Location = new System.Drawing.Point(1272, 1);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(25, 24);
             this.button1.TabIndex = 40;
@@ -176,6 +176,7 @@ namespace Vista
             this.button5.Size = new System.Drawing.Size(54, 29);
             this.button5.TabIndex = 44;
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
@@ -218,6 +219,7 @@ namespace Vista
             this.pictureBox2.Size = new System.Drawing.Size(29, 28);
             this.pictureBox2.TabIndex = 43;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // label6
             // 
@@ -256,9 +258,9 @@ namespace Vista
             this.Buscartxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Buscartxt.Font = new System.Drawing.Font("Verdana", 11.25F);
             this.Buscartxt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(169)))), ((int)(((byte)(181)))));
-            this.Buscartxt.Location = new System.Drawing.Point(280, 123);
+            this.Buscartxt.Location = new System.Drawing.Point(290, 123);
             this.Buscartxt.Name = "Buscartxt";
-            this.Buscartxt.Size = new System.Drawing.Size(701, 26);
+            this.Buscartxt.Size = new System.Drawing.Size(898, 26);
             this.Buscartxt.TabIndex = 44;
             this.Buscartxt.Text = "Buscar libros o materias";
             this.Buscartxt.Enter += new System.EventHandler(this.Buscartxt_Enter);
@@ -288,57 +290,6 @@ namespace Vista
             this.lblTipoCuenta.Size = new System.Drawing.Size(100, 14);
             this.lblTipoCuenta.TabIndex = 48;
             this.lblTipoCuenta.Text = "Tipo de cuenta";
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox6.Image = global::Vista.Properties.Resources.USuario__2___1_;
-            this.pictureBox6.Location = new System.Drawing.Point(224, 12);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(0, 75);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 47;
-            this.pictureBox6.TabStop = false;
-            // 
-            // CerrarSesionBTN
-            // 
-            this.CerrarSesionBTN.Font = new System.Drawing.Font("Verdana", 7F);
-            this.CerrarSesionBTN.Image = global::Vista.Properties.Resources.Salir;
-            this.CerrarSesionBTN.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.CerrarSesionBTN.Location = new System.Drawing.Point(903, 22);
-            this.CerrarSesionBTN.Name = "CerrarSesionBTN";
-            this.CerrarSesionBTN.Size = new System.Drawing.Size(104, 35);
-            this.CerrarSesionBTN.TabIndex = 46;
-            this.CerrarSesionBTN.Text = "     Cerrar sesión";
-            this.CerrarSesionBTN.UseVisualStyleBackColor = true;
-            this.CerrarSesionBTN.Click += new System.EventHandler(this.CerrarSesionBTN_Click);
-            // 
-            // SubirArchivoBTN
-            // 
-            this.SubirArchivoBTN.Font = new System.Drawing.Font("Verdana", 7F);
-            this.SubirArchivoBTN.Image = global::Vista.Properties.Resources.Añadir;
-            this.SubirArchivoBTN.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.SubirArchivoBTN.Location = new System.Drawing.Point(764, 22);
-            this.SubirArchivoBTN.Name = "SubirArchivoBTN";
-            this.SubirArchivoBTN.Size = new System.Drawing.Size(104, 35);
-            this.SubirArchivoBTN.TabIndex = 46;
-            this.SubirArchivoBTN.Text = "     Subir archivo";
-            this.SubirArchivoBTN.UseVisualStyleBackColor = true;
-            this.SubirArchivoBTN.Click += new System.EventHandler(this.SubirArchivoBTN_Click);
-            // 
-            // Buscarbtn
-            // 
-            this.Buscarbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.Buscarbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Buscarbtn.Image = global::Vista.Properties.Resources.Buscar;
-            this.Buscarbtn.Location = new System.Drawing.Point(236, 116);
-            this.Buscarbtn.Name = "Buscarbtn";
-            this.Buscarbtn.Size = new System.Drawing.Size(38, 39);
-            this.Buscarbtn.TabIndex = 43;
-            this.Buscarbtn.UseVisualStyleBackColor = false;
-            this.Buscarbtn.Click += new System.EventHandler(this.Buscarbtn_Click);
             // 
             // lblnombre
             // 
@@ -376,11 +327,19 @@ namespace Vista
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(280, 184);
+            this.dataGridView1.Location = new System.Drawing.Point(280, 178);
+            this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(709, 387);
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(1006, 554);
             this.dataGridView1.TabIndex = 50;
             // 
             // verArchivobtn
@@ -388,7 +347,7 @@ namespace Vista
             this.verArchivobtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.verArchivobtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.verArchivobtn.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.verArchivobtn.Location = new System.Drawing.Point(870, 601);
+            this.verArchivobtn.Location = new System.Drawing.Point(1165, 738);
             this.verArchivobtn.Name = "verArchivobtn";
             this.verArchivobtn.Size = new System.Drawing.Size(111, 29);
             this.verArchivobtn.TabIndex = 51;
@@ -401,7 +360,7 @@ namespace Vista
             this.Descargarbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.Descargarbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Descargarbtn.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.Descargarbtn.Location = new System.Drawing.Point(738, 601);
+            this.Descargarbtn.Location = new System.Drawing.Point(1039, 738);
             this.Descargarbtn.Name = "Descargarbtn";
             this.Descargarbtn.Size = new System.Drawing.Size(111, 29);
             this.Descargarbtn.TabIndex = 51;
@@ -409,12 +368,63 @@ namespace Vista
             this.Descargarbtn.UseVisualStyleBackColor = false;
             this.Descargarbtn.Click += new System.EventHandler(this.Descargarbtn_Click);
             // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox6.Image = global::Vista.Properties.Resources.USuario__2___1_;
+            this.pictureBox6.Location = new System.Drawing.Point(224, 12);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(98, 91);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 47;
+            this.pictureBox6.TabStop = false;
+            // 
+            // CerrarSesionBTN
+            // 
+            this.CerrarSesionBTN.Font = new System.Drawing.Font("Verdana", 7F);
+            this.CerrarSesionBTN.Image = global::Vista.Properties.Resources.Salir;
+            this.CerrarSesionBTN.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.CerrarSesionBTN.Location = new System.Drawing.Point(1138, 24);
+            this.CerrarSesionBTN.Name = "CerrarSesionBTN";
+            this.CerrarSesionBTN.Size = new System.Drawing.Size(116, 35);
+            this.CerrarSesionBTN.TabIndex = 46;
+            this.CerrarSesionBTN.Text = "     Cerrar sesión";
+            this.CerrarSesionBTN.UseVisualStyleBackColor = true;
+            this.CerrarSesionBTN.Click += new System.EventHandler(this.CerrarSesionBTN_Click);
+            // 
+            // SubirArchivoBTN
+            // 
+            this.SubirArchivoBTN.Font = new System.Drawing.Font("Verdana", 7F);
+            this.SubirArchivoBTN.Image = global::Vista.Properties.Resources.Añadir;
+            this.SubirArchivoBTN.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.SubirArchivoBTN.Location = new System.Drawing.Point(980, 24);
+            this.SubirArchivoBTN.Name = "SubirArchivoBTN";
+            this.SubirArchivoBTN.Size = new System.Drawing.Size(123, 35);
+            this.SubirArchivoBTN.TabIndex = 46;
+            this.SubirArchivoBTN.Text = "     Subir archivo";
+            this.SubirArchivoBTN.UseVisualStyleBackColor = true;
+            this.SubirArchivoBTN.Click += new System.EventHandler(this.SubirArchivoBTN_Click);
+            // 
+            // Buscarbtn
+            // 
+            this.Buscarbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.Buscarbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Buscarbtn.Image = global::Vista.Properties.Resources.Buscar;
+            this.Buscarbtn.Location = new System.Drawing.Point(236, 116);
+            this.Buscarbtn.Name = "Buscarbtn";
+            this.Buscarbtn.Size = new System.Drawing.Size(38, 39);
+            this.Buscarbtn.TabIndex = 43;
+            this.Buscarbtn.UseVisualStyleBackColor = false;
+            this.Buscarbtn.Click += new System.EventHandler(this.Buscarbtn_Click);
+            // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.ClientSize = new System.Drawing.Size(1065, 736);
+            this.ClientSize = new System.Drawing.Size(1298, 779);
             this.Controls.Add(this.Descargarbtn);
             this.Controls.Add(this.verArchivobtn);
             this.Controls.Add(this.dataGridView1);
@@ -442,8 +452,8 @@ namespace Vista
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

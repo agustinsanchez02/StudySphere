@@ -237,5 +237,21 @@ namespace Vista
                 dataGridView1.DataSource = contextoArchivo.FiltroArchivo(Buscartxt.Text);
             }
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = contextoArchivo.ListarDocsUsuario(ContextoUsuarios.obtenerIDActual());
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = contextoArchivo.ListarDocs();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            dataGridView1.Columns["FechaCreacion"].ValueType = typeof(DateTime);
+
+        }
     }
 }

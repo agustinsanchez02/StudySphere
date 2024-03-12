@@ -16,7 +16,7 @@ namespace Vista
 {
     public partial class AdministrarUsuarios : Form
     {
-        Controladora.ContextoUsuario ContextoUsuarios = new Controladora.ContextoUsuario();
+        ContextoUsuario ContextoUsuarios = new ContextoUsuario();
 
         public AdministrarUsuarios()
         {
@@ -29,7 +29,7 @@ namespace Vista
         private void AdministrarUsuarios_Load(object sender, EventArgs e)
         {
 
-            this.Width = 1128;
+            this.Width = 987;
             this.Height = 544;
             dgv.DataSource = ContextoUsuarios.ListarUsuarios();
         }
@@ -61,15 +61,15 @@ namespace Vista
                         else
                         {
                             var ContextoUsuario = new ContextoUsuario(id: ContextoUsuarios.obtenerIDActual(),
-                                           usuario: usuariotxt.Text,
-                                           nombre: nombretxt.Text,
-                                           apellido: apellidotxt.Text,
-                                           email: emailtxt.Text);
+                                usuario: usuariotxt.Text,
+                                nombre: nombretxt.Text,
+                                apellido: apellidotxt.Text,
+                                email: emailtxt.Text);
 
                             var resultado = ContextoUsuarios.editarperfilAdmin(Id: ContextoUsuarios.obtenerIDActual(), Usuario: usuariotxt.Text, Nombre: nombretxt.Text, Apellido: apellidotxt.Text, Email: emailtxt.Text, telefono: telefonotxt.Text, Convert.ToInt32(permisostxt.Text));
                             MessageBox.Show(resultado);
                             ContextoUsuario.ObtenerUsuarioCompleto(usuariotxt.Text);
-                            this.Width = 1128;
+                            this.Width = 987;
                             AdministrarUsuarios_Load(sender, e);
                         }
                     }
@@ -79,7 +79,14 @@ namespace Vista
 
         private void Editar_Click(object sender, EventArgs e)
         {
-            CargarDatosUsuario();
+            if (dgv.CurrentRow.Cells[1].Value.ToString() == "SuperAdmin")
+            {
+                MessageBox.Show("No se pueden editar los permisos del SuperAdmin");
+            }
+            else
+            {
+                CargarDatosUsuario();
+            }
         }
         private void CargarDatosUsuario()
         {
@@ -91,7 +98,7 @@ namespace Vista
                 emailtxt.Text = dgv.CurrentRow.Cells[4].Value.ToString();
                 telefonotxt.Text = dgv.CurrentRow.Cells[5].Value.ToString();
                 permisostxt.Text = dgv.CurrentRow.Cells[6].Value.ToString();
-                this.Width = 1444;
+                this.Width = 1300;
                 this.Height = 628;
 
             }

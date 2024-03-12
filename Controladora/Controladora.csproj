@@ -45,6 +45,8 @@
     <Compile Include="ContextoAuditoria.cs" />
     <Compile Include="ContextoBKP.cs" />
     <Compile Include="ContextoCarrera.cs" />
+    <Compile Include="ContextoGraficos.cs" />
+    <Compile Include="ContextoGrupos.cs" />
     <Compile Include="ContextoMail.cs" />
     <Compile Include="ContextoMateria.cs" />
     <Compile Include="ContextoUsuario.cs" />

@@ -34,6 +34,8 @@ namespace Vista
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Subir_Archivo));
             this.button1 = new System.Windows.Forms.Button();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.Materiacb = new System.Windows.Forms.ComboBox();
+            this.CarreraCB = new System.Windows.Forms.ComboBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.Explorar = new System.Windows.Forms.Button();
@@ -43,18 +45,16 @@ namespace Vista
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.rtfData = new System.Windows.Forms.RichTextBox();
             this.axAcroPDF1 = new AxAcroPDFLib.AxAcroPDF();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.CarreraCB = new System.Windows.Forms.ComboBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Materiacb = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -103,6 +103,25 @@ namespace Vista
             this.splitContainer1.SplitterDistance = 272;
             this.splitContainer1.TabIndex = 43;
             this.splitContainer1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.splitContainer1_MouseDown);
+            // 
+            // Materiacb
+            // 
+            this.Materiacb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Materiacb.FormattingEnabled = true;
+            this.Materiacb.Location = new System.Drawing.Point(84, 82);
+            this.Materiacb.Name = "Materiacb";
+            this.Materiacb.Size = new System.Drawing.Size(172, 21);
+            this.Materiacb.TabIndex = 43;
+            // 
+            // CarreraCB
+            // 
+            this.CarreraCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CarreraCB.FormattingEnabled = true;
+            this.CarreraCB.Location = new System.Drawing.Point(84, 117);
+            this.CarreraCB.Name = "CarreraCB";
+            this.CarreraCB.Size = new System.Drawing.Size(172, 21);
+            this.CarreraCB.TabIndex = 42;
+            this.CarreraCB.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // button3
             // 
@@ -196,6 +215,15 @@ namespace Vista
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre:";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(33, 19);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(727, 770);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 43;
+            this.pictureBox1.TabStop = false;
+            // 
             // rtfData
             // 
             this.rtfData.Location = new System.Drawing.Point(33, 19);
@@ -219,32 +247,6 @@ namespace Vista
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // CarreraCB
-            // 
-            this.CarreraCB.FormattingEnabled = true;
-            this.CarreraCB.Location = new System.Drawing.Point(84, 117);
-            this.CarreraCB.Name = "CarreraCB";
-            this.CarreraCB.Size = new System.Drawing.Size(172, 21);
-            this.CarreraCB.TabIndex = 42;
-            this.CarreraCB.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(33, 19);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(727, 770);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 43;
-            this.pictureBox1.TabStop = false;
-            // 
-            // Materiacb
-            // 
-            this.Materiacb.FormattingEnabled = true;
-            this.Materiacb.Location = new System.Drawing.Point(84, 82);
-            this.Materiacb.Name = "Materiacb";
-            this.Materiacb.Size = new System.Drawing.Size(172, 21);
-            this.Materiacb.TabIndex = 43;
-            // 
             // Subir_Archivo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -258,13 +260,14 @@ namespace Vista
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Subir_Archivo";
             this.Load += new System.EventHandler(this.Subir_Archivo_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Subir_Archivo_MouseDown_1);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF1)).EndInit();
             this.ResumeLayout(false);
 
         }

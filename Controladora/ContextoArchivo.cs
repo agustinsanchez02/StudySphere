@@ -30,6 +30,10 @@ namespace Controladora
         {
             return archivos.ListarDocs();
         }
+        public DataTable ListarDocsUsuario(int id)
+        {
+            return archivos.ListarDocsUsuario(id);
+        }
         public DataTable FiltroArchivo(string texto)
         {
             return archivos.FiltroArchivo(texto);

@@ -47,7 +47,6 @@ namespace Vista
                 var extension = Path.GetExtension(openFileDialog1.FileName);
                 if (extension == ".pdf")
                 {
-                    this.Width = 933;
                     this.Height = 273;
                     axAcroPDF1.Hide();
                     rtfData.Hide();
@@ -66,7 +65,6 @@ namespace Vista
                                 axAcroPDF1.Hide();
                                 pictureBox1.Hide();
                                 rtfData.Show();
-                                this.Width = 933;
                                 this.Height = 1046;
                                 object readOnly = true;
                                 object visible = true;
@@ -99,7 +97,6 @@ namespace Vista
                             axAcroPDF1.Hide();
                             rtfData.Hide();
                             pictureBox1.Show();
-                            this.Width = 933;
                             this.Height = 1046;
                             pictureBox1.Image = Image.FromFile(openFileDialog1.FileName);
                         }
@@ -107,7 +104,6 @@ namespace Vista
                         {
                             if (extension == ".ppt" || extension == ".pptx")
                             {
-                                this.Width = 933;
                                 this.Height = 273;
                                 axAcroPDF1.Hide();
                                 rtfData.Hide();
@@ -117,7 +113,6 @@ namespace Vista
                             {
                                 if (extension == ".xls" || extension == ".xlsx")
                                 {
-                                    this.Width = 933;
                                     this.Height = 273;
                                     axAcroPDF1.Hide();
                                     rtfData.Hide();
@@ -245,6 +240,12 @@ namespace Vista
         private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void Subir_Archivo_MouseDown_1(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }

@@ -28,6 +28,9 @@ namespace Vista
 
         private void AdministrarArchivos_Load(object sender, EventArgs e)
         {
+            this.dgv.SelectionMode =
+            DataGridViewSelectionMode.FullRowSelect;
+            this.dgv.MultiSelect = false;
             LlenarData();
         }
         [DllImport("User32.DLL", EntryPoint = "ReleaseCapture")]
